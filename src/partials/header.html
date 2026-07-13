@@ -1,0 +1,190 @@
+<header
+  data-site-header
+  class="max-w-full flex flex-row items-center p-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto bg-white border-b border-gray-100 gap-4"
+>
+  <style>
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-main-nav] {
+      display: none;
+    }
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-logo-link] {
+      flex: 0 0 auto;
+    }
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-header-actions] {
+      flex: 1 1 auto;
+    }
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-search-open] {
+      display: none;
+    }
+  </style>
+
+  <a
+    href="index.html"
+    data-logo-link
+    class="flex-1 flex items-center justify-start transition-all"
+  >
+    <img src="/assets/icons/Logo.svg" class="w-31" alt="Логотип" data-logo />
+  </a>
+
+  <nav
+    class="hidden xl:flex flex-row gap-10 self-center shrink-0"
+    data-main-nav
+  >
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="about.html"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Компанія</a
+        >
+      </div>
+    </div>
+
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="products.html"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Продукція</a
+        >
+        <img
+          src="/assets/icons/ArrowBottom.svg"
+          class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-hover:brightness-75 group-focus-within:rotate-180 group-focus-within:brightness-75"
+          alt=""
+        />
+      </div>
+      <div
+        class="absolute left-0 z-50 mt-1 hidden min-w-[220px] rounded-lg border border-gray-100 bg-white py-2 shadow-xl group-hover:block group-focus-within:block"
+      >
+        <div class="flex flex-col">
+          <a
+            href="products.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Іграшки «ТехноК»</a
+          >
+          <a
+            href="products.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Вироби з пластмаси</a
+          >
+          <a
+            href="products.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Вироби з металу</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="services/index.html"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Послуги</a
+        >
+        <img
+          src="/assets/icons/ArrowBottom.svg"
+          class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-hover:brightness-75 group-focus-within:rotate-180 group-focus-within:brightness-75"
+          alt=""
+        />
+      </div>
+      <div
+        class="absolute left-0 z-50 mt-1 hidden min-w-[220px] rounded-lg border border-gray-100 bg-white py-2 shadow-xl group-hover:block group-focus-within:block"
+      >
+        <div class="flex flex-col">
+          <a
+            href="services/index.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Лиття виробів з пластмаси</a
+          >
+          <a
+            href="services/services-metal.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Металообробка</a
+          >
+          <a
+            href="services/index.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Промисловий дизайн та проєктування</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="cooperation.html"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Співпраця</a
+        >
+      </div>
+    </div>
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="news.html"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Новини</a
+        >
+      </div>
+    </div>
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="contacts.html"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Контакти</a
+        >
+      </div>
+    </div>
+  </nav>
+
+  <div
+    class="flex-1 flex flex-row items-center gap-4 justify-end"
+    data-header-actions
+  >
+    <div
+      class="hidden min-w-0 flex-1 flex-row items-center gap-2 rounded-md border border-[#004C97] bg-white p-2 ml-32"
+      data-search-box
+    >
+      <img src="/assets/icons/Search.svg" class="w-4" alt="Пошук" />
+      <input
+        type="text"
+        placeholder="що вас цікавить?"
+        class="text-black self-stretch w-full outline-none text-sm"
+        data-search-input
+      />
+      <img
+        src="/assets/icons/Close2.svg"
+        class="w-4 cursor-pointer hover:opacity-70 transition-opacity"
+        alt="Закрити"
+        data-search-close
+      />
+    </div>
+
+    <img
+      src="/assets/icons/Search.svg"
+      class="w-5 h-5 cursor-pointer hover:opacity-80 transition-opacity"
+      alt="Відкрити пошук"
+      data-search-open
+    />
+
+    <img
+      src="/assets/icons/LangToggle.svg"
+      class="hidden md:block cursor-pointer w-6"
+      alt="Мова"
+      data-lang-toggle
+    />
+    <img
+      src="/assets/icons/MenuIcon.svg"
+      class="w-5 h-5 xl:hidden cursor-pointer"
+      alt="Меню"
+      data-menu-open
+    />
+  </div>
+</header>
