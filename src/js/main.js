@@ -1,10 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  initBurgerMenu();
-  initAccordion();
-  initSearchToggle();
-  initAboutSlider();
-  initTrustedSlider();
+  safeInit(initBurgerMenu);
+  safeInit(initAccordion);
+  safeInit(initSearchToggle);
+  safeInit(initAboutSlider);
+  safeInit(initTPASlider);
 });
+
+function safeInit(fn) {
+  try {
+    fn();
+  } catch (err) {
+    console.error(`помлка ${fn.name}:`, err);
+  }
+}
 
 function initBurgerMenu() {
   const menuBtn = document.querySelector("[data-menu-open]");
@@ -38,14 +46,8 @@ function initAccordion() {
 
   heads.forEach((head) => {
     head.addEventListener("click", (e) => {
-      if (e.target.closest("a")) return;
-
       const item = head.closest("[data-accordion-item]");
-      if (!item) return;
-
       const body = item.querySelector("[data-accordion-body]");
-      if (!body) return;
-
       e.preventDefault();
 
       const arrow = item.querySelector("img");
@@ -133,43 +135,37 @@ function initAboutSlider() {
   });
 }
 
-function initTrustedSlider() {
-  const slider = document.querySelector(".trustedBy-slider");
+function initTPASlider() {
+  const slider = document.querySelector(".tpa-slider");
   if (!slider) return;
 
-  if (typeof window.jQuery === "undefined" || !window.jQuery.fn.slick) {
-    console.warn("Slick carousel не підключено — перевір vendor.js");
+  const $slider = window.jQuery(slider);
+
+  if ($slider.hasClass("slick-initialized")) return;
+
+  if (slider.children.length === 0) {
+    console.warn("initTPASlider: контейнер .tpa-slider порожній, ініціалізацію пропущено");
     return;
   }
 
-  const $slider = window.jQuery(slider);
-  const $prev = window.jQuery(".trustedBy-prev");
-  const $next = window.jQuery(".trustedBy-next");
-
-  if ($slider.hasClass("slick-initialized")) {
-    $slider.slick("unslick");
-  }
-
   $slider.slick({
-    rows: 3,
-    slidesPerRow: 5,
     slidesToShow: 1,
     slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "22%",
+    arrows: true,
+    dots: true,
     infinite: true,
-    arrows: false,
-    dots: false,
-    speed: 400,
+    customPaging: function () {
+      return '<div class="slider-dot mt-4"></div>';
+    },
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesPerRow: 3,
-          rows: 3,
+          centerPadding: "15%",
         },
       },
     ],
   });
-
-  $prev.on("click", () => $slider.slick("slickPrev"));
-  $next.on("click", () => $slider.slick("slickNext"));
 }

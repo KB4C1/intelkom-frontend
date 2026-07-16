@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новини</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    @@include('../../partials/burger-menu.html')
+    @@include('../../partials/header.html')
+    <main class="3xl:max-w-[1400px] 3xl:mx-auto">
+      <div class="w-full text-left py-3 px-4">
+        <span
+          class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
+          >Головна / Новини</span
+        >
+      </div>
+      <section>
+        <div class="3xl:max-w-[1400px] 3xl:mx-auto p-4">
+          <div class="flex flex-col gap-4 text-left">
+            <h1 class="font-semibold text-xl">
+              Компанія «ІНТЕЛКОМ» увійшла до рейтингу Forbes Ukraine Next250
+            </h1>
+            <span class="text-sm text-[#939496]">23.11.2025</span>
+            <div class="flex flex-col gap-4">
+              <img src="../../assets/news/Forbes.jpg" />
+              <div class="font-medium flex flex-col gap-8">
+                <p>
+                  Компанія ТОВ «ІНТЕЛКОМ», що представляє український бренд
+                  дитячих іграшок «ТехноК», увійшла до рейтингу Forbes Ukraine
+                  Next250 - списку найперспективніших малих та середніх компаній
+                  України, які демонструють стабільний розвиток, інноваційність
+                  та значний потенціал зростання.
+                </p>
+                <p>
+                  Включення до цього рейтингу є важливим визнанням результатів
+                  роботи компанії та підтвердженням її активного розвитку навіть
+                  в умовах складної економічної ситуації та викликів воєнного
+                  часу.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-8 px-4 py-8 3xl:max-w-[1400px] 3xl:mx-auto"
+        >
+          <h2 class="font-semibold text-2xl">Основні напрямки виробництва</h2>
+          <ol class="list-decimal pl-5 space-y-3 font-medium text-gray-700">
+            <li>Виробництво іграшок під ТМ «ТехноК»</li>
+            <li>Лиття пластмас під тиском</li>
+            <li>Повний цикл металообробки</li>
+          </ol>
+
+          <h2 class="text-xl font-semibold">Стандарти якості</h2>
+          <ul class="list-disc pl-5 space-y-3 font-medium text-gray-700">
+            <li>Сертифіковане виробництво</li>
+            <li>Сучасне обладнання</li>
+            <li>Експорт до 20 країн</li>
+          </ul>
+
+          <h2 class="font-semibold text-xl">Наші досягнення</h2>
+          <div
+            class="border border-[#E5E7EB] rounded-xl p-5 flex flex-row items-stretch gap-4"
+          >
+            <div class="w-[3px] bg-[#C84E4E] rounded-full shrink-0"></div>
+            <span class="italic text-gray-700 block">
+              «Компанія «ІНТЕЛКОМ» вже майже 30 років працює на ринку дитячих
+              іграшок та є одним із провідних українських виробників у своїй
+              галузі. Продукція бренду «ТехноК» представлена більш ніж у 20 000
+              магазинах по всій Україні та експортується до 20 країн світу»
+            </span>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 gap-4 px-4 py-8 3xl:max-w-[1400px] 3xl:mx-auto"
+        >
+          <div>
+            <!--prettier-ignore -->
+            @@include('../../partials/news-card.html', {"title": "Компанія «ІНТЕЛКОМ» увійшла до рейтингу Forbes Ukraine Next250", "imgPath": "../assets/news/Forbes.jpg"})
+          </div>
+          <div>
+            <!--prettier-ignore -->
+            @@include('../../partials/news-card.html', {"title": "ТОВ «ІНТЕЛКОМ» відзначено найвищою нагородою ТПП України", "imgPath": "../assets/news/TTP_Ukraine_2.svg"})
+          </div>
+          <div>
+            <!--prettier-ignore -->
+            @@include('../../partials/news-card.html', {"title": "ТОВ «ІНТЕЛКОМ» — інвестиції у чисту енергію та енергетичну незалежність", "imgPath": "../assets/news/Energy_2.svg"})
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('../../partials/footer.html')
+  </body>
+</html>

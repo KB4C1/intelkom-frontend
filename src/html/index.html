@@ -13,7 +13,9 @@
 </head>
 <body>
 
+  <!-- prettier-ignore -->
   @@include('../partials/burger-menu.html')
+  <!-- prettier-ignore -->
   @@include('../partials/header.html')
   
   <main>
@@ -104,18 +106,18 @@
         </div>
 
         <div class="w-full flex flex-col gap-4 md:grid md:grid-cols-2 xl:grid-cols-3">
-          <div class="flex">
-            @@include('../partials/direction-block.html', {"title": "Іграшки «ТехноК»", "imgPath": "assets/banners/Frame1.svg", "description": "Високоякісні сертифіковані іграшки власного виробництва, орієнтовані на розвиток та безпеку дитини"})
+          <div class="flex w-full">
+            @@include('../partials/direction-block.html', {"title": "Іграшки «ТехноК»", "imgPath": "assets/banners/Frame1.jpg", "description": "Високоякісні сертифіковані іграшки власного виробництва, орієнтовані на розвиток та безпеку дитини"})
           </div>
-          <div class="flex">
-            @@include('../partials/direction-block.html', {"title": "Вироби з пластмаси", "imgPath": "assets/banners/Frame2.svg", "description": "Лиття пластмас під тиском за індивідуальними кресленнями та технічними умовами"})
+          <div class="flex w-full">
+            @@include('../partials/direction-block.html', {"title": "Вироби з пластмаси", "imgPath": "assets/banners/Frame2.jpg", "description": "Лиття пластмас під тиском за індивідуальними кресленнями та технічними умовами"})
           </div>
-          <div class="md:col-span-2 xl:col-span-1">
-            @@include('../partials/direction-block.html', {"title": "Вироби з металу", "imgPath": "assets/banners/Frame3.svg", "description": "Повний цикл металообробки: фрезерування, токарні, зварювальні роботи, складання та фарбування"})
+          <div class="flex w-full md:col-span-2 xl:col-span-1">
+            @@include('../partials/direction-block.html', {"title": "Вироби з металу", "imgPath": "assets/banners/Frame3.jpg", "description": "Повний цикл металообробки: фрезерування, токарні, зварювальні роботи, складання та фарбування"})
           </div>
         </div>
         <span class="hidden w-[90%] mx-auto text-center xl:block font-semibold">
-          Наші потужності включають виробництво дитячих іграшок под ТМ
+          Наші потужності включають виробництво дитячих іграшок під ТМ
           «Технок» з акцентом на розвиток і безпеку дитини, лиття пластмас під
           тиском за індивідуальними кресленнями, а також повний цикл
           металообробки — від фрезерування та токарних робіт до складання й
@@ -130,10 +132,15 @@
             <span class="font-semibold">Потужності</span>
           </div>
 
+          <!-- prettier-ignore -->
           @@include('../partials/capacity-card.html', {"title": "Лиття під тиском на термопластавтоматах (ТПА)", "bgColor": "#990103D9", "imgPath": "/assets/banners/img01.jpg", "colSpan": "xl:col-span-3"})
+          <!-- prettier-ignore -->
           @@include('../partials/capacity-card.html', {"title": "Лиття на екструзійно-видувних машинах", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img02.jpg", "colSpan": "xl:col-span-3"})
+          <!-- prettier-ignore -->
           @@include('../partials/capacity-card.html', {"title": "Технологія IML (In-Mould Labeling)", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img03.jpg", "colSpan": "mm:col-span-2 xl:col-span-2"})
+          <!-- prettier-ignore -->
           @@include('../partials/capacity-card.html', {"title": "Ультразвукове зварювання пластмас", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img04.jpg", "colSpan": "xl:col-span-2"})
+          <!-- prettier-ignore -->
           @@include('../partials/capacity-card.html', {"title": "Шовкотрафаретний друк", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img05.jpg", "colSpan": "xl:col-span-2"})
         </div>
       </div>

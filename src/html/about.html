@@ -6,7 +6,6 @@
     <title>Компанія</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="stylesheet" href="css/style.css" />
-
   </head>
   <body>
     @@include('../partials/burger-menu.html')
@@ -22,7 +21,7 @@
       </div>
       <section class="w-full flex flex-col">
         <div
-          class="mb-8 3xl:max-w-[1400px] 3xl:self-center w-full h-[500px] overflow-hidden relative flex justify-center items-center text-white text-center"
+          class="mb-8 3xl:max-w-[1400px] 3xl:mx-auto w-full h-[500px] overflow-hidden relative flex justify-center items-center text-white text-center"
         >
           <img
             src="assets/banners/banner1.svg"
@@ -44,9 +43,9 @@
         </div>
 
         <div
-          class="flex flex-col gap-8 px-4 py-8 3xl:max-w-[1400px] 3xl:self-center"
+          class="flex flex-col gap-8 px-4 py-8 3xl:max-w-[1400px] 3xl:mx-auto"
         >
-          <h2 class="font-semibold text-xl md:self-center md:text-3xl">
+          <h2 class="font-semibold text-xl md:mx-auto md:text-3xl">
             Про компанію
           </h2>
           <span class="font-medium text-gray-700">
@@ -64,7 +63,7 @@
         </div>
 
         <div
-          class="flex flex-col gap-8 px-4 py-8 3xl:max-w-[1400px] 3xl:self-center"
+          class="flex flex-col gap-8 px-4 py-8 3xl:max-w-[1400px] 3xl:mx-auto"
         >
           <h2 class="font-semibold text-2xl">Основні напрямки виробництва</h2>
           <ol class="list-decimal pl-5 space-y-3 font-medium text-gray-700">
@@ -96,13 +95,13 @@
 
         <div class="bg-[#D5E6FA] w-full py-16 mb-14">
           <div class="about-slider mx-auto">
-            <div><img src="../assets/banners/img06.jpg"></div>
-            <div><img src="../assets/banners/img07.jpg"></div>
-            <div><img src="../assets/banners/img08.jpg"></div>
+            <div><img src="../assets/banners/img06.jpg" /></div>
+            <div><img src="../assets/banners/img07.jpg" /></div>
+            <div><img src="../assets/banners/img08.jpg" /></div>
           </div>
         </div>
 
-        <div class="w-full h-auto flex-1 3xl:max-w-[1400px] 3xl:self-center">
+        <div class="w-full h-auto flex-1 3xl:max-w-[1400px] 3xl:mx-auto">
           <div class="w-full h-[80vw] 3xl:h-[40vw] self-start overflow-hidden">
             <video controls class="w-full h-full object-cover">
               <source src="assets/videos/lviv.mp4" type="video/mp4" />
@@ -111,29 +110,46 @@
           </div>
         </div>
 
-        <div class="text-black flex flex-col px-4 py-6 pb-9 pt-9 gap-8 border-t border-t-gray-300 xl:max-w-[1200px] xl:mx-auto">
+        <div
+          class="text-black flex flex-col px-4 py-6 pb-9 pt-9 gap-8 border-t border-t-gray-300 xl:max-w-[1200px] xl:mx-auto"
+        >
           <div class="flex flex-col gap-4 items-center">
             <div class="flex flex-row gap-2 justify-center items-center">
-              <img class="h-4" src="assets/icons/Decorative.svg" alt="decorative" />
-              <span class="text-xs xs:text-sm text-gray-500">Основні напрямки</span>
+              <img
+                class="h-4"
+                src="assets/icons/Decorative.svg"
+                alt="decorative"
+              />
+              <span class="text-xs xs:text-sm text-gray-500"
+                >Основні напрямки</span
+              >
             </div>
-            <h2 class="font-semibold text-[22px] text-center md:text-3xl max-w-[800px] mb-4">
+            <h2
+              class="font-semibold text-[22px] text-center md:text-3xl max-w-[800px] mb-4"
+            >
               Ми працюємо у трьох ключових напрямках
             </h2>
           </div>
 
-          <div class="w-full flex flex-col gap-4 md:grid md:grid-cols-2 xl:grid-cols-3">
+          <div
+            class="w-full flex flex-col gap-4 md:grid md:grid-cols-2 xl:grid-cols-3"
+          >
             <div class="flex">
-              @@include('../partials/direction-block.html', {"title": "Іграшки «ТехноК»", "imgPath": "assets/banners/Frame1.svg", "description": "Високоякісні сертифіковані іграшки власного виробництва, орієнтовані на розвиток та безпеку дитини"})
+              <!-- prettier-ignore -->
+              @@include('../partials/direction-block.html', {"title": "Іграшки «ТехноК»", "imgPath": "assets/banners/Frame1.jpg", "description": "Високоякісні сертифіковані іграшки власного виробництва, орієнтовані на розвиток та безпеку дитини"})
             </div>
             <div class="flex">
-              @@include('../partials/direction-block.html', {"title": "Вироби з пластмаси", "imgPath": "assets/banners/Frame2.svg", "description": "Лиття пластмас під тиском за індивідуальними кресленнями та технічними умовами"})
+              <!-- prettier-ignore -->
+              @@include('../partials/direction-block.html', {"title": "Вироби з пластмаси", "imgPath": "assets/banners/Frame2.jpg", "description": "Лиття пластмас під тиском за індивідуальними кресленнями та технічними умовами"})
             </div>
             <div class="md:col-span-2 xl:col-span-1">
-              @@include('../partials/direction-block.html', {"title": "Вироби з металу", "imgPath": "assets/banners/Frame3.svg", "description": "Повний цикл металообробки: фрезерування, токарні, зварювальні роботи, складання та фарбування"})
+              <!-- prettier-ignore -->
+              @@include('../partials/direction-block.html', {"title": "Вироби з металу", "imgPath": "assets/banners/Frame3.jpg", "description": "Повний цикл металообробки: фрезерування, токарні, зварювальні роботи, складання та фарбування"})
             </div>
           </div>
-          <span class="hidden w-[90%] mx-auto text-center xl:block font-semibold">
+          <span
+            class="hidden w-[90%] mx-auto text-center xl:block font-semibold"
+          >
             Наші потужності включають виробництво дитячих іграшок под ТМ
             «Технок» з акцентом на розвиток і безпеку дитини, лиття пластмас під
             тиском за індивідуальними кресленнями, а також повний цикл

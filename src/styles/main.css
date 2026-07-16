@@ -18,7 +18,8 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.about-slider .slick-slide {
+.about-slider .slick-slide,
+.tpa-slider .slick-slide {
   margin: 0 8px;
   opacity: 0.5;
   transition:
@@ -26,11 +27,13 @@ body {
     filter 0.3s ease;
 }
 
-.about-slider .slick-slide.slick-center {
+.about-slider .slick-slide.slick-center,
+.tpa-slider .slick-slide.slick-center {
   opacity: 1;
 }
 
-.about-slider .slick-slide img {
+.about-slider .slick-slide img,
+.tpa-slider .slick-slide img {
   height: 240px;
   width: 100%;
   object-fit: cover;
@@ -51,7 +54,8 @@ body {
 }
 
 @media (min-width: 768px) {
-  .about-slider .slick-slide img {
+  .about-slider .slick-slide img,
+  .tpa-slider .slick-slide img {
     height: 500px;
     width: 80%;
     object-fit: cover;
@@ -63,19 +67,22 @@ body {
   }
 }
 @media (min-width: 920px) {
-  .about-slider .slick-slide img {
+  .about-slider .slick-slide img,
+  .tpa-slider .slick-slide img {
     height: 500px;
     width: 100%;
   }
 }
 @media (min-width: 1280px) {
-  .about-slider .slick-slide img {
+  .about-slider .slick-slide img,
+  .tpa-slider .slick-slide img {
     height: 600px;
     width: 100%;
   }
 }
 @media (min-width: 110rem) {
-  .about-slider .slick-slide img {
+  .about-slider .slick-slide img,
+  .tpa-slider .slick-slide img {
     height: 600px;
     width: 100%;
     object-fit: cover;
