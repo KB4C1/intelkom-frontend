@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Новини</title>
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/intelkom-frontend/favicon.svg" />
+    <link rel="stylesheet" href="/intelkom-frontend/css/style.css" />
   </head>
   <body>
     <div
@@ -18,7 +18,7 @@
 >
   <div class="self-end cursor-pointer p-1">
     <img
-      src="./assets/icons/Close.svg"
+      src="/intelkom-frontend/assets/icons/Close.svg"
       alt="Закрити меню"
       class="cursor-pointer"
       data-menu-close
@@ -30,7 +30,9 @@
         class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
         data-accordion-head
       >
-        <a href="./about.html" class="font-medium text-lg text-black block w-full"
+        <a
+          href="/intelkom-frontend/about.html"
+          class="font-medium text-lg text-black block w-full"
           >Компанія</a
         >
       </div>
@@ -41,11 +43,11 @@
         class="flex w-full cursor-pointer flex-row items-center justify-between px-4 py-4 border-l-[#CC1A1A]"
         data-accordion-head
       >
-        <a href="./products.html" class="font-medium text-lg text-black"
+        <a href="/intelkom-frontend/products.html" class="font-medium text-lg text-black"
           >Продукція</a
         >
         <img
-          src="./assets/icons/ArrowBottom.svg"
+          src="/intelkom-frontend/assets/icons/ArrowBottom.svg"
           class="h-4 w-4 -rotate-90 transition duration-300"
           alt=""
         />
@@ -55,17 +57,17 @@
         data-accordion-body
       >
         <a
-          href="./products.html"
+          href="/intelkom-frontend/products.html"
           class="ptext-sm text-gray-700 hover:text-red-500 transition-colors"
           >Іграшки «ТехноК»</a
         >
         <a
-          href="./products.html"
+          href="/intelkom-frontend/products.html"
           class="text-sm text-gray-700 hover:text-red-500 transition-colors"
           >Вироби з пластмаси</a
         >
         <a
-          href="./products.html"
+          href="/intelkom-frontend/products.html"
           class="text-sm text-gray-700 hover:text-red-500 transition-colors"
           >Вироби з металу</a
         >
@@ -77,11 +79,11 @@
         class="flex w-full cursor-pointer flex-row items-center justify-between px-4 py-4 borde-l-[#CC1A1A]"
         data-accordion-head
       >
-        <a href="./services.html" class="font-medium text-lg text-black"
+        <a href="/intelkom-frontend/services.html" class="font-medium text-lg text-black"
           >Послуги</a
         >
         <img
-          src="./assets/icons/ArrowBottom.svg"
+          src="/intelkom-frontend/assets/icons/ArrowBottom.svg"
           class="h-4 w-4 -rotate-90 transition duration-300"
           alt=""
         />
@@ -91,17 +93,17 @@
         data-accordion-body
       >
         <a
-          href="./services.html"
+          href="/intelkom-frontend/services.html"
           class="text-sm text-gray-700 hover:text-red-500 transition-colors"
           >Лиття виробів з пластмаси</a
         >
         <a
-          href="./services.html"
+          href="/intelkom-frontend/services.html"
           class="text-sm text-gray-700 hover:text-red-500 transition-colors"
           >Металообробка</a
         >
         <a
-          href="./services.html"
+          href="/intelkom-frontend/services.html"
           class="text-sm text-gray-700 hover:text-red-500 transition-colors"
           >Промисловий дизайн та проєктування</a
         >
@@ -113,7 +115,9 @@
         class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
         data-accordion-head
       >
-        <a href="./news.html" class="font-medium text-lg text-black block w-full"
+        <a
+          href="/intelkom-frontend/news.html"
+          class="font-medium text-lg text-black block w-full"
           >Новини</a
         >
       </div>
@@ -124,7 +128,7 @@
         data-accordion-head
       >
         <a
-          href="./cooperation.html"
+          href="/intelkom-frontend/cooperation.html"
           class="font-medium text-lg text-black block w-full"
           >Співпраця</a
         >
@@ -136,7 +140,7 @@
         data-accordion-head
       >
         <a
-          href="./contacts.html"
+          href="/intelkom-frontend/contacts.html"
           class="font-medium text-lg text-black block w-full"
           >Контакти</a
         >
@@ -169,18 +173,23 @@
   </style>
 
   <a
-    href="./index.html"
+    href="/intelkom-frontend/index.html"
     data-logo-link
     class="flex-1 flex items-center justify-start transition-all"
   >
-    <img src="./assets/icons/Logo.svg" class="w-31" alt="Логотип" data-logo />
+    <img
+      src="/intelkom-frontend/assets/icons/Logo.svg"
+      class="w-31"
+      alt="Логотип"
+      data-logo
+    />
   </a>
 
   <nav class="hidden xl:flex flex-row gap-10 mx-auto shrink-0" data-main-nav>
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="./about.html"
+          href="/intelkom-frontend/about.html"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Компанія</a
         >
@@ -190,12 +199,12 @@
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="./products/index.html"
+          href="/intelkom-frontend/products/index.html"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Продукція</a
         >
         <img
-          src="./assets/icons/ArrowBottom.svg"
+          src="/intelkom-frontend/assets/icons/ArrowBottom.svg"
           class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-hover:brightness-75 group-focus-within:rotate-180 group-focus-within:brightness-75"
         />
       </div>
@@ -204,17 +213,17 @@
       >
         <div class="flex flex-col">
           <a
-            href="./products/toys.html"
+            href="/intelkom-frontend/products/toys.html"
             class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
             >Іграшки «ТехноК»</a
           >
           <a
-            href="./products/plastic.html"
+            href="/intelkom-frontend/products/plastic.html"
             class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
             >Вироби з пластмаси</a
           >
           <a
-            href="./products/metaloobrobka.html"
+            href="/intelkom-frontend/products/metaloobrobka.html"
             class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
             >Вироби з металу</a
           >
@@ -225,12 +234,12 @@
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="./services/index.html"
+          href="/intelkom-frontend/services/index.html"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Послуги</a
         >
         <img
-          src="./assets/icons/ArrowBottom.svg"
+          src="/intelkom-frontend/assets/icons/ArrowBottom.svg"
           class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-hover:brightness-75 group-focus-within:rotate-180 group-focus-within:brightness-75"
         />
       </div>
@@ -239,17 +248,17 @@
       >
         <div class="flex flex-col">
           <a
-            href="./services/plastic.html"
+            href="/intelkom-frontend/services/plastic.html"
             class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
             >Лиття виробів з пластмаси</a
           >
           <a
-            href="./services/metaloobrobka.html"
+            href="/intelkom-frontend/services/metaloobrobka.html"
             class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
             >Металообробка</a
           >
           <a
-            href="./services/lyttia-tpa.html"
+            href="/intelkom-frontend/services/lyttia-tpa.html"
             class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
             >Промисловий дизайн та проєктування</a
           >
@@ -260,7 +269,7 @@
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="./cooperation.html"
+          href="/intelkom-frontend/cooperation.html"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Співпраця</a
         >
@@ -269,7 +278,7 @@
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="./news/index.html"
+          href="/intelkom-frontend/news/index.html"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Новини</a
         >
@@ -278,7 +287,7 @@
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="./index.html"
+          href="/intelkom-frontend/index.html"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Контакти</a
         >
@@ -294,7 +303,7 @@
       class="hidden min-w-0 flex-1 flex-row items-center gap-2 rounded-md border border-[#004C97] bg-white p-2 ml-32"
       data-search-box
     >
-      <img src="./assets/icons/Search.svg" class="w-4" alt="Пошук" />
+      <img src="/intelkom-frontend/assets/icons/Search.svg" class="w-4" alt="Пошук" />
       <input
         type="text"
         placeholder="що вас цікавить?"
@@ -302,7 +311,7 @@
         data-search-input
       />
       <img
-        src="./assets/icons/Close2.svg"
+        src="/intelkom-frontend/assets/icons/Close2.svg"
         class="w-4 cursor-pointer hover:opacity-70 transition-opacity"
         alt="Закрити"
         data-search-close
@@ -310,20 +319,20 @@
     </div>
 
     <img
-      src="./assets/icons/Search.svg"
+      src="/intelkom-frontend/assets/icons/Search.svg"
       class="w-5 h-5 cursor-pointer hover:opacity-80 transition-opacity"
       alt="Відкрити пошук"
       data-search-open
     />
 
     <img
-      src="./assets/icons/LangToggle.svg"
+      src="/intelkom-frontend/assets/icons/LangToggle.svg"
       class="hidden md:block cursor-pointer w-6"
       alt="Мова"
       data-lang-toggle
     />
     <img
-      src="./assets/icons/MenuIcon.svg"
+      src="/intelkom-frontend/assets/icons/MenuIcon.svg"
       class="w-5 h-5 xl:hidden cursor-pointer"
       alt="Меню"
       data-menu-open
@@ -346,7 +355,7 @@
             </h1>
             <span class="text-sm text-[#939496]">23.11.2025</span>
             <div class="flex flex-col gap-4">
-              <img src="../assets/news/Forbes.jpg" />
+              <img src="/intelkom-frontend/assets/news/Forbes.jpg" />
               <div class="font-medium flex flex-col gap-8">
                 <p>
                   Компанія ТОВ «ІНТЕЛКОМ», що представляє український бренд
@@ -470,17 +479,21 @@
         </h2>
         <div class="flex flex-col gap-4">
           <div class="text-sm flex flex-row gap-3 2xl:text-lg">
-            <img class="w-5" src="./assets/icons/LocationIcon.svg" alt="" />
+            <img
+              class="w-5"
+              src="/intelkom-frontend/assets/icons/LocationIcon.svg"
+              alt=""
+            />
             <span
               >вул. Микитинецька, 7а, м. Івано-Франківськ, 76002, Україна</span
             >
           </div>
           <div class="text-sm flex flex-row gap-3 2xl:text-lg">
-            <img class="w-5" src="./assets/icons/Phone.svg" alt="" />
+            <img class="w-5" src="/intelkom-frontend/assets/icons/Phone.svg" alt="" />
             <span>+38 0342 50 35 85</span>
           </div>
           <div class="text-sm flex flex-row gap-3 2xl:text-lg">
-            <img class="w-5" src="./assets/icons/Mail.svg" alt="" />
+            <img class="w-5" src="/intelkom-frontend/assets/icons/Mail.svg" alt="" />
             <span>office@intelkom.net.ua</span>
           </div>
         </div>
@@ -488,11 +501,20 @@
         <div class="flex flex-col gap-2">
           <h2 class="font-medium">Стежте за нами в мережах:</h2>
           <div class="flex flex-row gap-5">
-            <img src="./assets/icons/meta/Facebook.svg" alt="Facebook" />
-            <img src="./assets/icons/meta/Youtube.svg" alt="Youtube" />
-            <img src="./assets/icons/meta/X.svg" alt="X" />
-            <img src="./assets/icons/meta/Telegram.svg" alt="Telegram" />
-            <img src="./assets/icons/meta/linkedin.svg" alt="Linkedin" />
+            <img
+              src="/intelkom-frontend/assets/icons/meta/Facebook.svg"
+              alt="Facebook"
+            />
+            <img src="/intelkom-frontend/assets/icons/meta/Youtube.svg" alt="Youtube" />
+            <img src="/intelkom-frontend/assets/icons/meta/X.svg" alt="X" />
+            <img
+              src="/intelkom-frontend/assets/icons/meta/Telegram.svg"
+              alt="Telegram"
+            />
+            <img
+              src="/intelkom-frontend/assets/icons/meta/linkedin.svg"
+              alt="Linkedin"
+            />
           </div>
         </div>
 
@@ -633,45 +655,49 @@
         class="flex flex-col justify-between gap-5 md:justify-evenly md:flex-row ml:gap-16"
       >
         <div class="flex flex-col gap-2">
-          <a href="./about.html">
+          <a href="/intelkom-frontend/about.html">
             <strong class="font-extrabold">Про компанію</strong>
           </a>
 
-          <a href="./about.html">Компанія</a>
-          <a href="./news/index.html">Новини</a>
-          <a href="./cooperation.html">Співпраця</a>
+          <a href="/intelkom-frontend/about.html">Компанія</a>
+          <a href="/intelkom-frontend/news/index.html">Новини</a>
+          <a href="/intelkom-frontend/cooperation.html">Співпраця</a>
         </div>
         <div class="flex flex-col gap-2">
-          <a href="./services/">
+          <a href="/intelkom-frontend/services/">
             <strong class="font-extrabold">Послуги</strong>
           </a>
 
-          <a href="./services/plastic.html">Лиття пластмас</a>
-          <a href="./services/metaloobrobka.html">Металообробка</a>
-          <a href="./services/lyttia-tpa.html">Дизайн</a>
+          <a href="/intelkom-frontend/services/plastic.html">Лиття пластмас</a>
+          <a href="/intelkom-frontend/services/metaloobrobka.html">Металообробка</a>
+          <a href="/intelkom-frontend/services/lyttia-tpa.html">Дизайн</a>
         </div>
         <div class="flex flex-col gap-2">
-          <a href="./products/">
+          <a href="/intelkom-frontend/products/">
             <strong class="font-extrabold">Продукція</strong>
           </a>
 
-          <a href="./products/toys.html">Іграшки ТехноК</a>
-          <a href="./products/plastic.html">Пластмаса</a>
-          <a href="./products/metaloobrobka.html">Метал</a>
+          <a href="/intelkom-frontend/products/toys.html">Іграшки ТехноК</a>
+          <a href="/intelkom-frontend/products/plastic.html">Пластмаса</a>
+          <a href="/intelkom-frontend/products/metaloobrobka.html">Метал</a>
         </div>
       </div>
       <div
         class="pt-6 border-t border-[#939496] flex flex-row justify-between items-center ml:flex-col ml:items-start ml:border-none ml:pt-0 gap-4"
       >
-        <img src="./assets/icons/LogoGray.svg" class="w-29" alt="ІНТЕЛКОМ" />
+        <img
+          src="/intelkom-frontend/assets/icons/LogoGray.svg"
+          class="w-29"
+          alt="ІНТЕЛКОМ"
+        />
         <p class="text-sm text-[#939496] ml:mt-2">© 2026 ТОВ «Інтелком»</p>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="./js/vendor.js" defer></script>
-<script src="./js/main.js" defer></script>
+<script src="/intelkom-frontend/js/vendor.js" defer></script>
+<script src="/intelkom-frontend/js/main.js" defer></script>
 
   </body>
 </html>
