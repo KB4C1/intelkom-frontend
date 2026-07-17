@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Послуги - металообробка</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div
+  class="fixed inset-0 z-[90] hidden bg-black/40 transition-opacity duration-200"
+  data-menu-overlay
+></div>
+<div
+  class="fixed top-0 right-0 z-[100] hidden h-screen w-full flex-col gap-7 overflow-y-auto bg-white pt-4 pr-4 pb-4 pl-4 shadow-2xl mm:w-2/5 mm:pl-0"
+  data-menu-panel
+>
+  <div class="self-end cursor-pointer p-1">
+    <img
+      src="/assets/icons/Close.svg"
+      alt="Закрити меню"
+      class="cursor-pointer"
+      data-menu-close
+    />
+  </div>
+  <div class="flex flex-col">
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
+        data-accordion-head
+      >
+        <a href="about.html" class="font-medium text-lg text-black block w-full"
+          >Компанія</a
+        >
+      </div>
+    </div>
+
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between px-4 py-4 border-l-[#CC1A1A]"
+        data-accordion-head
+      >
+        <a href="products.html" class="font-medium text-lg text-black"
+          >Продукція</a
+        >
+        <img
+          src="/assets/icons/ArrowBottom.svg"
+          class="h-4 w-4 -rotate-90 transition duration-300"
+          alt=""
+        />
+      </div>
+      <div
+        class="hidden w-full max-h-fit flex flex-col bg-gray-50/50 gap-4 pl-8"
+        data-accordion-body
+      >
+        <a
+          href="products.html"
+          class="ptext-sm text-gray-700 hover:text-red-500 transition-colors"
+          >Іграшки «ТехноК»</a
+        >
+        <a
+          href="products.html"
+          class="text-sm text-gray-700 hover:text-red-500 transition-colors"
+          >Вироби з пластмаси</a
+        >
+        <a
+          href="products.html"
+          class="text-sm text-gray-700 hover:text-red-500 transition-colors"
+          >Вироби з металу</a
+        >
+      </div>
+    </div>
+
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between px-4 py-4 borde-l-[#CC1A1A]"
+        data-accordion-head
+      >
+        <a href="services.html" class="font-medium text-lg text-black"
+          >Послуги</a
+        >
+        <img
+          src="/assets/icons/ArrowBottom.svg"
+          class="h-4 w-4 -rotate-90 transition duration-300"
+          alt=""
+        />
+      </div>
+      <div
+        class="hidden w-full max-h-fit flex flex-col bg-gray-50/50 gap-4 pl-8"
+        data-accordion-body
+      >
+        <a
+          href="services.html"
+          class="text-sm text-gray-700 hover:text-red-500 transition-colors"
+          >Лиття виробів з пластмаси</a
+        >
+        <a
+          href="services.html"
+          class="text-sm text-gray-700 hover:text-red-500 transition-colors"
+          >Металообробка</a
+        >
+        <a
+          href="services.html"
+          class="text-sm text-gray-700 hover:text-red-500 transition-colors"
+          >Промисловий дизайн та проєктування</a
+        >
+      </div>
+    </div>
+
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
+        data-accordion-head
+      >
+        <a href="news.html" class="font-medium text-lg text-black block w-full"
+          >Новини</a
+        >
+      </div>
+    </div>
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
+        data-accordion-head
+      >
+        <a
+          href="cooperation.html"
+          class="font-medium text-lg text-black block w-full"
+          >Співпраця</a
+        >
+      </div>
+    </div>
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
+        data-accordion-head
+      >
+        <a
+          href="contacts.html"
+          class="font-medium text-lg text-black block w-full"
+          >Контакти</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+    <header
+  data-site-header
+  class="max-w-full flex flex-row items-center p-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto bg-white border-b border-gray-100 gap-4"
+>
+  <style>
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-main-nav] {
+      display: none;
+    }
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-logo-link] {
+      flex: 0 0 auto;
+    }
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-header-actions] {
+      flex: 1 1 auto;
+    }
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-search-open] {
+      display: none;
+    }
+  </style>
+
+  <a
+    href="/index.html"
+    data-logo-link
+    class="flex-1 flex items-center justify-start transition-all"
+  >
+    <img src="/assets/icons/Logo.svg" class="w-31" alt="Логотип" data-logo />
+  </a>
+
+  <nav class="hidden xl:flex flex-row gap-10 mx-auto shrink-0" data-main-nav>
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="/about.html"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Компанія</a
+        >
+      </div>
+    </div>
+
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="/products/index.html"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Продукція</a
+        >
+        <img
+          src="/assets/icons/ArrowBottom.svg"
+          class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-hover:brightness-75 group-focus-within:rotate-180 group-focus-within:brightness-75"
+          alt=""
+        />
+      </div>
+      <div
+        class="absolute left-0 z-50 mt-1 hidden min-w-[220px] rounded-lg border border-gray-100 bg-white py-2 shadow-xl group-hover:block group-focus-within:block"
+      >
+        <div class="flex flex-col">
+          <a
+            href="/products/toys.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Іграшки «ТехноК»</a
+          >
+          <a
+            href="/products/plastic.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Вироби з пластмаси</a
+          >
+          <a
+            href="/products/metaloobrobka.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Вироби з металу</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="/services/index.html"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Послуги</a
+        >
+        <img
+          src="/assets/icons/ArrowBottom.svg"
+          class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-hover:brightness-75 group-focus-within:rotate-180 group-focus-within:brightness-75"
+        />
+      </div>
+      <div
+        class="absolute left-0 z-50 mt-1 hidden min-w-[220px] rounded-lg border border-gray-100 bg-white py-2 shadow-xl group-hover:block group-focus-within:block"
+      >
+        <div class="flex flex-col">
+          <a
+            href="/services/plastic.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Лиття виробів з пластмаси</a
+          >
+          <a
+            href="/services/metaloobrobka.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Металообробка</a
+          >
+          <a
+            href="/services/lyttia-tpa.html"
+            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+            >Промисловий дизайн та проєктування</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="/cooperation.html"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Співпраця</a
+        >
+      </div>
+    </div>
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="/news/index.html"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Новини</a
+        >
+      </div>
+    </div>
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="/"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
+          >Контакти</a
+        >
+      </div>
+    </div>
+  </nav>
+
+  <div
+    class="flex-1 flex flex-row items-center gap-4 justify-end"
+    data-header-actions
+  >
+    <div
+      class="hidden min-w-0 flex-1 flex-row items-center gap-2 rounded-md border border-[#004C97] bg-white p-2 ml-32"
+      data-search-box
+    >
+      <img src="/assets/icons/Search.svg" class="w-4" alt="Пошук" />
+      <input
+        type="text"
+        placeholder="що вас цікавить?"
+        class="text-black self-stretch w-full outline-none text-sm"
+        data-search-input
+      />
+      <img
+        src="/assets/icons/Close2.svg"
+        class="w-4 cursor-pointer hover:opacity-70 transition-opacity"
+        alt="Закрити"
+        data-search-close
+      />
+    </div>
+
+    <img
+      src="/assets/icons/Search.svg"
+      class="w-5 h-5 cursor-pointer hover:opacity-80 transition-opacity"
+      alt="Відкрити пошук"
+      data-search-open
+    />
+
+    <img
+      src="/assets/icons/LangToggle.svg"
+      class="hidden md:block cursor-pointer w-6"
+      alt="Мова"
+      data-lang-toggle
+    />
+    <img
+      src="/assets/icons/MenuIcon.svg"
+      class="w-5 h-5 xl:hidden cursor-pointer"
+      alt="Меню"
+      data-menu-open
+    />
+  </div>
+</header>
+
+    <main>
+      <div
+        class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
+      >
+        <span
+          class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
+          >Головна / Послуги / Металообробка</span
+        >
+      </div>
+      <section class="3xl:max-w-[1400px] 3xl:mx-auto">
+        <div
+          class="mb-8 3xl:max-w-[1400px] 3xl:mx-auto w-full h-[500px] overflow-hidden relative flex justify-center items-center text-white text-center"
+        >
+          <img
+            src="/assets/banners/Frame5.jpg"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+            alt="Hero Banner"
+          />
+          <div
+            class="absolute inset-0 z-10 bg-gradient-to-t from-[#004C97]/90 from-25% to-transparent pointer-events-none"
+          ></div>
+          <div class="z-20 max-w-[90%] flex flex-col place-self-end py-8">
+            <h1 class="text-2xl font-semibold xs:text-[26px] md:text-3xl xl:text-4xl 3xl:text-5xl">
+              Металообробка
+            </h1>
+            <span class="text-xs xl:text-base 3xl:text-xl text-light">
+              Ми виготовляємо високоточні металеві деталі та конструкції,
+              використовуючи сучасне ЧПУ-обладнання й інженерні технології.
+              Забезпечуємо стабільну якість, точність і відповідність вимогам
+              промислових проєктів.
+            </span>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h2 class="text-3xl font-semibold text-center">
+              Механічна обробка деталей
+            </h2>
+            <div
+              class="flex items-center justify-center mx-auto p-4 my-4 gap-1 flex-col xs:flex-wrap xs:flex-row max-w-[1040px]"
+            >
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Токарна обробка</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Фрезерування</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Свердління та розточування</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Електроерозійна обробка на верстатах з ЧПУ</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Електроіскорова обробка на верстатах з ЧПУ</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Проточування, розточування корпусних деталей</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Термічна обробка металів</span>
+</div>
+            </div>
+          </div>
+          <div class="mx-auto mm:max-w-[1400px]">
+            <div
+              class="flex flex-col gap-8 text-left py-8 w-full p-4 mm:flex-row-reverse"
+            >
+              <img
+                src="/assets/banners/stanok1.jpg"
+                class="w-full h-[300px] md:h-[450px] object-cover mm:w-1/2 xl:h-[500px] [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
+                alt="Токарна обробка"
+              />
+              <div class="flex flex-col gap-8 md:self-center mm:w-1/2">
+                <strong class="text-2xl font-semibold md:text-3xl"
+                  >Токарна обробка</strong
+                >
+
+                <span>
+                  Комплекс механічної обробки дозволяє виготовляти металеві
+                  деталі з високою точністю та стабільністю параметрів. Ми
+                  виконуємо токарні та фрезерні операції, шліфування,
+                  свердління, розточування та проточування корпусних елементів.
+                  Для складних контурів застосовуємо електроерозійну та
+                  електроіскрову обробку на ЧПУ-верстатах, що забезпечує
+                  мінімальні допуски та чистоту поверхні. Додаткова термічна
+                  обробка підвищує міцність і зносостійкість металів, гарантуючи
+                  надійність готових виробів у реальних умовах експлуатації.
+                </span>
+
+                <a
+                  href="/index.html"
+                  class="py-2 px-6 rounded-sm text-lg text-white text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] shadow-lg shadow-red-400 max-w-max max-h-min"
+                >
+                  Замовити послугу
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-16">
+          <div>
+            <h2 class="text-3xl font-semibold text-center">
+              Виробництво металевих конструкцій
+            </h2>
+            <div
+              class="flex items-center justify-center mx-auto p-4 my-4 gap-1 flex-col xs:flex-wrap xs:flex-row max-w-[1040px]"
+            >
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Лазерне різання металу</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Гнуття деталей на листозгинальному пресі</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Гнуття деталей на трубозгинальному пресі</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Штампування металу</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Порошкове фарбування</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Зварювання</span>
+</div>
+              <!-- prettier-ignore -->
+              <div class="py-1 px-4 text-center border border-[#939496] rounded-md max-w-fit max-h-fit text-black bg-white hover:bg-[#C8E8F8] hover:border-[#0B72B5] hover:text-[#0B72B5] duration-300">
+    <span class="text-sm">Лазерне гравірування</span>
+</div>
+            </div>
+          </div>
+          <div class="mx-auto mm:max-w-[1400px]">
+            <div
+              class="flex flex-col gap-8 text-left py-8 w-full p-4 mm:flex-row"
+            >
+              <img
+                src="/assets/banners/stanok2.jpg"
+                class="w-full h-[300px] md:h-[450px] object-cover mm:w-1/2 xl:h-[500px] [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
+                alt="Токарна обробка"
+              />
+              <div class="flex flex-col gap-8 md:self-center mm:w-1/2">
+                <strong class="text-2xl font-semibold md:text-3xl"
+                  >Лазерне різання металу</strong
+                >
+
+                <span>
+                  Наш технопарк забезпечує повний цикл виготовлення металевих
+                  конструкцій: лазерне різання для високої точності контурів,
+                  гнуття листових і трубних деталей на сучасних пресах, а також
+                  штампування для серійних виробів. Професійне зварювання
+                  гарантує міцність з'єднань, порошкове фарбування — захист від
+                  корозії та довговічність покриття, а лазерне гравірування
+                  додає точне маркування чи декоративні елементи. Такий комплекс
+                  технологій дозволяє отримувати металоконструкції з відмінною
+                  геометрією та стабільною якістю.
+                </span>
+
+                <a
+                  href="/index.html"
+                  class="py-2 px-6 rounded-sm text-lg text-white text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] shadow-lg shadow-red-400 max-w-max max-h-min"
+                >
+                  Замовити послугу
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.1160983668206!2d24.73789331059069!3d48.913180270657996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c3df6b2d0f5f%3A0x7f0dff3974f8e4b3!2z0IbQvdGC0LXQu9C60L7QvCDQotCcICLQotC10YXQvdC-0Joi!5e0!3m2!1suk!2sua!4v1783420557616!5m2!1suk!2sua"
+    class="w-full h-[365px] border-0"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Google Map Location"
+  ></iframe>
+
+  <div class="2xl:w-[1400px] 2xl:mx-auto 2xl:mb-20">
+    <div
+      class="-mt-7 w-full flex flex-col md:flex-row md:items-stretch max-w-full"
+    >
+      <div
+        class="w-full md:w-1/2 bg-[#004C97E5] 3xl:p-12 3xl:bg-[#004C97] flex flex-col text-[#fff] p-4 py-6 gap-5 [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
+      >
+        <h2 class="text-2xl font-semibold md:text-3xl 3xl:text-[32px]">
+          Контактна інформація:
+        </h2>
+        <div class="flex flex-col gap-4">
+          <div class="text-sm flex flex-row gap-3 2xl:text-lg">
+            <img class="w-5" src="/assets/icons/LocationIcon.svg" alt="" />
+            <span
+              >вул. Микитинецька, 7а, м. Івано-Франківськ, 76002, Україна</span
+            >
+          </div>
+          <div class="text-sm flex flex-row gap-3 2xl:text-lg">
+            <img class="w-5" src="/assets/icons/Phone.svg" alt="" />
+            <span>+38 0342 50 35 85</span>
+          </div>
+          <div class="text-sm flex flex-row gap-3 2xl:text-lg">
+            <img class="w-5" src="/assets/icons/Mail.svg" alt="" />
+            <span>office@intelkom.net.ua</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h2 class="font-medium">Стежте за нами в мережах:</h2>
+          <div class="flex flex-row gap-5">
+            <img src="/assets/icons/meta/Facebook.svg" alt="Facebook" />
+            <img src="/assets/icons/meta/Youtube.svg" alt="Youtube" />
+            <img src="/assets/icons/meta/X.svg" alt="X" />
+            <img src="/assets/icons/meta/Telegram.svg" alt="Telegram" />
+            <img src="/assets/icons/meta/linkedin.svg" alt="Linkedin" />
+          </div>
+        </div>
+
+        <form
+          class="bg-[#D5E6FA] rounded-xl py-7 px-5 flex flex-col gap-4 md:hidden mt-4"
+        >
+          <h2 class="text-[#004C97] font-semibold">Напишіть нам!</h2>
+          <div class="relative inline-block w-full">
+            <input
+              type="text"
+              placeholder=" "
+              required
+              class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            />
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Ім'я <span class="text-red-500">*</span></span
+            >
+          </div>
+          <div class="relative inline-block w-full">
+            <input
+              type="tel"
+              placeholder=" "
+              required
+              class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            />
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Телефон <span class="text-red-500">*</span></span
+            >
+          </div>
+          <div class="relative inline-block w-full">
+            <input
+              type="email"
+              placeholder=" "
+              required
+              class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            />
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Email <span class="text-red-500">*</span></span
+            >
+          </div>
+          <div class="relative inline-block w-full">
+            <textarea
+              placeholder=" "
+              required
+              rows="4"
+              class="peer h-25 w-full resize-none rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            ></textarea>
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Повідомлення <span class="text-red-500">*</span></span
+            >
+          </div>
+          <button
+            type="button"
+            class="p-3 rounded-lg text-white text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] shadow-lg shadow-red-400"
+          >
+            <span>Зв'язатися з нами</span>
+          </button>
+        </form>
+      </div>
+
+      <form
+        class="hidden md:flex md:w-[50%] md:bg-white rounded-none bg-[#D5E6FA] p-6 justify-center"
+      >
+        <div class="w-full max-w-md flex flex-col gap-4 self-start">
+          <h2 class="text-black font-semibold text-3xl">
+            Маєте питання або пропозицію? Напишіть нам!
+          </h2>
+          <div class="flex flex-col ml:flex-row gap-4">
+            <div class="relative inline-block w-full">
+              <input
+                type="text"
+                placeholder=" "
+                required
+                class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+              />
+              <span
+                class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+                >Ім'я <span class="text-red-500">*</span></span
+              >
+            </div>
+            <div class="relative inline-block w-full">
+              <input
+                type="tel"
+                placeholder=" "
+                required
+                class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+              />
+              <span
+                class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+                >Телефон <span class="text-red-500">*</span></span
+              >
+            </div>
+          </div>
+          <div class="relative inline-block w-full">
+            <input
+              type="email"
+              placeholder=" "
+              required
+              class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            />
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Email <span class="text-red-500">*</span></span
+            >
+          </div>
+          <div class="relative inline-block w-full">
+            <textarea
+              placeholder=" "
+              required
+              rows="4"
+              class="peer h-25 w-full resize-none rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            ></textarea>
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Повідомлення <span class="text-red-500">*</span></span
+            >
+          </div>
+          <button
+            type="button"
+            class="p-3 rounded-lg text-white text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] shadow-lg shadow-red-400"
+          >
+            <span>Зв'язатися з нами</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="footer-links" class="bg-[#323232] text-white p-4 py-8">
+    <div
+      class="mx-auto flex flex-col gap-7 ml:flex-row-reverse md:justify-evenly ml:items-start"
+    >
+      <div
+        class="flex flex-col justify-between gap-5 md:justify-evenly md:flex-row ml:gap-16"
+      >
+        <div class="flex flex-col gap-2">
+          <a href="/about.html">
+            <strong class="font-extrabold">Про компанію</strong>
+          </a>
+
+          <a href="about.html">Компанія</a>
+          <a href="/news/index.html">Новини</a>
+          <a href="../cooperation.html">Співпраця</a>
+        </div>
+        <div class="flex flex-col gap-2">
+          <a href="/services/">
+            <strong class="font-extrabold">Послуги</strong>
+          </a>
+
+          <a href="/services/plastic.html">Лиття пластмас</a>
+          <a href="/services/metaloobrobka.html">Металообробка</a>
+          <a href="/services/lyttia-tpa.html">Дизайн</a>
+        </div>
+        <div class="flex flex-col gap-2">
+          <a href="/products/">
+            <strong class="font-extrabold">Продукція</strong>
+          </a>
+
+          <a href="/products/toys.html">Іграшки ТехноК</a>
+          <a href="/products/plastic.html">Пластмаса</a>
+          <a href="/products/metaloobrobka.html">Метал</a>
+        </div>
+      </div>
+      <div
+        class="pt-6 border-t border-[#939496] flex flex-row justify-between items-center ml:flex-col ml:items-start ml:border-none ml:pt-0 gap-4"
+      >
+        <img src="/assets/icons/LogoGray.svg" class="w-29" alt="ІНТЕЛКОМ" />
+        <p class="text-sm text-[#939496] ml:mt-2">© 2026 ТОВ «Інтелком»</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/vendor.js" defer></script>
+<script src="/js/main.js" defer></script>
+
+  </body>
+</html>
