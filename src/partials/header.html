@@ -1,6 +1,6 @@
 <header
   data-site-header
-  class="max-w-full flex flex-row items-center p-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto bg-white border-b border-gray-100 gap-4"
+  class="max-w-full justify-between h-[64px] md:h-[80px] xl:h-[110] flex flex-row items-center p-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto bg-white border-b border-gray-100 gap-4"
 >
   <style>
     header[data-site-header]:has([data-search-box]:not(.hidden))
@@ -13,7 +13,17 @@
     }
     header[data-site-header]:has([data-search-box]:not(.hidden))
       [data-header-actions] {
-      flex: 1 1 auto;
+      flex: 1 0 auto;
+      flex-direction: row-reverse;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    @media (min-width: 768px) {
+      header[data-site-header]:has([data-search-box]:not(.hidden))
+        [data-header-actions] {
+        padding-left: 190px;
+      }
     }
     header[data-site-header]:has([data-search-box]:not(.hidden))
       [data-search-open] {
@@ -22,18 +32,27 @@
   </style>
 
   <a
-    href="/index.html"
+    href="@@webRoot/index.html"
     data-logo-link
-    class="flex-1 flex items-center justify-start transition-all"
+    class="flex items-center justify-start transition-all"
   >
-    <img src="/assets/icons/Logo.svg" class="w-31" alt="Логотип" data-logo />
+    <img
+      src="@@webRoot/assets/icons/Logo.svg"
+      class="w-31"
+      alt="Логотип"
+      data-logo
+    />
   </a>
 
-  <nav class="hidden xl:flex flex-row gap-10 mx-auto shrink-0" data-main-nav>
+  <nav
+    class="hidden xl:flex flex-row shrink-0 mx-auto justify-between"
+    data-main-nav
+    style="gap: 50px"
+  >
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="/about.html"
+          href="@@webRoot/about.html"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Компанія</a
         >
@@ -43,35 +62,36 @@
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="/products/index.html"
+          href="@@webRoot/products/index.html"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Продукція</a
         >
         <img
-          src="/assets/icons/ArrowBottom.svg"
+          src="@@webRoot/assets/icons/ArrowBottom.svg"
           class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-hover:brightness-75 group-focus-within:rotate-180 group-focus-within:brightness-75"
-          alt=""
         />
       </div>
       <div
-        class="absolute left-0 z-50 mt-1 hidden min-w-[220px] rounded-lg border border-gray-100 bg-white py-2 shadow-xl group-hover:block group-focus-within:block"
+        class="absolute left-0 z-50 pt-2 hidden min-w-[220px] group-hover:block group-focus-within:block"
       >
-        <div class="flex flex-col">
-          <a
-            href="/products/toys.html"
-            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
-            >Іграшки «ТехноК»</a
-          >
-          <a
-            href="/products/plastic.html"
-            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
-            >Вироби з пластмаси</a
-          >
-          <a
-            href="/products/metaloobrobka.html"
-            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
-            >Вироби з металу</a
-          >
+        <div class="rounded-lg border border-gray-100 bg-white py-2 shadow-xl">
+          <div class="flex flex-col">
+            <a
+              href="@@webRoot/products/toys.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+              >Іграшки «ТехноК»</a
+            >
+            <a
+              href="@@webRoot/products/plastic.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+              >Вироби з пластмаси</a
+            >
+            <a
+              href="@@webRoot/products/metaloobrobka.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+              >Вироби з металу</a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -79,34 +99,36 @@
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="/services/index.html"
+          href="@@webRoot/services/index.html"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Послуги</a
         >
         <img
-          src="/assets/icons/ArrowBottom.svg"
+          src="@@webRoot/assets/icons/ArrowBottom.svg"
           class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-hover:brightness-75 group-focus-within:rotate-180 group-focus-within:brightness-75"
         />
       </div>
       <div
-        class="absolute left-0 z-50 mt-1 hidden min-w-[220px] rounded-lg border border-gray-100 bg-white py-2 shadow-xl group-hover:block group-focus-within:block"
+        class="absolute left-0 z-50 pt-2 hidden min-w-[220px] group-hover:block group-focus-within:block"
       >
-        <div class="flex flex-col">
-          <a
-            href="/services/plastic.html"
-            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
-            >Лиття виробів з пластмаси</a
-          >
-          <a
-            href="/services/metaloobrobka.html"
-            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
-            >Металообробка</a
-          >
-          <a
-            href="/services/lyttia-tpa.html"
-            class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
-            >Промисловий дизайн та проєктування</a
-          >
+        <div class="rounded-lg border border-gray-100 bg-white py-2 shadow-xl">
+          <div class="flex flex-col">
+            <a
+              href="@@webRoot/services/plastic.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+              >Лиття виробів з пластмаси</a
+            >
+            <a
+              href="@@webRoot/services/metaloobrobka.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+              >Металообробка</a
+            >
+            <a
+              href="@@webRoot/services/lyttia-tpa.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-red-500 transition-colors"
+              >Промисловий дизайн та проєктування</a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -114,7 +136,7 @@
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="/cooperation.html"
+          href="@@webRoot/cooperation.html"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Співпраця</a
         >
@@ -123,7 +145,7 @@
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="/news/index.html"
+          href="@@webRoot/news/index.html"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Новини</a
         >
@@ -132,7 +154,7 @@
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
-          href="/"
+          href="#footer-contacts"
           class="font-medium text-black transition-colors duration-200 group-hover:text-red-500 group-hover:underline group-focus-within:text-red-500 group-focus-within:underline"
           >Контакти</a
         >
@@ -141,14 +163,15 @@
   </nav>
 
   <div
-    class="flex-1 flex flex-row items-center gap-4 justify-end"
+    class="flex flex-row items-center gap-4 justify-end transition-all duration-300"
     data-header-actions
   >
     <div
-      class="hidden min-w-0 flex-1 flex-row items-center gap-2 rounded-md border border-[#004C97] bg-white p-2 ml-32"
+      class="hidden min-w-0 flex-1 flex-row items-center gap-2 rounded-md border border-[#004C97] bg-white"
       data-search-box
+      style="padding: 9px"
     >
-      <img src="/assets/icons/Search.svg" class="w-4" alt="Пошук" />
+      <img src="@@webRoot/assets/icons/Search.svg" class="w-4" alt="Пошук" />
       <input
         type="text"
         placeholder="що вас цікавить?"
@@ -156,7 +179,7 @@
         data-search-input
       />
       <img
-        src="/assets/icons/Close2.svg"
+        src="@@webRoot/assets/icons/Close2.svg"
         class="w-4 cursor-pointer hover:opacity-70 transition-opacity"
         alt="Закрити"
         data-search-close
@@ -164,21 +187,19 @@
     </div>
 
     <img
-      src="/assets/icons/Search.svg"
-      class="w-5 h-5 cursor-pointer hover:opacity-80 transition-opacity"
-      alt="Відкрити пошук"
+      src="@@webRoot/assets/icons/Search.svg"
+      class="w-5 h-5 cursor-pointer hover:opacity-80 transition-opacity shrink-0"
       data-search-open
     />
 
     <img
-      src="/assets/icons/LangToggle.svg"
-      class="hidden md:block cursor-pointer w-6"
-      alt="Мова"
+      src="@@webRoot/assets/icons/LangToggle.svg"
+      class="w-6 shrink-0"
       data-lang-toggle
     />
     <img
-      src="/assets/icons/MenuIcon.svg"
-      class="w-5 h-5 xl:hidden cursor-pointer"
+      src="@@webRoot/assets/icons/MenuIcon.png"
+      class="w-5 h-5 xl:hidden cursor-pointer shrink-0"
       alt="Меню"
       data-menu-open
     />

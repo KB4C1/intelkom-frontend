@@ -1,265 +1,553 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Головна</title>
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-  <link rel="stylesheet" href="css/style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Головна</title>
+    <link rel="icon" type="image/svg+xml" href="@@webRoot/favicon.svg" />
+    <link rel="stylesheet" href="@@webRoot/css/style.css" />
 
-  <link rel="stylesheet" href="/assets/vendor/slick.css" />
-  <link rel="stylesheet" href="/assets/vendor/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    @@include('../partials/burger-menu.html', { "active": "" })
+    @@include('../partials/header.html')
 
-</head>
-<body>
-
-  <!-- prettier-ignore -->
-  @@include('../partials/burger-menu.html')
-  <!-- prettier-ignore -->
-  @@include('../partials/header.html')
-  
-  <main>
-    <section class="w-full overflow-hidden">
-      <div class="w-full h-[500px] overflow-hidden relative flex justify-center items-center">
-        <img
-          src="assets/banners/banner1.svg"
-          class="h-auto max-w-none object-cover object-center"
-          alt="Hero Banner"
-        />
-      </div>
-
-      <div class="bg-[#004C97] text-white p-4">
-        <div class="flex flex-col gap-9 px-[4vw] py-6 pb-9 3xl:flex-row 3xl:justify-between 3xl:items-center 3xl:max-w-[1400px] 3xl:mx-auto 3xl:py-4 3xl:pb-0">
-          <div class="flex flex-col gap-2">
-            <h1 class="font-semibold text-2xl">ТОВ «Інтелком»</h1>
-            <h2 class="font-medium text-sm max-w-xl">
-              Ваш надійний виробник пластмасової та металевої продукції в Україні
-            </h2>
-          </div>
-
-          <div class="flex flex-row gap-10 md:gap-[15vw] 3xl:gap-16">
-            <div class="flex flex-col max-w-min xs:max-w-max">
-              <strong class="font-bold text-5xl">
-                35<span class="pl-2 font-medium text-base">тис.м2</span>
-              </strong>
-              <span class="font-medium text-sm w-full">Сучасного виробництва</span>
-            </div>
-            
-            <div class="flex flex-col max-w-min xs:max-w-max">
-              <strong class="font-bold text-5xl">
-                30<span class="pl-2 font-medium text-base">років</span>
-              </strong>
-              <span class="font-medium text-sm w-full">Досвіду та партнерства</span>
-            </div>
-          </div>
+    <main>
+      <section class="w-full overflow-hidden">
+        <div class="w-full h-[500px] relative overflow-hidden">
+          <img
+            src="@@webRoot/assets/banners/banner1.svg"
+            class="absolute w-full h-full object-cover object-right"
+          />
         </div>
-      </div>
-      <div class="text-black flex flex-col px-[4vw] py-6 pb-9 gap-5 3xl:max-w-[1400px] 3xl:mx-auto">
-        <div class="flex flex-row gap-2">
-          <img src="assets/icons/Decorative.svg" alt="decorative" />
-          <span class="text-xs xs:text-sm">Про нас</span>
-        </div>
-        <div class="flex flex-col md:flex-row-reverse gap-8 items-center mt-4">
-          <div class="w-full flex-1">
-            <div class="w-full h-88 self-start overflow-hidden [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)] md:rounded-lg md:object-cover">
-              <video controls class="w-full h-full object-cover">
-                <source src="assets/videos/lviv.mp4" type="video/mp4" />
-                ваш браузер не підтримує відео
-              </video>
+
+        <div class="bg-[#004C97] text-white p-4">
+          <div
+            class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between md:items-center gap-6"
+          >
+            <div class="flex flex-col gap-2">
+              <h1 class="font-semibold text-2xl">ТОВ «Інтелком»</h1>
+              <span class="font-medium text-sm">
+                Ваш надійний виробник пластмасової та металевої продукції в
+                Україні
+              </span>
+            </div>
+
+            <div
+              class="flex flex-row justify-end justify-start md:justify-end gap-8 sm:gap-16"
+            >
+              <div class="flex flex-col">
+                <strong class="font-bold text-5xl">
+                  35<span class="pl-2 font-medium text-base">тис.м2</span>
+                </strong>
+                <span class="font-medium text-sm w-full"
+                  >Сучасного виробництва</span
+                >
+              </div>
+
+              <div class="flex flex-col">
+                <strong class="font-bold text-5xl">
+                  30<span class="pl-2 font-medium text-base">років</span>
+                </strong>
+                <span class="font-medium text-sm w-full"
+                  >Досвіду та партнерства</span
+                >
+              </div>
             </div>
           </div>
-
-          <div class="flex flex-col gap-5 text-left flex-1 w-full">
-            <h2 class="font-semibold text-lg xs:text-xl md:text-2xl text-black leading-snug">
-              Інноваційне виробництво з повним циклом та багаторічним досвідом
-            </h2>
-
-            <span class="text-xs font-medium xs:text-sm text-gray-700">
-              ТОВ «Інтелком» — один з провідних виробників в Україні з понад
-              30-річним досвідом. Компанія виготовляє іграшки під брендом
-              «Технок», пластикові деталі та металеві конструкції, працюючи за
-              принципом повного циклу виробництва — від розробки до готового
-              продукту з багаторівневим контролем якості
-            </span>
-
-            <span class="text-xs font-medium xs:text-sm text-gray-700">
-              Виробництво поєднує сучасні технології, інженерну майстерність та
-              високоточне обладнання, що дозволяє реалізовувати масштабні та
-              нестандартні проєкти. Сонячна електростанція на території
-              підприємства зменшує вуглецевий слід і підвищує
-              енергоефективність, а стабільні виробничі потужності роблять
-              «Інтелком» надійним партнером в Україні та за її межами.
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-black flex flex-col px-4 py-6 pb-9 pt-9 gap-8 border-t border-t-gray-300 xl:max-w-[1400px] xl:mx-auto">
-        <div class="flex flex-col gap-4 items-center">
-          <div class="flex flex-row gap-2 justify-center items-center">
-            <img class="h-4" src="assets/icons/Decorative.svg" alt="decorative" />
-            <span class="text-xs xs:text-sm text-gray-500">Основні напрямки</span>
-          </div>
-          <h2 class="font-semibold text-[22px] text-center md:text-3xl max-w-[800px] mb-4">
-            Ми працюємо у трьох ключових напрямках
-          </h2>
         </div>
 
-        <div class="w-full flex flex-col gap-4 md:grid md:grid-cols-2 xl:grid-cols-3">
-          <div class="flex w-full">
-            @@include('../partials/direction-block.html', {"title": "Іграшки «ТехноК»", "imgPath": "assets/banners/Frame1.jpg", "description": "Високоякісні сертифіковані іграшки власного виробництва, орієнтовані на розвиток та безпеку дитини"})
-          </div>
-          <div class="flex w-full">
-            @@include('../partials/direction-block.html', {"title": "Вироби з пластмаси", "imgPath": "assets/banners/Frame2.jpg", "description": "Лиття пластмас під тиском за індивідуальними кресленнями та технічними умовами"})
-          </div>
-          <div class="flex w-full md:col-span-2 xl:col-span-1">
-            @@include('../partials/direction-block.html', {"title": "Вироби з металу", "imgPath": "assets/banners/Frame3.jpg", "description": "Повний цикл металообробки: фрезерування, токарні, зварювальні роботи, складання та фарбування"})
-          </div>
-        </div>
-        <span class="hidden w-[90%] mx-auto text-center xl:block font-semibold">
-          Наші потужності включають виробництво дитячих іграшок під ТМ
-          «Технок» з акцентом на розвиток і безпеку дитини, лиття пластмас під
-          тиском за індивідуальними кресленнями, а також повний цикл
-          металообробки — від фрезерування та токарних робіт до складання й
-          фарбування.
-        </span>
-      </div>
+        <div
+          class="text-black w-full flex flex-col px-4 py-6 pb-9 gap-5 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
+        >
+          <div
+            class="w-full flex flex-col md:flex-row-reverse justify-between items-start gap-10 xs:gap-12 md:gap-7 mt-4"
+          >
+            <div class="w-full flex-1 flex justify-end">
+              <div
+                class="w-auto max-w-[448px] md:max-w-[700px] object-cover h-auto xs:w-[328px] xs:h-[262px] mm:w-[355px] mm:h-[380px] md:w-[355px] md:h-[380px] xl:w-[425px] xl:h-[400px] 2xl:w-[520px] 2xl:h-[520px] 3xl:w-[694px] 3xl:h-[640px] self-start overflow-hidden [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)] md:rounded-lg relative"
+                data-video-wrapper
+              >
+                <video
+                  data-video-player
+                  playsinline
+                  class="object-cover"
+                  poster="@@webRoot/assets/banners/factory2.jpg"
+                >
+                  <source
+                    src="@@webRoot/assets/videos/lviv.mp4"
+                    type="video/mp4"
+                  />
+                  ваш браузер не підтримує відео
+                </video>
 
-      <div class="w-full bg-[#D5E6FA] border-t border-t-gray-300 text-black">
-        <div class="mx-auto max-w-[1400px] px-[4vw] py-9 flex flex-col gap-8 mm:grid mm:grid-cols-2 mm:gap-8 xl:grid-cols-6 xl:gap-2">
-          <div class="flex flex-row gap-3 justify-center items-center mb-[2vw] mm:col-span-2 xl:col-span-6">
-            <img class="h-4" src="assets/icons/Decorative.svg" alt="decorative" />
-            <span class="font-semibold">Потужності</span>
-          </div>
-
-          <!-- prettier-ignore -->
-          @@include('../partials/capacity-card.html', {"title": "Лиття під тиском на термопластавтоматах (ТПА)", "bgColor": "#990103D9", "imgPath": "/assets/banners/img01.jpg", "colSpan": "xl:col-span-3"})
-          <!-- prettier-ignore -->
-          @@include('../partials/capacity-card.html', {"title": "Лиття на екструзійно-видувних машинах", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img02.jpg", "colSpan": "xl:col-span-3"})
-          <!-- prettier-ignore -->
-          @@include('../partials/capacity-card.html', {"title": "Технологія IML (In-Mould Labeling)", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img03.jpg", "colSpan": "mm:col-span-2 xl:col-span-2"})
-          <!-- prettier-ignore -->
-          @@include('../partials/capacity-card.html', {"title": "Ультразвукове зварювання пластмас", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img04.jpg", "colSpan": "xl:col-span-2"})
-          <!-- prettier-ignore -->
-          @@include('../partials/capacity-card.html', {"title": "Шовкотрафаретний друк", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img05.jpg", "colSpan": "xl:col-span-2"})
-        </div>
-      </div>
-
-      <div class="w-full text-black border-t border-t-gray-300">
-        <div class="mx-auto max-w-[1400px] px-[4vw] py-6 pb-9 pt-9 flex flex-col gap-8 xl:flex-row xl:gap-10">
-          <div class="h-[533px] flex relative w-full overflow-hidden mb-9 xl:mb-0 flex-1">
-            <div class="z-40 absolute right-5 top-5 bg-red-700 text-white w-[55px] h-[55px] p-1 text-left text-xs flex flex-col justify-center items-start">
-              <span class="font-medium leading-tight">23.11</span>
-              <span class="font-medium">2025</span>
+                <button
+                  type="button"
+                  data-video-play
+                  aria-label="Відтворити відео"
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110"
+                >
+                  <img
+                    src="@@webRoot/assets/icons/videoStart.svg"
+                    alt="Play"
+                    class="w-full h-full pointer-events-none"
+                  />
+                </button>
+              </div>
             </div>
-            <img
-              class="w-full h-[533px] object-cover [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
-              src="assets/news/Forbes.jpg"
-              alt="Forbes"
-            />
-            <div class="bottom-0 text-white absolute z-40 gap-3 p-6 bg-gradient-to-t from-[#004C97] via-[#004C97]/80 to-transparent w-full">
-              <h2 class="text-xl font-semibold mb-2">
-                Компанія «ІНТЕЛКОМ» увійшла до рейтингу Forbes Ukraine Next250
+
+            <div
+              class="flex flex-col justify-start gap-3 max-h-[640px] md:gap-4 mm:gap-5 text-left flex-1 md:w-1/2"
+            >
+              <div
+                class="flex flex-row gap-2 mb-[14px] md:mb-4 mm:mb-5 xl:mb-[26px] 2xl:mb-8"
+              >
+                <img
+                  src="@@webRoot/assets/icons/Decorative.svg"
+                  alt="decorative"
+                />
+                <span class="text-xs xs:text-sm md:text-base">Про нас</span>
+              </div>
+              <h2
+                class="font-semibold text-lg xs:text-xl mm:text-2xl xl:text-3xl text-black"
+              >
+                Інноваційне виробництво з повним циклом та багаторічним досвідом
               </h2>
-              <p class="text-base font-light line-clamp-3 opacity-90">
-                Компанія ТОВ «ІНТЕЛКОМ», що представляє український бренд
-                дитячих іграшок «ТехноК», увійшла до рейтингу Forbes Ukraine
-                Next250
+
+              <p class="text-xs font-medium xs:text-sm mm:text-base">
+                ТОВ «Інтелком» — один з провідних виробників в Україні з понад
+                30-річним досвідом. Компанія виготовляє іграшки під брендом
+                «Технок», пластикові деталі та металеві конструкції, працюючи за
+                принципом повного циклу виробництва — від розробки до готового
+                продукту з багаторівневим контролем якості
+              </p>
+
+              <p class="text-xs font-medium xs:text-sm mm:text-base">
+                Виробництво поєднує сучасні технології, інженерну майстерність
+                та високоточне обладнання, що дозволяє реалізовувати масштабні
+                та нестандартні проєкти. Сонячна електростанція на території
+                підприємства зменшує вуглецевий слід і підвищує
+                енергоефективність, а стабільні виробничі потужності роблять
+                «Інтелком» надійним партнером в Україні та за її межами.
               </p>
             </div>
           </div>
-          <div class="flex-1 flex flex-col gap-6">
-            <div class="flex flex-row justify-between items-center">
-              <div class="flex flex-row gap-2 items-center">
-                <img class="h-4" src="assets/icons/Decorative.svg" alt="decorative" />
-                <span class="font-semibold">Новини</span>
-              </div>
-              <div>
-                <a
-                  href="news.html"
-                  class="underline flex flex-row gap-2 items-center text-sm font-medium hover:text-[#004C97] transition-colors"
-                >
-                  <span>дивитися всі</span>
-                  <img src="assets/icons/arrowRight.svg" alt="arrow" />
-                </a>
-              </div>
-            </div>
+        </div>
 
-            <div class="flex flex-row items-start gap-4 w-full py-4 border-b border-gray-100">
-              <div class="flex flex-col flex-1 min-w-0">
-                <span class="text-[#939496] text-sm">23.11.2025</span>
-                <strong class="font-semibold text-black text-base mt-1 line-clamp-2 leading-snug">
+        <div
+          class="text-black flex flex-col px-4 3xl:px-0 3xl:px-0 py-9 gap-[30px] 3xl:max-w-[1400px] 3xl:mx-auto"
+        >
+          <div class="flex flex-col gap-[30px] items-center">
+            <div class="flex flex-row gap-2 justify-center items-center">
+              <img
+                class="h-4"
+                src="@@webRoot/assets/icons/Decorative.svg"
+                alt="decorative"
+              />
+              <span class="text-xs xs:text-sm">Основні напрямки</span>
+            </div>
+            <h2
+              class="font-semibold text-[22px] text-center md:text-3xl max-w-[800px]"
+            >
+              Ми працюємо у трьох ключових напрямках
+            </h2>
+          </div>
+
+          <div
+            class="w-full flex flex-col gap-6 md:grid md:grid-cols-2 xl:grid-cols-3"
+          >
+            <div class="flex w-full">
+              <!--prettier-ignore-->
+              @@include('../partials/direction-block.html', {"title": "Іграшки «ТехноК»", "imgPath": "assets/banners/Frame1.jpg", "description": "Високоякісні сертифіковані іграшки власного виробництва, орієнтовані на розвиток та безпеку дитини"})
+            </div>
+            <div class="flex w-full">
+              <!--prettier-ignore-->
+              @@include('../partials/direction-block.html', {"title": "Вироби з пластмаси", "imgPath": "assets/banners/Frame2.jpg", "description": "Лиття пластмас під тиском за індивідуальними кресленнями та технічними умовами"})
+            </div>
+            <div class="flex w-full md:col-span-2 xl:col-span-1">
+              <!--prettier-ignore-->
+              @@include('../partials/direction-block.html', {"title": "Вироби з металу", "imgPath": "assets/banners/Frame3.jpg", "description": "Повний цикл металообробки: фрезерування, токарні, зварювальні роботи, складання та фарбування"})
+            </div>
+          </div>
+          <p class="hidden w-[90%] mx-auto text-center xl:block font-medium">
+            Наші потужності включають виробництво дитячих іграшок під ТМ
+            «Технок» з акцентом на розвиток і безпеку дитини, лиття пластмас під
+            тиском за індивідуальними кресленнями, а також повний цикл
+            металообробки — від фрезерування та токарних робіт до складання й
+            фарбування.
+          </p>
+        </div>
+
+        <div class="w-full bg-[#D5E6FA] text-black">
+          <div
+            class="mx-auto max-w-[1400px] px-4 3xl:px-0 py-9 flex flex-col gap-8 mm:grid mm:grid-cols-2 mm:gap-8 xl:grid-cols-6 xl:gap-2"
+          >
+            <div
+              class="flex flex-row gap-3 justify-center items-center mb-[2vw] mm:col-span-2 xl:col-span-6"
+            >
+              <img
+                class="h-4"
+                src="@@webRoot/assets/icons/Decorative.svg"
+                alt="decorative"
+              />
+              <span>Потужності</span>
+            </div>
+            <!--prettier-ignore-->
+            @@include('../partials/capacity-card.html', {"title": "Лиття під тиском на термопластавтоматах (ТПА)", "imgPath": "./assets/banners/img01.jpg", "colSpan": "xl:col-span-3"})
+            <!--prettier-ignore-->
+            @@include('../partials/capacity-card.html', {"title": "Лиття на екструзійно-видувних машинах", "imgPath": "./assets/banners/img02.jpg", "colSpan": "xl:col-span-3"})
+            <!--prettier-ignore-->
+            @@include('../partials/capacity-card.html', {"title": "Технологія IML (In-Mould Labeling)", "imgPath": "./assets/banners/img03.jpg", "colSpan": "mm:col-span-2 xl:col-span-2"})
+            <!--prettier-ignore-->
+            @@include('../partials/capacity-card.html', {"title": "Ультразвукове зварювання пластмас", "imgPath": "./assets/banners/img04.jpg", "colSpan": "xl:col-span-2"})
+            <!--prettier-ignore-->
+            @@include('../partials/capacity-card.html', {"title": "Шовкотрафаретний друк", imgPath: "./assets/banners/img05.jpg", "colSpan": "xl:col-span-2"})
+          </div>
+        </div>
+
+        <div class="w-full text-black">
+          <div
+            class="3xl:mx-auto 3xl:max-w-[1400px] px-4 3xl:px-0 py-9 flex flex-col gap-8 xl:flex-row xl:gap-10"
+          >
+            <div
+              class="h-[533px] flex relative w-full overflow-hidden mb-9 xl:mb-0 flex-1"
+            >
+              <div
+                class="z-40 absolute right-5 top-5 bg-red-700 text-white w-[55px] h-[55px] p-1 text-left text-xs flex flex-col justify-center items-start"
+              >
+                <span class="font-medium leading-tight">23.11</span>
+                <span class="font-medium">2025</span>
+              </div>
+              <img
+                class="w-full h-[533px] object-cover [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
+                src="@@webRoot/assets/news/Forbes.jpg"
+                alt="Forbes"
+              />
+              <div
+                class="bottom-0 text-white absolute z-40 gap-3 p-6 bg-gradient-to-t from-[#004C97] via-[#004C97]/80 to-transparent w-full"
+              >
+                <h2 class="text-xl font-semibold mb-2">
                   Компанія «ІНТЕЛКОМ» увійшла до рейтингу Forbes Ukraine Next250
-                </strong>
-                <span class="font-normal text-sm text-gray-500 mt-2 line-clamp-2">
-                  Компанія ТОВ «ІНТЕЛКОМ», що представляє український бренд дитячих іграшок «ТехноК», увійшла до рейтингу Forbes Ukraine Next250 — списку найперспективніших малих та середніх компаній
-                </span>
+                </h2>
+                <p class="text-base font-light line-clamp-3 opacity-90">
+                  Компанія ТОВ «ІНТЕЛКОМ», що представляє український бренд
+                  дитячих іграшок «ТехноК», увійшла до рейтингу Forbes Ukraine
+                  Next250
+                </p>
               </div>
-              <img class="w-[100px] h-[150px] object-cover" src="assets/news/Forbes.jpg" alt="" />
             </div>
-            <div class="w-full h-[1px] bg-gray-300"></div>
-
-            <div class="flex flex-row items-start gap-4 w-full py-4 border-b border-gray-100">
-              <div class="flex flex-col flex-1 min-w-0">
-                <span class="text-[#939496] text-sm">03.01.2026</span>
-                <strong class="font-semibold text-black text-base mt-1 line-clamp-2 leading-snug">
-                  ТОВ «ІНТЕЛКОМ» — інвестиції у чисту енергію та енергетичну незалежність
-                </strong>
-                <span class="font-normal text-sm text-gray-500 mt-2 line-clamp-2">
-                  Компанія ТОВ «ІНТЕЛКОМ» послідовно впроваджує сучасні енергоефективні рішення та активно розвиває напрямок відновлюваної енергетики.
-                </span>
+            <div class="flex-1 flex flex-col gap-6">
+              <div class="flex flex-row justify-between items-center">
+                <div class="flex flex-row gap-2 items-center">
+                  <img
+                    class="h-4"
+                    src="assets/icons/Decorative.svg"
+                    alt="decorative"
+                  />
+                  <span class="font-semibold">Новини</span>
+                </div>
+                <div>
+                  <a
+                    href="@@webRoot/news.html"
+                    class="underline flex flex-row gap-2 items-center text-sm font-medium hover:text-[#004C97] transition-colors"
+                  >
+                    <span>дивитися всі</span>
+                    <img
+                      src="@@webRoot/assets/icons/arrowRight.svg"
+                      alt="arrow"
+                    />
+                  </a>
+                </div>
               </div>
-              <img class="w-[100px] h-[150px] object-cover" src="assets/news/Energy_2.svg" alt="" />
-            </div>
-            <div class="w-full h-[1px] bg-gray-300"></div>
 
-            <div class="flex flex-row items-start gap-4 w-full py-4 border-b border-gray-100">
-              <div class="flex flex-col flex-1 min-w-0">
-                <span class="text-[#939496] text-sm">03.03.2026</span>
-                <strong class="font-semibold text-black text-base mt-1 line-clamp-2 leading-snug">
-                  ТОВ «ІНТЕЛКОМ» відзначено найвищою нагородою ТПП України
-                </strong>
-                <span class="font-normal text-sm text-gray-500 mt-2 line-clamp-2">
-                  Під час проведення Міжрегіонального форуму «Український експорт: сьогодення та майбутнє» президент Торгово-промислової палати
-                </span>
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-row items-start gap-4 w-full">
+                  <div class="flex flex-col flex-1 min-w-0">
+                    <span class="text-[#939496] text-sm">23.11.2025</span>
+                    <strong
+                      class="font-semibold text-black text-base mt-1 line-clamp-2 leading-snug"
+                    >
+                      Компанія «ІНТЕЛКОМ» увійшла до рейтингу Forbes Ukraine
+                      Next250
+                    </strong>
+                    <p class="font-normal text-sm mt-2 line-clamp-2">
+                      Компанія ТОВ «ІНТЕЛКОМ», що представляє український бренд
+                      дитячих іграшок «ТехноК», увійшла до рейтингу Forbes
+                      Ukraine Next250 — списку найперспективніших малих та
+                      середніх компаній
+                    </p>
+                  </div>
+                  <img
+                    class="object-cover"
+                    style="width: 202px; height: 130px"
+                    src="assets/news/Forbes.jpg"
+                  />
+                </div>
+                <div class="w-full h-[1px] bg-gray-300"></div>
+
+                <div
+                  class="flex flex-row items-start gap-4 w-full border-b border-gray-100"
+                >
+                  <div class="flex flex-col flex-1 min-w-0">
+                    <span class="text-[#939496] text-sm">03.01.2026</span>
+                    <strong
+                      class="font-semibold text-black text-base mt-1 line-clamp-2 leading-snug"
+                    >
+                      ТОВ «ІНТЕЛКОМ» — інвестиції у чисту енергію та енергетичну
+                      незалежність
+                    </strong>
+                    <p
+                      class="font-normal text-sm text-gray-500 mt-2 line-clamp-2"
+                    >
+                      Компанія ТОВ «ІНТЕЛКОМ» послідовно впроваджує сучасні
+                      енергоефективні рішення та активно розвиває напрямок
+                      відновлюваної енергетики.
+                    </p>
+                  </div>
+                  <img
+                    class="object-cover"
+                    style="width: 202px; height: 130px"
+                    src="assets/news/Energy_2.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="w-full h-[1px] bg-gray-300"></div>
+
+                <div
+                  class="flex flex-row items-start gap-4 w-full border-b border-gray-100"
+                >
+                  <div class="flex flex-col flex-1 min-w-0">
+                    <span class="text-[#939496] text-sm">03.03.2026</span>
+                    <strong
+                      class="font-semibold text-black text-base mt-1 line-clamp-2 leading-snug"
+                    >
+                      ТОВ «ІНТЕЛКОМ» відзначено найвищою нагородою ТПП України
+                    </strong>
+                    <p
+                      class="font-normal text-sm text-gray-500 mt-2 line-clamp-2"
+                    >
+                      Під час проведення Міжрегіонального форуму «Український
+                      експорт: сьогодення та майбутнє» президент
+                      Торгово-промислової палати
+                    </p>
+                  </div>
+                  <img
+                    class="object-cover"
+                    style="width: 202px; height: 130px"
+                    src="assets/news/TTP_Ukraine_2.svg"
+                    alt=""
+                  />
+                </div>
               </div>
-              <img class="w-[100px] h-[150px] object-cover" src="assets/news/TTP_Ukraine_2.svg" alt="" />
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="text-black border-t border-t-gray-300 w-full">
-        <div class="mx-auto max-w-[1400px] px-[4vw] py-6 pb-9 pt-9 flex flex-col gap-8">
-          <div class="flex flex-row gap-2 justify-center items-center">
-            <img class="h-4" src="assets/icons/Decorative.svg" alt="decorative" />
-            <span class="font-semibold">Нам довіряють</span>
-          </div>
+        <div class="w-full">
+          <div
+            class="3xl:mx-auto 3xl:max-w-[1400px] 3xl:px-0 px-4 py-9 flex flex-col gap-8"
+          >
+            <div class="flex flex-row gap-2 justify-center items-center">
+              <img
+                class="h-4"
+                src="assets/icons/Decorative.svg"
+                alt="decorative"
+              />
+              <span class="font-medium">Нам довіряють</span>
+            </div>
 
-          <div class="grid grid-cols-3 md:grid-cols-5 gap-10 place-items-center">
-            <img src="../assets/icons/avrora.png" class="w-full max-w-[120px]">
-            <img src="../assets/icons/Epicentr.png" class="w-full max-w-[120px]">
-            <img src="../assets/icons/Rozetka.png" class="w-full max-w-[120px]">
-            <img src="../assets/icons/kopiyochka.png" class="w-full max-w-[120px]">
-            <img src="../assets/icons/nova_posta.png" class="w-full max-w-[120px]">
-            <img src="../assets/icons/Epicentr.png" class="w-full max-w-[120px]">
-            <img src="../assets/icons/avrora.png" class="w-full max-w-[120px]">
-            <img src="../assets/icons/kopiyochka.png" class="w-full max-w-[120px]">
-            <img src="../assets/icons/Epicentr.png" class="w-full max-w-[120px]">
-            <img src="../assets/icons/Rozetka.png" class="w-full max-w-[120px] hidden md:block">
-            <img src="../assets/icons/nova_posta.png" class="w-full max-w-[120px] hidden md:block">
-            <img src="../assets/icons/kopiyochka.png" class="w-full max-w-[120px] hidden md:block">
-            <img src="../assets/icons/nova_posta.png" class="w-full max-w-[120px] hidden md:block">
-            <img src="../assets/icons/avrora.png" class="w-full max-w-[120px] hidden md:block">
-            <img src="../assets/icons/avrora.png" class="w-full max-w-[120px] hidden md:block">
+            <div class="px-4 2xl:px-0">
+              <div class="relative swiper" data-trusted-slider>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div
+                      class="grid grid-cols-3 md:grid-cols-5 gap-10 place-items-center"
+                    >
+                      <img
+                        src="@@webRoot/assets/icons/avrora.png"
+                        class="w-full max-w-[120px]"
+                        alt="avrora"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/Epicentr.png"
+                        class="w-full max-w-[120px]"
+                        alt="Epicentr"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/Rozetka.png"
+                        class="w-full max-w-[120px]"
+                        alt="Rozetka"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/kopiyochka.png"
+                        class="w-full max-w-[120px]"
+                        alt="kopiyochka"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/nova_posta.png"
+                        class="w-full max-w-[120px]"
+                        alt="nova_posta"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/Epicentr.png"
+                        class="w-full max-w-[120px]"
+                        alt="Epicentr"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/avrora.png"
+                        class="w-full max-w-[120px]"
+                        alt="avrora"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/kopiyochka.png"
+                        class="w-full max-w-[120px]"
+                        alt="kopiyochka"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/Epicentr.png"
+                        class="w-full max-w-[120px]"
+                        alt="Epicentr"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/Rozetka.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="Rozetka"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/nova_posta.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="nova_posta"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/kopiyochka.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="kopiyochka"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/nova_posta.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="nova_posta"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/avrora.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="avrora"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/avrora.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="avrora"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="grid grid-cols-3 md:grid-cols-5 gap-10 place-items-center"
+                    >
+                      <img
+                        src="@@webRoot/assets/icons/avrora.png"
+                        class="w-full max-w-[120px]"
+                        alt="avrora"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/Epicentr.png"
+                        class="w-full max-w-[120px]"
+                        alt="Epicentr"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/Rozetka.png"
+                        class="w-full max-w-[120px]"
+                        alt="Rozetka"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/kopiyochka.png"
+                        class="w-full max-w-[120px]"
+                        alt="kopiyochka"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/nova_posta.png"
+                        class="w-full max-w-[120px]"
+                        alt="nova_posta"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/Epicentr.png"
+                        class="w-full max-w-[120px]"
+                        alt="Epicentr"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/avrora.png"
+                        class="w-full max-w-[120px]"
+                        alt="avrora"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/kopiyochka.png"
+                        class="w-full max-w-[120px]"
+                        alt="kopiyochka"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/Epicentr.png"
+                        class="w-full max-w-[120px]"
+                        alt="Epicentr"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/Rozetka.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="Rozetka"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/nova_posta.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="nova_posta"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/kopiyochka.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="kopiyochka"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/nova_posta.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="nova_posta"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/avrora.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="avrora"
+                      />
+                      <img
+                        src="@@webRoot/assets/icons/avrora.png"
+                        class="w-full max-w-[120px] hidden md:block"
+                        alt="avrora"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <button type="button" data-trusted-prev>
+                  <img
+                    src="@@webRoot/assets/icons/arrowRight2.svg"
+                    class="w-[20px] h-[20px]"
+                    style="rotate: 180deg"
+                  />
+                </button>
+                <button type="button" data-trusted-next>
+                  <img
+                    src="@@webRoot/assets/icons/arrowRight2.svg"
+                    class="w-[20px] h-[20px]"
+                  />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  @@include('../partials/footer.html')
-  <script src="/assets/vendor/jquery.min.js"></script>
-  <script src="/assets/vendor/slick.min.js"></script>
-  <script src="/js/main.js" defer></script>
-</body>
+      </section>
+    </main>
+    @@include('../partials/footer.html')
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="@@webRoot/js/main.js" defer type="module"></script>
+  </body>
 </html>

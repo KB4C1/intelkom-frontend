@@ -9,6 +9,7 @@ import { deleteAsync } from "del";
 import browserSyncLib from "browser-sync";
 import tailwindcss from "@tailwindcss/postcss";
 import autoprefixer from "autoprefixer";
+import esbuild from "esbuild";
 
 const browserSync = browserSyncLib.create();
 
@@ -58,7 +59,15 @@ export function html() {
   return gulp
     .src(paths.html.src)
     .pipe(plumber())
-    .pipe(fileInclude({ prefix: "@@", basepath: "@file" }))
+    .pipe(
+      fileInclude({
+        prefix: "@@",
+        basepath: "@file",
+        context: {
+          webRoot: "/intelkom-frontend",
+        },
+      }),
+    )
     .pipe(gulp.dest(paths.html.dest))
     .pipe(browserSync.stream());
 }
@@ -96,11 +105,14 @@ export function slickAssets() {
 }
 
 export function scripts() {
-  return gulp
-    .src(paths.js.src)
-    .pipe(plumber())
-    .pipe(gulp.dest(paths.js.dest))
-    .pipe(browserSync.stream());
+  return esbuild.build({
+    entryPoints: ["src/js/main.js"],
+    bundle: true,
+    outfile: "dist/js/main.js",
+    format: "esm",
+    sourcemap: true,
+  });
+  browserSync.reload();
 }
 
 export function assets() {
@@ -111,7 +123,12 @@ export function assets() {
 
 export function serve(done) {
   browserSync.init({
-    server: { baseDir: "./dist" },
+    server: {
+      baseDir: "./",
+      routes: {
+        "/intelkom-frontend": "dist",
+      },
+    },
     port: 3000,
     notify: false,
     open: false,
@@ -120,7 +137,7 @@ export function serve(done) {
 }
 
 export function watchFiles() {
-  gulp.watch(paths.html.watch, gulp.series(html, styles));
+  gulp.watch(paths.html.watch, html);
   gulp.watch(paths.css.watch, styles);
   gulp.watch(paths.js.watch, scripts);
   gulp.watch(paths.assets.src, assets);

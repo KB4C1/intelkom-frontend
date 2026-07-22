@@ -4,29 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Послуги - металообробка</title>
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="@@webRoot/favicon.svg" />
+    <link rel="stylesheet" href="@@webRoot/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
-    @@include('../../partials/burger-menu.html')
+    <!-- prettier-ignore -->
+    @@include('../../partials/burger-menu.html', { "active": "services" })
     @@include('../../partials/header.html')
     <div
       class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
     >
       <span
         class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-        >Головна / Послуги / Лиття виробів із пластмаси / Лиття під тиском на
-        ТПА</span
-      >
+        ><a class="hover:underline" href="@@webRoot/index.html">Головна</a>
+        <span> / </span>
+        <a class="hover:underline" href="@@webRoot/services/index.html"
+          >Послуги</a
+        >
+        <span> / </span>
+        <span class="text-[#939496]">Лиття під тиском на ТПА</span>
+      </span>
     </div>
-
     <main>
       <section>
         <div
           class="mb-8 3xl:max-w-[1400px] 3xl:mx-auto w-full h-[500px] overflow-hidden relative flex justify-center items-center text-white text-center"
         >
           <img
-            src="/assets/banners/img12.jpg"
+            src="@@webRoot/assets/banners/img12.jpg"
             class="absolute inset-0 w-full h-full object-cover object-center"
             alt="Hero Banner"
           />
@@ -41,11 +50,11 @@
             >
               Лиття під тиском на термопластавтоаматах (ТПА)
             </h1>
-            <span class="text-sm md:text-base 3xl:text-2xl">
+            <p class="text-sm md:text-base 3xl:text-2xl">
               Сучасні термопластавтомати зі зусиллям змикання 35–1000 т
               забезпечують формування деталей із високою точністю та
               стабільністю параметрів
-            </span>
+            </p>
           </div>
         </div>
         <div
@@ -55,58 +64,69 @@
             Лиття під тиском на термопластавтоаматах (ТПА)
           </h2>
           <div class="flex flex-col gap-8 text-left xl:max-w-[60%]">
-            <span>
+            <p>
               Компанія ТОВ «ІНТЕЛКОМ», що представляє український бренд дитячих
               іграшок «ТехноК», увійшла до рейтингу Forbes Ukraine Next250 —
               списку найперспективніших малих та середніх компаній України, які
               демонструють стабільний розвиток, інноваційність та значний
               потенціал зростання.
-            </span>
-            <span
-              >Включення до цього рейтингу є важливим визнанням результатів
+            </p>
+            <p>
+              Включення до цього рейтингу є важливим визнанням результатів
               роботи компанії та підтвердженням її активного розвитку навіть в
               умовах складної економічної ситуації та викликів воєнного часу.
-            </span>
-            <span>
+            </p>
+            <p>
               Компанія «ІНТЕЛКОМ» вже майже 30 років працює на ринку дитячих
               іграшок та є одним із провідних українських виробників у своїй
               галузі. Продукція бренду «ТехноК» представлена більш ніж у 20 000
               магазинах по всій Україні та експортується до 20 країн світу.
-            </span>
-            <span>
+            </p>
+            <p>
               Попри виклики війни, компанія продовжує активно розвиватися,
               розширювати асортимент продукції та інвестувати у сучасні
               виробничі технології. Одним із важливих напрямів розвитку є також
               розширення міжнародної співпраці та участь у міжнародних
               виставках, зокрема у найбільшій світовій виставці іграшок
               Spielwarenmesse у Нюрнберзі.
-            </span>
-            <span>
+            </p>
+            <p>
               На сьогодні каталог бренду «ТехноК» налічує понад 700 найменувань
               іграшок. Входження до рейтингу Forbes Ukraine Next250 є важливим
               етапом у розвитку компанії та підтверджує ефективність її
               бізнес-стратегії, високі стандарти виробництва та потенціал
               подальшого зростання як на українському, так і на міжнародному
               ринках.
-            </span>
-            <span>
+            </p>
+            <p>
               Компанія «ІНТЕЛКОМ» і надалі продовжує працювати над створенням
               якісних, безпечних та сучасних іграшок бренду «ТехноК», які
               дарують дітям радість та сприяють їхньому розвитку.
-            </span>
-            <!--можна було через <br/> але так легше контролювати геп між блоками тексту -->
+            </p>
           </div>
         </div>
         <div class="bg-[#D5E6FA] w-full py-16 mb-14">
-          <div class="tpa-slider mx-auto">
-            <div><img src="/assets/banners/img12.jpg" /></div>
-            <div><img src="/assets/banners/img13.jpg" /></div>
-            <div><img src="/assets/banners/img08.jpg" /></div>
+          <div class="tpa-slider-wrap w-full mx-auto relative">
+            <div class="tpa-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="@@webRoot/assets/banners/img12.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="@@webRoot/assets/banners/img13.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="@@webRoot/assets/banners/img08.jpg" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination tpa-pagination"></div>
           </div>
         </div>
         <div class="flex m-12">
           <a
-            href="/services/index.html"
+            href="@@webRoot/services/index.html"
             class="p-3 rounded-lg text-white mx-auto text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] shadow-lg shadow-[#FF000066]"
           >
             Замовити послугу
@@ -115,5 +135,7 @@
       </section>
     </main>
     @@include('../../partials/footer.html')
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="@@webRoot/js/main.js" type="module"></script>
   </body>
 </html>

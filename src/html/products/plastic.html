@@ -4,19 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>продукція - лиття виробів із пластмаси</title>
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="@@webRoot/favicon.svg" />
+    <link rel="stylesheet" href="@@webRoot/css/style.css" />
   </head>
   <body>
-    @@include('../../partials/burger-menu.html')
+    <!-- prettier-ignore -->
+    @@include('../../partials/burger-menu.html', { "active": "products" })
     @@include('../../partials/header.html')
     <div
       class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
     >
       <span
         class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-        >Головна / Послуги / Лиття виробів із пластмаси</span
-      >
+        ><a class="hover:underline" href="@@webRoot/index.html">Головна</a>
+        <span> / </span>
+        <a class="hover:underline" href="@@webRoot/products/index.html"
+          >Продукція</a
+        >
+        <span> / </span>
+        <span class="text-[#939496]">Вироби з пластмаси</span>
+      </span>
     </div>
     <main>
       <section>
@@ -24,7 +31,7 @@
           class="mb-8 3xl:max-w-[1400px] 3xl:mx-auto w-full h-[500px] overflow-hidden relative flex justify-center items-center text-white text-center"
         >
           <img
-            src="/assets/banners/img09.jpg"
+            src="@@webRoot/assets/banners/img09.jpg"
             class="absolute inset-0 w-full h-full object-cover object-center"
             alt="Hero Banner"
           />
@@ -38,12 +45,12 @@
               Надійні пластикові рішення для промисловості та повсякденного
               використання
             </h1>
-            <span class="text-xs xl:text-base 3xl:text-xl text-light">
+            <p class="text-xs xl:text-base 3xl:text-xl text-light">
               Ми виготовляємо якісні та надійні вироби з пластмаси,
               використовуючи сучасні технології та сертифіковані матеріали. Наше
               виробництво забезпечує стабільну якість і точність деталей
               будь-якої складності.
-            </span>
+            </p>
           </div>
         </div>
         <div
@@ -59,55 +66,55 @@
           >
             <div class="2xl:hidden">
               <!-- prettier-ignore -->
-              @@include('../../partials/capacity-card.html', {"title": "Лиття під тиском на термопластавтоматах (ТПА)", "bgColor": "#990103D9", "imgPath": "/assets/banners/img01.jpg", "colSpan": ""})
+              @@include('../../partials/capacity-card.html', {"title": "Лиття під тиском на термопластавтоматах (ТПА)", "bgColor": "#990103D9", "imgPath": "../assets/banners/img01.jpg", "colSpan": ""})
             </div>
             <div class="xl:hidden">
               <!-- prettier-ignore -->
-              @@include('../../partials/capacity-card.html', {"title": "Лиття на екструзійно-видувних машинах", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img02.jpg", "colSpan": ""})
+              @@include('../../partials/capacity-card.html', {"title": "Лиття на екструзійно-видувних машинах", "bgColor": "#004C97D9", "imgPath": "../assets/banners/img02.jpg", "colSpan": ""})
             </div>
             <div class="xs:hidden xl:block 2xl:hidden">
               <!-- prettier-ignore -->
-              @@include('../../partials/capacity-card.html', {"title": "Технологія IML (In-Mould Labeling)", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img03.jpg", "colSpan": ""})
+              @@include('../../partials/capacity-card.html', {"title": "Технологія IML (In-Mould Labeling)", "bgColor": "#004C97D9", "imgPath": "../assets/banners/img03.jpg", "colSpan": ""})
             </div>
             <div class="2xl:hidden">
               <!-- prettier-ignore -->
-              @@include('../../partials/capacity-card.html', {"title": "Ультразвукове зварювання пластмас", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img04.jpg", "colSpan": ""})
+              @@include('../../partials/capacity-card.html', {"title": "Ультразвукове зварювання пластмас", "bgColor": "#004C97D9", "imgPath": "../assets/banners/img04.jpg", "colSpan": ""})
             </div>
             <div class="2xl:hidden">
               <!-- prettier-ignore -->
-              @@include('../../partials/capacity-card.html', {"title": "Шовкотрафаретний друк", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img05.jpg", "colSpan": ""})
+              @@include('../../partials/capacity-card.html', {"title": "Шовкотрафаретний друк", "bgColor": "#004C97D9", "imgPath": "../assets/banners/img05.jpg", "colSpan": ""})
             </div>
             <div class="2xl:hidden">
               <!-- prettier-ignore -->
-              @@include('../../partials/capacity-card.html', {"title": "Термоперенесення (термотрансфер)", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img11.jpg", "colSpan": ""})
+              @@include('../../partials/capacity-card.html', {"title": "Термоперенесення (термотрансфер)", "bgColor": "#004C97D9", "imgPath": "../assets/banners/img11.jpg", "colSpan": ""})
             </div>
             <div class="2xl:hidden">
               <!-- prettier-ignore -->
-              @@include('../../partials/capacity-card.html', {"title": "Тамподрук", "bgColor": "#004C97D9", "imgPath": "/assets/banners/img11.jpg", "colSpan": ""})
+              @@include('../../partials/capacity-card.html', {"title": "Тамподрук", "bgColor": "#004C97D9", "imgPath": "../assets/banners/img11.jpg", "colSpan": ""})
             </div>
           </div>
           <div
             class="hidden grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 2xl:grid"
           >
             <!-- prettier-ignore -->
-            @@include('../../partials/capacity-card.html', {"bgColor": "#990103D9", "title": "Вироби для машинобудування та промисловості", "imgPath": "/assets/banners/img15.jpg"})
+            @@include('../../partials/capacity-card.html', {"bgColor": "#990103D9", "title": "Вироби для машинобудування та промисловості", "imgPath": "../assets/banners/img15.jpg"})
             <!-- prettier-ignore -->
-            @@include('../../partials/capacity-card.html', {"bgColor": "#004C97D9", "title": "Вироби для дому", "imgPath": "/assets/banners/img16.jpg"})
+            @@include('../../partials/capacity-card.html', {"bgColor": "#004C97D9", "title": "Вироби для дому", "imgPath": "../assets/banners/img16.jpg"})
             <!-- prettier-ignore -->
-            @@include('../../partials/capacity-card.html', {"bgColor": "#004C97D9", "title": "Садово-господарські вироби", "imgPath": "/assets/banners/img17.jpg"})
+            @@include('../../partials/capacity-card.html', {"bgColor": "#004C97D9", "title": "Садово-господарські вироби", "imgPath": "../assets/banners/img17.jpg"})
             <!-- prettier-ignore -->
-            @@include('../../partials/capacity-card.html', {"bgColor": "#004C97D9", "title": "Сантехнічні вироби", "imgPath": "/assets/banners/img18.png"})
+            @@include('../../partials/capacity-card.html', {"bgColor": "#004C97D9", "title": "Сантехнічні вироби", "imgPath": "../assets/banners/img18.png"})
             <!-- prettier-ignore -->
-            @@include('../../partials/capacity-card.html', {"bgColor": "#004C97D9", "title": "Вироби для меблевої промисловості", "imgPath": "/assets/banners/img19.png"})
+            @@include('../../partials/capacity-card.html', {"bgColor": "#004C97D9", "title": "Вироби для меблевої промисловості", "imgPath": "../assets/banners/img19.png"})
             <!-- prettier-ignore -->
-            @@include('../../partials/capacity-card.html', {"bgColor": "#004C97D9", "title": "Вироби для будівельної галузі", "imgPath": "/assets/banners/img20.jpg"})
+            @@include('../../partials/capacity-card.html', {"bgColor": "#004C97D9", "title": "Вироби для будівельної галузі", "imgPath": "../assets/banners/img20.jpg"})
           </div>
         </div>
         <div
-          class="text-black flex flex-col px-[4vw] py-6 pb-9 gap-5 3xl:max-w-[1400px] 3xl:mx-auto"
+          class="text-black flex flex-col px-4 3xl:px-0 py-6 pb-9 gap-5 3xl:max-w-[1400px] 3xl:mx-auto"
         >
           <div class="flex flex-row gap-2">
-            <img src="/assets/icons/Decorative.svg" alt="decorative" />
+            <img src="@@webRoot/assets/icons/Decorative.svg" alt="decorative" />
             <span class="text-xs xs:text-sm">Чому саме ми?</span>
           </div>
           <div class="flex flex-col mm:flex-row gap-8 items-center mt-4">
@@ -119,30 +126,52 @@
                 виготовлення Вашої продукції
               </h2>
 
-              <span>
+              <p>
                 Наші виробничі площі понад 35 000 м², сучасний парк
                 термопластавтоматів і металообробного обладнання дозволяє
                 реалізовувати проєкти будь-якої складності. Ми забезпечуємо
                 повний цикл виробництва — від розробки технічного завдання до
                 готового виробу, з багаторівневим контролем якості на всіх
                 етапах.
-              </span>
+              </p>
 
-              <span>
+              <p>
                 Ми ідеально підходимо для партнерів, які цінують надійність та
                 ефективність: понад 30 років досвіду та успішна реалізація
                 масштабних проєктів для українських і міжнародних компаній
                 гарантують швидку та якісну реалізацію вашої продукції.
-              </span>
+              </p>
             </div>
-            <div class="w-full flex-1">
+            <div class="w-full h-auto flex-1 3xl:max-w-[1400px] 3xl:mx-auto">
               <div
-                class="w-full h-88 self-start overflow-hidden [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)] md:rounded-lg md:object-cover"
+                class="w-full h-[80vw] 3xl:h-[40vw] self-start overflow-hidden relative"
+                data-video-wrapper
               >
-                <video controls class="w-full h-full object-cover">
-                  <source src="/assets/videos/lviv.mp4" type="video/mp4" />
+                <video
+                  data-video-player
+                  playsinline
+                  class="w-full h-full object-cover"
+                  poster="@@webRoot/assets/banners/factory2.jpg"
+                >
+                  <source
+                    src="@@webRoot/assets/videos/lviv.mp4"
+                    type="video/mp4"
+                  />
                   ваш браузер не підтримує відео
                 </video>
+
+                <button
+                  type="button"
+                  data-video-play
+                  aria-label="Відтворити відео"
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110"
+                >
+                  <img
+                    src="@@webRoot/assets/icons/videoStart.svg"
+                    alt="Play"
+                    class="w-full h-full pointer-events-none"
+                  />
+                </button>
               </div>
             </div>
           </div>

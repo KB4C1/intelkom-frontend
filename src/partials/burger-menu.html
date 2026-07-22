@@ -2,25 +2,29 @@
   class="fixed inset-0 z-[90] hidden bg-black/40 transition-opacity duration-200"
   data-menu-overlay
 ></div>
+
 <div
   class="fixed top-0 right-0 z-[100] hidden h-screen w-full flex-col gap-7 overflow-y-auto bg-white pt-4 pr-4 pb-4 pl-4 shadow-2xl mm:w-2/5 mm:pl-0"
   data-menu-panel
 >
   <div class="self-end cursor-pointer p-1">
     <img
-      src="/assets/icons/Close.svg"
+      src="@@webRoot/assets/icons/Close.svg"
       alt="Закрити меню"
       class="cursor-pointer"
       data-menu-close
     />
   </div>
+
   <div class="flex flex-col">
     <div class="accordion-item" data-accordion-item>
       <div
         class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
         data-accordion-head
       >
-        <a href="about.html" class="font-medium text-lg text-black block w-full"
+        <a
+          href="@@webRoot/about.html"
+          class="font-medium text-lg text-black block w-full"
           >Компанія</a
         >
       </div>
@@ -31,31 +35,37 @@
         class="flex w-full cursor-pointer flex-row items-center justify-between px-4 py-4 border-l-[#CC1A1A]"
         data-accordion-head
       >
-        <a href="products.html" class="font-medium text-lg text-black"
+        <a
+          href="@@webRoot/products/index.html"
+          class="font-medium text-lg text-black"
           >Продукція</a
         >
+
         <img
-          src="/assets/icons/ArrowBottom.svg"
+          src="@@webRoot/assets/icons/ArrowBottom.svg"
           class="h-4 w-4 -rotate-90 transition duration-300"
           alt=""
         />
       </div>
+
       <div
         class="hidden w-full max-h-fit flex flex-col bg-gray-50/50 gap-4 pl-8"
         data-accordion-body
       >
         <a
-          href="products.html"
+          href="@@webRoot/products/toys.html"
           class="ptext-sm text-gray-700 hover:text-red-500 transition-colors"
           >Іграшки «ТехноК»</a
         >
+
         <a
-          href="products.html"
+          href="@@webRoot/products/plastic.html"
           class="text-sm text-gray-700 hover:text-red-500 transition-colors"
           >Вироби з пластмаси</a
         >
+
         <a
-          href="products.html"
+          href="@@webRoot/products/metaloobrobka.html"
           class="text-sm text-gray-700 hover:text-red-500 transition-colors"
           >Вироби з металу</a
         >
@@ -67,31 +77,37 @@
         class="flex w-full cursor-pointer flex-row items-center justify-between px-4 py-4 borde-l-[#CC1A1A]"
         data-accordion-head
       >
-        <a href="services.html" class="font-medium text-lg text-black"
+        <a
+          href="@@webRoot/services/index.html"
+          class="font-medium text-lg text-black"
           >Послуги</a
         >
+
         <img
-          src="/assets/icons/ArrowBottom.svg"
+          src="@@webRoot/assets/icons/ArrowBottom.svg"
           class="h-4 w-4 -rotate-90 transition duration-300"
           alt=""
         />
       </div>
+
       <div
         class="hidden w-full max-h-fit flex flex-col bg-gray-50/50 gap-4 pl-8"
         data-accordion-body
       >
         <a
-          href="services.html"
+          href="@@webRoot/services/plastic.html"
           class="text-sm text-gray-700 hover:text-red-500 transition-colors"
           >Лиття виробів з пластмаси</a
         >
+
         <a
-          href="services.html"
+          href="@@webRoot/services/metaloobrobka.html"
           class="text-sm text-gray-700 hover:text-red-500 transition-colors"
           >Металообробка</a
         >
+
         <a
-          href="services.html"
+          href="@@webRoot/services/lyttia-tpa.html"
           class="text-sm text-gray-700 hover:text-red-500 transition-colors"
           >Промисловий дизайн та проєктування</a
         >
@@ -103,30 +119,34 @@
         class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
         data-accordion-head
       >
-        <a href="news.html" class="font-medium text-lg text-black block w-full"
+        <a
+          href="@@webRoot/news/index.html"
+          class="font-medium text-lg text-black block w-full"
           >Новини</a
         >
       </div>
     </div>
+
     <div class="accordion-item" data-accordion-item>
       <div
         class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
         data-accordion-head
       >
         <a
-          href="cooperation.html"
+          href="@@webRoot/cooperation.html"
           class="font-medium text-lg text-black block w-full"
           >Співпраця</a
         >
       </div>
     </div>
+
     <div class="accordion-item" data-accordion-item>
       <div
         class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
         data-accordion-head
       >
         <a
-          href="contacts.html"
+          href="@@webRoot/contacts.html"
           class="font-medium text-lg text-black block w-full"
           >Контакти</a
         >

@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Послуги</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="@@webRoot/css/style.css" />
   </head>
   <body>
-    @@include('../../partials/burger-menu.html')
+    <!-- prettier-ignore -->
+    @@include('../../partials/burger-menu.html', { "active": "products" })
     @@include('../../partials/header.html')
     <main>
       <div
@@ -16,15 +17,17 @@
       >
         <span
           class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-          >Головна / Продукція</span
-        >
+          ><a class="hover:underline" href="@@webRoot/index.html">Головна</a>
+          <span> / </span>
+          <span class="text-[#939496]">Продукція</span>
+        </span>
       </div>
       <section class="3xl:max-w-[1400px] 3xl:mx-auto">
         <div
           class="mb-8 3xl:max-w-[1400px] 3xl:mx-auto w-full h-[500px] overflow-hidden relative flex justify-center items-center text-white text-center"
         >
           <img
-            src="/assets/banners/banner2.jpg"
+            src="@@webRoot/assets/banners/banner2.jpg"
             class="absolute inset-0 w-full h-full object-cover object-center"
             alt="Hero Banner"
           />
@@ -35,13 +38,13 @@
             <h1 class="text-2xl font-semibold xs:text-[26px] md:text-3xl">
               Комплексні рішення у пластику та металі для вашого бізнесу та дому
             </h1>
-            <span class="text-sm xs:text-sm md:text-[15px]">
+            <p class="text-sm xs:text-sm md:text-[15px]">
               Виробництво безпечних іграшок ТМ «ТехноК», лиття пластмас за
               індивідуальними кресленнями та професійна металообробка повного
               циклу. Надійність у кожній деталі
-            </span>
+            </p>
             <a
-              href="/index.html"
+              href="@@webRoot/index.html"
               class="p-3 rounded-lg text-white text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] max-h-min max-w-fit mx-auto text-xs xs:text-sm"
             >
               Зробити замовлення
@@ -57,7 +60,7 @@
               class="w-full h-[250px] sm:h-[300px] md:h-[380px] overflow-hidden md:order-2"
             >
               <img
-                src="/assets/banners/Frame1.jpg"
+                src="@@webRoot/assets/banners/Frame1.jpg"
                 class="object-cover w-full h-full [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
                 alt="Створюємо якісні вироби з пластмаси для вашого бізнесу"
               />
@@ -68,27 +71,27 @@
                 виробника
               </h2>
               <div class="flex flex-col gap-8 text-xs xs:text-sm">
-                <span>
+                <p>
                   ТехноК — власна торгова марка ТОВ «Інтелком», лідер серед
                   українських виробників іграшок. Асортимент бренду налічує
                   понад 800 найменувань: конструктори, машинки, меблі та товари
                   для малюків.
-                </span>
-                <span>
+                </p>
+                <p>
                   Уся продукція сертифікована за стандартами EN 71, відповідає
                   вимогам безпеки та експортується до понад 20 країн світу. Ми
                   створюємо іграшки, що поєднують якість, безпечні матеріали та
                   продуманий дизайн для розвитку дітей
-                </span>
+                </p>
               </div>
 
               <a
-                href="/index.html"
-                class="p-3 rounded-lg text-[#004C97] bg-white duration-150 hover:-translate-y-1 border border-[#004C97] shadow-md !shadow-[0_0_12px_#004C9766] flex flex-row gap-4 max-w-fit text-xs px-3 xs:text-sm"
+                href="@@webRoot/products/toys.html"
+                class="p-3 rounded-lg text-[#004C97] bg-white duration-150 hover:opacity-70 border border-[#004C97] shadow-md !shadow-[0_0_12px_#004C9766] flex flex-row gap-4 max-w-fit text-xs px-3 xs:text-sm"
               >
                 Дізнатися більше
                 <img
-                  src="/assets/icons/ArrowRight3.svg"
+                  src="@@webRoot/assets/icons/ArrowRight3.svg"
                   class="w-5 h-3 mx-auto self-center"
                   alt=""
                 />
@@ -103,7 +106,7 @@
               class="w-full h-[250px] sm:h-[300px] md:h-[380px] overflow-hidden md:order-1"
             >
               <img
-                src="/assets/banners/Frame2.jpg"
+                src="@@webRoot/assets/banners/Frame2.jpg"
                 class="object-cover w-full h-full [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
                 alt="Металообробка"
               />
@@ -113,7 +116,7 @@
                 Надійні пластикові рішення для промисловості та повсякденного
                 використання
               </h2>
-              <span class="text-xs xs:text-sm text-gray-600">
+              <p class="text-xs xs:text-sm text-gray-600">
                 Ми виготовляємо пластикові вироби з високою точністю та
                 стабільністю параметрів, використовуючи сучасні технології лиття
                 й видувного формування. Контроль якості на всіх етапах та підбір
@@ -122,14 +125,14 @@
                 Такі рішення однаково ефективні як у промислових застосуваннях,
                 так і в повсякденному використанні, гарантуючи надійну роботу в
                 будь-яких умовах.
-              </span>
+              </p>
               <a
-                href="/services/metaloobrobka.html"
-                class="p-3 rounded-lg text-[#004C97] bg-white duration-150 hover:-translate-y-1 border border-[#004C97] shadow-md !shadow-[0_0_12px_#004C9766] flex flex-row gap-4 max-w-fit text-xs px-3 xs:text-sm"
+                href="@@webRoot/products/plastic.html"
+                class="p-3 rounded-lg text-[#004C97] bg-white duration-150 hover:opacity-70 border border-[#004C97] shadow-md !shadow-[0_0_12px_#004C9766] flex flex-row gap-4 max-w-fit text-xs px-3 xs:text-sm"
               >
                 Дізнатися більше
                 <img
-                  src="/assets/icons/ArrowRight3.svg"
+                  src="@@webRoot/assets/icons/ArrowRight3.svg"
                   class="w-5 h-3 mx-auto self-center"
                   alt=""
                 />
@@ -144,14 +147,14 @@
               class="w-full h-[250px] sm:h-[300px] md:h-[380px] overflow-hidden md:order-2"
             >
               <img
-                src="/assets/banners/Frame5.jpg"
+                src="@@webRoot/assets/banners/Frame5.jpg"
                 class="object-cover w-full h-full [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
                 alt="Промисловий дизайн та проєктування"
               />
             </div>
             <div class="flex flex-col gap-4 md:order-1">
               <h2 class="font-semibold text-lg xs:text-xl">Металообробка</h2>
-              <span class="text-xs xs:text-sm text-gray-600">
+              <p class="text-xs xs:text-sm text-gray-600">
                 Ми виконуємо повний спектр робіт із високоточної обробки металів
                 — від токарних і фрезерних операцій до зварювання, гнуття,
                 лазерного різання та порошкового фарбування. Сучасне обладнання
@@ -160,14 +163,14 @@
                 деталі та конструкції підходять для машинобудування,
                 будівництва, меблевої галузі та інших сфер, де важлива
                 надійність і якість у кожному елементі.
-              </span>
+              </p>
               <a
-                href="/index.html"
-                class="p-3 rounded-lg text-[#004C97] bg-white duration-150 hover:-translate-y-1 border border-[#004C97] shadow-md !shadow-[0_0_12px_#004C9766] flex flex-row gap-4 max-w-fit text-xs px-3 xs:text-sm"
+                href="@@webRoot/products/metaloobrobka.html"
+                class="p-3 rounded-lg text-[#004C97] bg-white duration-150 hover:opacity-70 border border-[#004C97] shadow-md !shadow-[0_0_12px_#004C9766] flex flex-row gap-4 max-w-fit text-xs px-3 xs:text-sm"
               >
                 Дізнатися більше
                 <img
-                  src="/assets/icons/ArrowRight3.svg"
+                  src="@@webRoot/assets/icons/ArrowRight3.svg"
                   class="w-5 h-3 mx-auto self-center"
                   alt=""
                 />

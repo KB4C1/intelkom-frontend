@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Послуги - металообробка</title>
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="@@webRoot/favicon.svg" />
+    <link rel="stylesheet" href="@@webRoot/css/style.css" />
   </head>
   <body>
-    @@include('../../partials/burger-menu.html')
+    <!-- prettier-ignore -->
+    @@include('../../partials/burger-menu.html', { "active": "services" })
     @@include('../../partials/header.html')
     <main>
       <div
@@ -16,15 +17,21 @@
       >
         <span
           class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-          >Головна / Послуги / Металообробка</span
-        >
+          ><a class="hover:underline" href="@@webRoot/index.html">Головна</a>
+          <span> / </span>
+          <a class="hover:underline" href="@@webRoot/services/index.html"
+            >Послуги</a
+          >
+          <span> / </span>
+          <span class="text-[#939496]">Металообробка</span>
+        </span>
       </div>
       <section class="3xl:max-w-[1400px] 3xl:mx-auto">
         <div
           class="mb-8 3xl:max-w-[1400px] 3xl:mx-auto w-full h-[500px] overflow-hidden relative flex justify-center items-center text-white text-center"
         >
           <img
-            src="/assets/banners/Frame5.jpg"
+            src="@@webRoot/assets/banners/Frame5.jpg"
             class="absolute inset-0 w-full h-full object-cover object-center"
             alt="Hero Banner"
           />
@@ -32,15 +39,17 @@
             class="absolute inset-0 z-10 bg-gradient-to-t from-[#004C97]/90 from-25% to-transparent pointer-events-none"
           ></div>
           <div class="z-20 max-w-[90%] flex flex-col place-self-end py-8">
-            <h1 class="text-2xl font-semibold xs:text-[26px] md:text-3xl xl:text-4xl 3xl:text-5xl">
+            <h1
+              class="text-2xl font-semibold xs:text-[26px] md:text-3xl xl:text-4xl 3xl:text-5xl"
+            >
               Металообробка
             </h1>
-            <span class="text-xs xl:text-base 3xl:text-xl text-light">
+            <p class="text-xs xl:text-base 3xl:text-xl text-light">
               Ми виготовляємо високоточні металеві деталі та конструкції,
               використовуючи сучасне ЧПУ-обладнання й інженерні технології.
               Забезпечуємо стабільну якість, точність і відповідність вимогам
               промислових проєктів.
-            </span>
+            </p>
           </div>
         </div>
         <div>
@@ -72,7 +81,7 @@
               class="flex flex-col gap-8 text-left py-8 w-full p-4 mm:flex-row-reverse"
             >
               <img
-                src="/assets/banners/stanok1.jpg"
+                src="@@webRoot/assets/banners/stanok1.jpg"
                 class="w-full h-[300px] md:h-[450px] object-cover mm:w-1/2 xl:h-[500px] [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
                 alt="Токарна обробка"
               />
@@ -81,7 +90,7 @@
                   >Токарна обробка</strong
                 >
 
-                <span>
+                <p>
                   Комплекс механічної обробки дозволяє виготовляти металеві
                   деталі з високою точністю та стабільністю параметрів. Ми
                   виконуємо токарні та фрезерні операції, шліфування,
@@ -91,10 +100,10 @@
                   мінімальні допуски та чистоту поверхні. Додаткова термічна
                   обробка підвищує міцність і зносостійкість металів, гарантуючи
                   надійність готових виробів у реальних умовах експлуатації.
-                </span>
+                </p>
 
                 <a
-                  href="/index.html"
+                  href="@@webRoot/index.html"
                   class="py-2 px-6 rounded-sm text-lg text-white text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] shadow-lg shadow-red-400 max-w-max max-h-min"
                 >
                   Замовити послугу
@@ -132,7 +141,7 @@
               class="flex flex-col gap-8 text-left py-8 w-full p-4 mm:flex-row"
             >
               <img
-                src="/assets/banners/stanok2.jpg"
+                src="@@webRoot/assets/banners/stanok2.jpg"
                 class="w-full h-[300px] md:h-[450px] object-cover mm:w-1/2 xl:h-[500px] [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
                 alt="Токарна обробка"
               />
@@ -141,7 +150,7 @@
                   >Лазерне різання металу</strong
                 >
 
-                <span>
+                <p>
                   Наш технопарк забезпечує повний цикл виготовлення металевих
                   конструкцій: лазерне різання для високої точності контурів,
                   гнуття листових і трубних деталей на сучасних пресах, а також
@@ -151,10 +160,10 @@
                   додає точне маркування чи декоративні елементи. Такий комплекс
                   технологій дозволяє отримувати металоконструкції з відмінною
                   геометрією та стабільною якістю.
-                </span>
+                </p>
 
                 <a
-                  href="/index.html"
+                  href="@@webRoot/index.html"
                   class="py-2 px-6 rounded-sm text-lg text-white text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] shadow-lg shadow-red-400 max-w-max max-h-min"
                 >
                   Замовити послугу

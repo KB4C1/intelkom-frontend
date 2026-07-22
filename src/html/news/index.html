@@ -4,61 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Новини</title>
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="@@webRoot/favicon.svg" />
+    <link rel="stylesheet" href="@@webRoot/css/style.css" />
   </head>
   <body>
-    @@include('../../partials/burger-menu.html')
+    <!-- prettier-ignore -->
+    @@include('../../partials/burger-menu.html', { "active": "news" })
     @@include('../../partials/header.html')
     <main class="3xl:max-w-[1400px] 3xl:mx-auto">
-      <div class="w-full text-left py-3 px-4">
+      <div
+        class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
+      >
         <span
           class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-          >Головна / Новини</span
-        >
+          ><a class="hover:underline" href="@@webRoot/index.html">Головна</a>
+          <span> / </span>
+          <span class="text-[#939496]">Новини</span>
+        </span>
       </div>
       <section>
         <div class="flex flex-col p-4 pt-8 gap-8 mb-10">
           <h1 class="text-2xl font-semibold mx-auto 3xl:text-3xl">Новини</h1>
           <div class="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-            <a href="/news/Forbes.html">
+            <a href="@@webRoot/news/Forbes.html">
               <!-- prettier-ignore -->
               @@include('../../partials/news-card.html', {"title": "Компанія «ІНТЕЛКОМ» увійшла до рейтингу Forbes Ukraine Next250", "imgPath": "../assets/news/Forbes.jpg"})
             </a>
-            <a href="/news/Forbes.html">
+            <a href="@@webRoot/news/Forbes.html">
               <!-- prettier-ignore -->
               @@include('../../partials/news-card.html', {"title": "ТОВ «ІНТЕЛКОМ» відзначено найвищою нагородою ТПП України", "imgPath": "../assets/news/TTP_Ukraine_2.svg"})
             </a>
-            <a href="/news/Forbes.html">
+            <a href="@@webRoot/news/Forbes.html">
               <!-- prettier-ignore -->
               @@include('../../partials/news-card.html', {"title": "ТОВ «ІНТЕЛКОМ» — інвестиції у чисту енергію та енергетичну незалежність", "imgPath": "../assets/news/Energy_2.svg"})
             </a>
             <div class="hidden md:grid">
-              <a href="/news/Forbes.html">
+              <a href="@@webRoot/news/Forbes.html">
                 <!-- prettier-ignore -->
                 @@include('../../partials/news-card.html', {"title": "Компанія «ІНТЕЛКОМ» увійшла до рейтингу Forbes Ukraine Next250", "imgPath": "../assets/news/Forbes.jpg"})
               </a>
             </div>
             <div class="hidden md:grid">
-              <a href="/news/Forbes.html">
+              <a href="@@webRoot/news/Forbes.html">
                 <!-- prettier-ignore -->
                 @@include('../../partials/news-card.html', {"title": "ТОВ «ІНТЕЛКОМ» відзначено найвищою нагородою ТПП України", "imgPath": "../assets/news/TTP_Ukraine_2.svg"})
               </a>
             </div>
             <div class="hidden md:grid">
-              <a href="/news/Forbes.html">
+              <a href="@@webRoot/news/Forbes.html">
                 <!-- prettier-ignore -->
                 @@include('../../partials/news-card.html', {"title": "ТОВ «ІНТЕЛКОМ» — інвестиції у чисту енергію та енергетичну незалежність", "imgPath": "../assets/news/Energy_2.svg"})
               </a>
             </div>
           </div>
           <a
-            href="/news/index.html"
-            class="p-3 mx-auto rounded-lg text-[#004C97] bg-white duration-150 hover:-translate-y-1 border border-[#004C97] shadow-md !shadow-[0_0_12px_#004C9766] flex flex-row gap-4 max-w-fit text-xs px-3 xs:text-sm"
+            href="@@webRoot/news/index.html"
+            class="p-3 mx-auto rounded-lg text-[#004C97] bg-white duration-150 hover:opacity-70 border border-[#004C97] shadow-md !shadow-[0_0_12px_#004C9766] flex flex-row gap-4 max-w-fit text-xs px-3 xs:text-sm"
           >
             Дізнатися більше
             <img
-              src="/assets/icons/ArrowRight3.svg"
+              src="@@webRoot/assets/icons/ArrowRight3.svg"
               class="w-5 h-3 mx-auto self-center"
             />
           </a>

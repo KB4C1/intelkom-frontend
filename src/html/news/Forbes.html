@@ -4,28 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Новини</title>
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="@@webRoot/favicon.svg" />
+    <link rel="stylesheet" href="@@webRoot/css/style.css" />
   </head>
   <body>
-    @@include('../../partials/burger-menu.html')
+    <!-- prettier-ignore -->
+    @@include('../../partials/burger-menu.html', { "active": "news" })
     @@include('../../partials/header.html')
     <main class="3xl:max-w-[1400px] 3xl:mx-auto">
-      <div class="w-full text-left py-3 px-4">
+      <div
+        class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
+      >
         <span
           class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-          >Головна / Новини</span
-        >
+          ><a class="hover:underline" href="@@webRoot/index.html">Головна</a>
+          <span> / </span>
+          <a class="hover:underline" href="@@webRoot/news/index.html">Новини</a>
+        </span>
       </div>
       <section>
-        <div class="3xl:max-w-[1400px] 3xl:mx-auto p-4">
-          <div class="flex flex-col gap-4 text-left">
-            <h1 class="font-semibold text-xl">
-              Компанія «ІНТЕЛКОМ» увійшла до рейтингу Forbes Ukraine Next250
-            </h1>
-            <span class="text-sm text-[#939496]">23.11.2025</span>
+        <div class="3xl:max-w-[1400px] 3xl:mx-auto p-4 3xl:p-0">
+          <div
+            class="flex flex-col gap-4 text-left md:max-w-[670px] mm:max-w-[850px]"
+          >
             <div class="flex flex-col gap-4">
-              <img src="../../assets/news/Forbes.jpg" />
+              <h1 class="font-semibold text-xl md:text-3xl 2xl:max-w-[850px]">
+                Компанія «ІНТЕЛКОМ» увійшла до рейтингу Forbes Ukraine Next250
+              </h1>
+              <span class="text-sm text-[#939496]">23.11.2025</span>
+            </div>
+
+            <div class="flex flex-col gap-[52px]">
+              <img
+                class="h-[200px] xs:h-[265px] md:h-[400px] mm:w-[800px] mm:h-[483px] object-cover"
+                src="@@webRoot/assets/news/Forbes.jpg"
+              />
               <div class="font-medium flex flex-col gap-8">
                 <p>
                   Компанія ТОВ «ІНТЕЛКОМ», що представляє український бренд
@@ -39,6 +52,35 @@
                   роботи компанії та підтвердженням її активного розвитку навіть
                   в умовах складної економічної ситуації та викликів воєнного
                   часу.
+                </p>
+                <p>
+                  Компанія «ІНТЕЛКОМ» вже майже 30 років працює на ринку дитячих
+                  іграшок та є одним із провідних українських виробників у своїй
+                  галузі. Продукція бренду «ТехноК» представлена більш ніж у 20
+                  000 магазинах по всій Україні та експортується до 20 країн
+                  світу.
+                </p>
+                <p>
+                  Попри виклики війни, компанія продовжує активно розвиватися,
+                  розширювати асортимент продукції та інвестувати у сучасні
+                  виробничі технології. Одним із важливих напрямів розвитку є
+                  також розширення міжнародної співпраці та участь у міжнародних
+                  виставках, зокрема у найбільшій світовій виставці іграшок
+                  Spielwarenmesse у Нюрнберзі.
+                </p>
+                <p>
+                  На сьогодні каталог бренду «ТехноК» налічує понад 700
+                  найменувань іграшок. Входження до рейтингу Forbes Ukraine
+                  Next250 є важливим етапом у розвитку компанії та підтверджує
+                  ефективність її бізнес-стратегії, високі стандарти виробництва
+                  та потенціал подальшого зростання як на українському, так і на
+                  міжнародному ринках.
+                </p>
+                <p>
+                  Компанія «ІНТЕЛКОМ» і надалі продовжує працювати над
+                  створенням якісних, безпечних та сучасних іграшок бренду
+                  «ТехноК», які дарують дітям радість та сприяють їхньому
+                  розвитку.
                 </p>
               </div>
             </div>
@@ -66,16 +108,16 @@
             class="border border-[#E5E7EB] rounded-xl p-5 flex flex-row items-stretch gap-4"
           >
             <div class="w-[3px] bg-[#C84E4E] rounded-full shrink-0"></div>
-            <span class="italic text-gray-700 block">
+            <p class="italic text-gray-700 block">
               «Компанія «ІНТЕЛКОМ» вже майже 30 років працює на ринку дитячих
               іграшок та є одним із провідних українських виробників у своїй
               галузі. Продукція бренду «ТехноК» представлена більш ніж у 20 000
               магазинах по всій Україні та експортується до 20 країн світу»
-            </span>
+            </p>
           </div>
         </div>
         <div
-          class="grid grid-cols-1 gap-4 px-4 py-8 3xl:max-w-[1400px] 3xl:mx-auto"
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-4 py-8 3xl:max-w-[1400px] 3xl:mx-auto"
         >
           <div>
             <!--prettier-ignore -->
@@ -85,7 +127,7 @@
             <!--prettier-ignore -->
             @@include('../../partials/news-card.html', {"title": "ТОВ «ІНТЕЛКОМ» відзначено найвищою нагородою ТПП України", "imgPath": "../assets/news/TTP_Ukraine_2.svg"})
           </div>
-          <div>
+          <div class="md:col-span-2 xl:col-span-1">
             <!--prettier-ignore -->
             @@include('../../partials/news-card.html', {"title": "ТОВ «ІНТЕЛКОМ» — інвестиції у чисту енергію та енергетичну незалежність", "imgPath": "../assets/news/Energy_2.svg"})
           </div>
