@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTrustedSlider();
   customVideo();
   initContactForms();
+  initTimeLine();
 });
 
 const contactSchema = z.object({
@@ -117,12 +118,12 @@ function initAccordion() {
     const isHidden = body.classList.toggle("hidden");
     const isOpened = !isHidden;
 
-    head.classList.toggle("border-l-4", isOpened);
-    head.classList.toggle("border-[#CC1A1A]", isOpened);
+    head.classList.toggle("border-l-[#CC1A1A]", isOpened);
+    head.classList.toggle("bg-[#F2F2F7]", isOpened);
+    head.classList.toggle("border-l-transparent", !isOpened);
 
     if (arrow) {
       arrow.classList.toggle("rotate-0", isOpened);
-      arrow.classList.toggle("brightness-75", isOpened);
       arrow.classList.toggle("-rotate-90", isHidden);
     }
   });
@@ -259,4 +260,90 @@ function customVideo() {
       playBtn.classList.remove("hidden");
     });
   });
+}
+
+function initTimeLine() {
+  const container = document.getElementById("timeline-container");
+  const progressLine = document.getElementById("timeline-progress");
+  const circles = [...document.querySelectorAll(".timeline-circle")];
+
+  if (!container || !progressLine || !circles.length) return;
+
+  const INITIAL_PROGRESS = 0.05;
+  const MAX_PROGRESS = 1;
+
+  let ticking = false;
+  let listening = false;
+  let maxProgress = INITIAL_PROGRESS;
+
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+  function updateTimeline() {
+    const containerRect = container.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    const startScroll = container.offsetTop - viewportHeight * 0.4;
+    const endScroll =
+      container.offsetTop + container.offsetHeight - viewportHeight * 0.7;
+
+    const normalized = clamp(
+      (window.scrollY - startScroll) / (endScroll - startScroll),
+      0,
+      1,
+    );
+
+    const progress =
+      INITIAL_PROGRESS + normalized * (MAX_PROGRESS - INITIAL_PROGRESS);
+
+    maxProgress = Math.max(maxProgress, progress);
+
+    progressLine.style.height = `${maxProgress * 100}%`;
+
+    const lineBottom = containerRect.top + container.offsetHeight * maxProgress;
+
+    circles.forEach((circle) => {
+      if (circle.dataset.active === "true") return;
+
+      const rect = circle.getBoundingClientRect();
+      const center = rect.top + rect.height / 2;
+
+      if (lineBottom >= center) {
+        circle.dataset.active = "true";
+        circle.classList.remove("border-[#D9D9D9]", "text-[#D9D9D9]");
+        circle.classList.add("border-[#E90B0F]", "text-black");
+      }
+    });
+
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(updateTimeline);
+  }
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        if (!listening) {
+          window.addEventListener("scroll", onScroll, {
+            passive: true,
+          });
+          window.addEventListener("resize", updateTimeline);
+          listening = true;
+        }
+        updateTimeline();
+      } else if (listening) {
+        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("resize", updateTimeline);
+        listening = false;
+      }
+    },
+    {
+      threshold: 0,
+    },
+  );
+
+  observer.observe(container);
 }

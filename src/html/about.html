@@ -14,7 +14,7 @@
   </head>
   <body>
     <!-- prettier-ignore -->
-    @@include('../partials/burger-menu.html', { "active": "about" })
+    @@include('../partials/burger-menu.html', { "activePage": "about" })
     @@include('../partials/header.html')
     <main>
       <div
@@ -50,7 +50,7 @@
         </div>
 
         <div
-          class="flex flex-col gap-5 px-4 py-8 3xl:w-[1400px] 3xl:px-0 3xl:mx-auto"
+          class="flex flex-col gap-5 px-4 xs:px-5 md:px-10 xl:px-[115px] py-8 3xl:w-[1400px] 3xl:px-0 3xl:mx-auto"
         >
           <h2 class="font-semibold text-xl md:mx-auto md:text-3xl">
             Про компанію
@@ -154,7 +154,7 @@
         </div>
 
         <div
-          class="text-black flex flex-col px-4 py-6 pb-9 pt-9 gap-8 xl:max-w-[1200px] xl:mx-auto"
+          class="text-black flex flex-col px-4 xs:px-5 md:px-10 xl:px-[115px] py-9 gap-8 3xl:px-0 xl:max-w-[1400px] xl:mx-auto"
         >
           <div class="flex flex-col gap-4 items-left md:items-center">
             <div class="flex flex-row gap-2">

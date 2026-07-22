@@ -9,7 +9,7 @@
   </head>
   <body>
     <!-- prettier-ignore -->
-    @@include('../../partials/burger-menu.html', { "active": "services" })
+    @@include('../../partials/burger-menu.html', { "activePage": "services" })
     @@include('../../partials/header.html')
     <main>
       <div
@@ -51,7 +51,9 @@
           </div>
         </div>
 
-        <div class="px-4 py-8 flex flex-col gap-26 pb-13 md:gap-8">
+        <div
+          class="px-4 xs:px-5 md:px-10 xl:px-[115px] py-8 flex flex-col gap-26 pb-13 md:gap-8"
+        >
           <div
             class="flex flex-col gap-6 md:grid md:grid-cols-2 md:items-center md:gap-12 w-full"
           >

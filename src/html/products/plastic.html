@@ -9,7 +9,7 @@
   </head>
   <body>
     <!-- prettier-ignore -->
-    @@include('../../partials/burger-menu.html', { "active": "products" })
+    @@include('../../partials/burger-menu.html', { "activePage": "products" })
     @@include('../../partials/header.html')
     <div
       class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
@@ -54,7 +54,7 @@
           </div>
         </div>
         <div
-          class="flex flex-col gap-4 w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
+          class="flex flex-col gap-4 w-full text-left py-3 px-4 xs:px-5 md:px-10 xl:px-[115px] 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
         >
           <h2
             class="text-xl font-semibold self-center p-6 md:text-2xl 3xl:text-3xl"
@@ -111,67 +111,77 @@
           </div>
         </div>
         <div
-          class="text-black flex flex-col px-4 3xl:px-0 py-6 pb-9 gap-5 3xl:max-w-[1400px] 3xl:mx-auto"
+          class="text-black flex flex-col px-4 xs:px-5 md:px-10 xl:px-[115px] 3xl:px-0 py-6 pb-9 gap-5 3xl:max-w-[1400px] 3xl:mx-auto"
         >
-          <div class="flex flex-row gap-2">
-            <img src="@@webRoot/assets/icons/Decorative.svg" alt="decorative" />
-            <span class="text-xs xs:text-sm">Чому саме ми?</span>
-          </div>
-          <div class="flex flex-col mm:flex-row gap-8 items-center mt-4">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[30px] mm:gap-[45px] xl:gap-[70px] 2xl:gap-[53px] items-center"
+          >
             <div
-              class="flex flex-col gap-5 text-left flex-1 w-full mm:max-w-fit"
+              class="md:order-2 w-full h-[262px] md:h-[380px] mm:h-[400px] xl:h-[520px] mb-6 md:mb-0 [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)] md:rounded-lg relative overflow-hidden"
+              data-video-wrapper
             >
-              <h2 class="font-semibold text-2xl md:text-3xl">
+              <video
+                data-video-player
+                playsinline
+                class="w-full h-full object-cover"
+                poster="@@webRoot/assets/banners/factory2.jpg"
+              >
+                <source
+                  src="@@webRoot/assets/videos/lviv.mp4"
+                  type="video/mp4"
+                />
+                ваш браузер не підтримує відео
+              </video>
+
+              <button
+                type="button"
+                data-video-play
+                aria-label="Відтворити відео"
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110"
+              >
+                <img
+                  src="@@webRoot/assets/icons/videoStart.svg"
+                  alt="Play"
+                  class="w-full h-full pointer-events-none"
+                />
+              </button>
+            </div>
+            <div
+              class="flex flex-col self-start md:order-1 gap-[14px] md:gap-4 mm:gap-5 xl:gap-[26px] 2xl:gap-8"
+            >
+              <div class="flex items-center gap-2">
+                <img
+                  src="@@webRoot/assets/icons/Decorative.svg"
+                  alt="decorative"
+                  class="h-4"
+                />
+                <span class="text-xs xs:text-sm md:text-base"
+                  >Чому саме ми?</span
+                >
+              </div>
+              <h2
+                class="font-semibold text-lg xs:text-xl mm:text-2xl xl:text-3xl"
+              >
                 Ми надаємо свої потужності для росту Вашого бізнесу або
                 виготовлення Вашої продукції
               </h2>
-
-              <p>
-                Наші виробничі площі понад 35 000 м², сучасний парк
-                термопластавтоматів і металообробного обладнання дозволяє
-                реалізовувати проєкти будь-якої складності. Ми забезпечуємо
-                повний цикл виробництва — від розробки технічного завдання до
-                готового виробу, з багаторівневим контролем якості на всіх
-                етапах.
-              </p>
-
-              <p>
-                Ми ідеально підходимо для партнерів, які цінують надійність та
-                ефективність: понад 30 років досвіду та успішна реалізація
-                масштабних проєктів для українських і міжнародних компаній
-                гарантують швидку та якісну реалізацію вашої продукції.
-              </p>
-            </div>
-            <div class="w-full h-auto flex-1 3xl:max-w-[1400px] 3xl:mx-auto">
               <div
-                class="w-full h-[80vw] 3xl:h-[40vw] self-start overflow-hidden relative"
-                data-video-wrapper
+                class="text-xs xs:text-sm mm:text-base flex flex-col gap-[14px] mm:gap-5 md:gap-4 text-left xl:gap-[26px] 2xl:gap-8"
               >
-                <video
-                  data-video-player
-                  playsinline
-                  class="w-full h-full object-cover"
-                  poster="@@webRoot/assets/banners/factory2.jpg"
-                >
-                  <source
-                    src="@@webRoot/assets/videos/lviv.mp4"
-                    type="video/mp4"
-                  />
-                  ваш браузер не підтримує відео
-                </video>
-
-                <button
-                  type="button"
-                  data-video-play
-                  aria-label="Відтворити відео"
-                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110"
-                >
-                  <img
-                    src="@@webRoot/assets/icons/videoStart.svg"
-                    alt="Play"
-                    class="w-full h-full pointer-events-none"
-                  />
-                </button>
+                <p>
+                  Наші виробничі площі понад 35 000 м², сучасний парк
+                  термопластавтоматів і металообробного обладнання дозволяє
+                  реалізовувати проєкти будь-якої складності. Ми забезпечуємо
+                  повний цикл виробництва — від розробки технічного завдання до
+                  готового виробу, з багаторівневим контролем якості на всіх
+                  етапах.
+                </p>
+                <p>
+                  Ми ідеально підходимо для партнерів, які цінують надійність та
+                  ефективність: понад 30 років досвіду та успішна реалізація
+                  масштабних проєктів для українських і міжнародних компаній
+                  гарантують швидку та якісну реалізацію вашої продукції.
+                </p>
               </div>
             </div>
           </div>

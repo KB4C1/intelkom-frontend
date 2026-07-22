@@ -4,7 +4,7 @@
 ></div>
 
 <div
-  class="fixed top-0 right-0 z-[100] hidden h-screen w-full flex-col gap-7 overflow-y-auto bg-white pt-4 pr-4 pb-4 pl-4 shadow-2xl mm:w-2/5 mm:pl-0"
+  class="fixed top-0 right-0 z-[100] hidden h-screen w-full flex-col gap-7 overflow-y-auto bg-[#F7FAFC] pt-4 pr-4 pb-4 pl-4 shadow-2xl mm:w-2/5 mm:pl-0"
   data-menu-panel
 >
   <div class="self-end cursor-pointer p-1">
@@ -19,12 +19,12 @@
   <div class="flex flex-col">
     <div class="accordion-item" data-accordion-item>
       <div
-        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4 @@if (activePage === 'about') { border-l-[#CC1A1A] bg-[#F2F2F7] text-[#CC1A1A] } @@if (activePage !== 'about') { border-l-transparent text-black }"
         data-accordion-head
       >
         <a
           href="@@webRoot/about.html"
-          class="font-medium text-lg text-black block w-full"
+          class="font-medium text-lg text-inherit block w-full"
           >Компанія</a
         >
       </div>
@@ -32,41 +32,41 @@
 
     <div class="accordion-item" data-accordion-item>
       <div
-        class="flex w-full cursor-pointer flex-row items-center justify-between px-4 py-4 border-l-[#CC1A1A]"
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4 @@if (activePage === 'products') { border-l-[#CC1A1A] bg-[#F2F2F7] text-[#CC1A1A] } @@if (activePage !== 'products') { border-l-transparent text-black }"
         data-accordion-head
       >
         <a
           href="@@webRoot/products/index.html"
-          class="font-medium text-lg text-black"
+          class="font-medium text-lg text-inherit"
           >Продукція</a
         >
 
         <img
           src="@@webRoot/assets/icons/ArrowBottom.svg"
-          class="h-4 w-4 -rotate-90 transition duration-300"
+          class="h-4 w-4 transition duration-300 @@if (activePage === 'products') { rotate-0 } @@if (activePage !== 'products') { -rotate-90 }"
           alt=""
         />
       </div>
 
       <div
-        class="hidden w-full max-h-fit flex flex-col bg-gray-50/50 gap-4 pl-8"
+        class="@@if (activePage !== 'products') { hidden } w-full max-h-fit flex flex-col bg-gray-50/50 gap-4 pl-8 py-2"
         data-accordion-body
       >
         <a
           href="@@webRoot/products/toys.html"
-          class="ptext-sm text-gray-700 hover:text-red-500 transition-colors"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
           >Іграшки «ТехноК»</a
         >
 
         <a
           href="@@webRoot/products/plastic.html"
-          class="text-sm text-gray-700 hover:text-red-500 transition-colors"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
           >Вироби з пластмаси</a
         >
 
         <a
           href="@@webRoot/products/metaloobrobka.html"
-          class="text-sm text-gray-700 hover:text-red-500 transition-colors"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
           >Вироби з металу</a
         >
       </div>
@@ -74,41 +74,41 @@
 
     <div class="accordion-item" data-accordion-item>
       <div
-        class="flex w-full cursor-pointer flex-row items-center justify-between px-4 py-4 borde-l-[#CC1A1A]"
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4 @@if (activePage === 'services') { border-l-[#CC1A1A] bg-[#F2F2F7] text-[#CC1A1A] } @@if (activePage !== 'services') { border-l-transparent text-black }"
         data-accordion-head
       >
         <a
           href="@@webRoot/services/index.html"
-          class="font-medium text-lg text-black"
+          class="font-medium text-lg text-inherit"
           >Послуги</a
         >
 
         <img
           src="@@webRoot/assets/icons/ArrowBottom.svg"
-          class="h-4 w-4 -rotate-90 transition duration-300"
+          class="h-4 w-4 transition duration-300 @@if (activePage === 'services') { rotate-0 } @@if (activePage !== 'services') { -rotate-90 }"
           alt=""
         />
       </div>
 
       <div
-        class="hidden w-full max-h-fit flex flex-col bg-gray-50/50 gap-4 pl-8"
+        class="@@if (activePage !== 'services') { hidden } w-full max-h-fit flex flex-col bg-gray-50/50 gap-4 pl-8 py-2"
         data-accordion-body
       >
         <a
           href="@@webRoot/services/plastic.html"
-          class="text-sm text-gray-700 hover:text-red-500 transition-colors"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
           >Лиття виробів з пластмаси</a
         >
 
         <a
           href="@@webRoot/services/metaloobrobka.html"
-          class="text-sm text-gray-700 hover:text-red-500 transition-colors"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
           >Металообробка</a
         >
 
         <a
           href="@@webRoot/services/lyttia-tpa.html"
-          class="text-sm text-gray-700 hover:text-red-500 transition-colors"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
           >Промисловий дизайн та проєктування</a
         >
       </div>
@@ -116,12 +116,12 @@
 
     <div class="accordion-item" data-accordion-item>
       <div
-        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4 @@if (activePage === 'news') { border-l-[#CC1A1A] bg-[#F2F2F7] text-[#CC1A1A] } @@if (activePage !== 'news') { border-l-transparent text-black }"
         data-accordion-head
       >
         <a
           href="@@webRoot/news/index.html"
-          class="font-medium text-lg text-black block w-full"
+          class="font-medium text-lg text-inherit block w-full"
           >Новини</a
         >
       </div>
@@ -129,12 +129,12 @@
 
     <div class="accordion-item" data-accordion-item>
       <div
-        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4 @@if (activePage === 'cooperation') { border-l-[#CC1A1A] bg-[#F2F2F7] text-[#CC1A1A] } @@if (activePage !== 'cooperation') { border-l-transparent text-black }"
         data-accordion-head
       >
         <a
           href="@@webRoot/cooperation.html"
-          class="font-medium text-lg text-black block w-full"
+          class="font-medium text-lg text-inherit block w-full"
           >Співпраця</a
         >
       </div>
@@ -142,12 +142,12 @@
 
     <div class="accordion-item" data-accordion-item>
       <div
-        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-l-transparent border-gray-100 px-4 py-4"
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4 @@if (activePage === 'contacts') { border-l-[#CC1A1A] bg-[#F2F2F7] text-[#CC1A1A] } @@if (activePage !== 'contacts') { border-l-transparent text-black }"
         data-accordion-head
       >
         <a
           href="@@webRoot/contacts.html"
-          class="font-medium text-lg text-black block w-full"
+          class="font-medium text-lg text-inherit block w-full"
           >Контакти</a
         >
       </div>

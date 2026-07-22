@@ -9,7 +9,7 @@
   </head>
   <body>
     <!-- prettier-ignore -->
-    @@include('../../partials/burger-menu.html', { "active": "news" })
+    @@include('../../partials/burger-menu.html', { "activePage": "news" })
     @@include('../../partials/header.html')
     <main class="3xl:max-w-[1400px] 3xl:mx-auto">
       <div
@@ -23,7 +23,9 @@
         </span>
       </div>
       <section>
-        <div class="flex flex-col p-4 pt-8 gap-8 mb-10">
+        <div
+          class="flex flex-col px-4 xs:px-5 md:px-10 xl:px-[115px] pt-8 gap-8 mb-10"
+        >
           <h1 class="text-2xl font-semibold mx-auto 3xl:text-3xl">Новини</h1>
           <div class="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             <a href="@@webRoot/news/Forbes.html">
