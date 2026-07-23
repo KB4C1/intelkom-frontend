@@ -5,6 +5,8 @@
   --breakpoint-xs: 30rem;
   --breakpoint-mm: 57.5rem;
   --breakpoint-3xl: 110rem;
+  --grid-column-two-cols: span 2 / span 2;
+  --grid-column-three-cols: span 3 / span 3;
 }
 
 :root {
@@ -22,6 +24,14 @@ html {
 body {
   background-color: #f7fafc;
   font-family: "Montserrat", sans-serif;
+}
+
+.two-cols-block {
+  grid-column: span 2 / span 2;
+}
+
+.three-cols-block {
+  grid-column: span 3 / span 3;
 }
 
 .tpa-slider-wrap {

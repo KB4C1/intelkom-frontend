@@ -21,7 +21,7 @@
         <div class="w-full h-[500px] relative overflow-hidden">
           <img
             src="@@webRoot/assets/banners/banner1.svg"
-            class="absolute w-full h-full object-cover object-right"
+            class="absolute w-full h-full object-cover object-[85%_center] md:object-center"
           />
         </div>
 
@@ -194,16 +194,30 @@
               />
               <span>Потужності</span>
             </div>
-            <!--prettier-ignore-->
-            @@include('../partials/capacity-card.html', {"title": "Лиття під тиском на термопластавтоматах (ТПА)", "imgPath": "./assets/banners/img01.jpg", "colSpan": "xl:col-span-3"})
-            <!--prettier-ignore-->
-            @@include('../partials/capacity-card.html', {"title": "Лиття на екструзійно-видувних машинах", "imgPath": "./assets/banners/img02.jpg", "colSpan": "xl:col-span-3"})
-            <!--prettier-ignore-->
-            @@include('../partials/capacity-card.html', {"title": "Технологія IML (In-Mould Labeling)", "imgPath": "./assets/banners/img03.jpg", "colSpan": "mm:col-span-2 xl:col-span-2"})
-            <!--prettier-ignore-->
-            @@include('../partials/capacity-card.html', {"title": "Ультразвукове зварювання пластмас", "imgPath": "./assets/banners/img04.jpg", "colSpan": "xl:col-span-2"})
-            <!--prettier-ignore-->
-            @@include('../partials/capacity-card.html', {"title": "Шовкотрафаретний друк", imgPath: "./assets/banners/img05.jpg", "colSpan": "xl:col-span-2"})
+            <div class="xl:col-three-cols">
+              <!--prettier-ignore-->
+              @@include('../partials/capacity-card.html', {"title": "Лиття під тиском на термопластавтоматах (ТПА)", "imgPath": "./assets/banners/img01.jpg"})
+            </div>
+
+            <div class="xl:col-three-cols">
+              <!--prettier-ignore-->
+              @@include('../partials/capacity-card.html', {"title": "Лиття на екструзійно-видувних машинах", "imgPath": "./assets/banners/img02.jpg"})
+            </div>
+
+            <div class="mm:col-two-cols xl:col-two-cols">
+              <!--prettier-ignore-->
+              @@include('../partials/capacity-card.html', {"title": "Технологія IML (In-Mould Labeling)", "imgPath": "./assets/banners/img03.jpg"})
+            </div>
+
+            <div class="xl:col-two-cols">
+              <!--prettier-ignore-->
+              @@include('../partials/capacity-card.html', {"title": "Ультразвукове зварювання пластмас", "imgPath": "./assets/banners/img04.jpg"})
+            </div>
+
+            <div class="xl:col-two-cols">
+              <!--prettier-ignore-->
+              @@include('../partials/capacity-card.html', {"title": "Шовкотрафаретний друк", "imgPath": "./assets/banners/img05.jpg"})
+            </div>
           </div>
         </div>
 
