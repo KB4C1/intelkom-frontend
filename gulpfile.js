@@ -129,6 +129,7 @@ export function serve(done) {
         "/intelkom-frontend": "dist",
       },
     },
+    host: "0.0.0.0",  // потрібно для роботи всередині Docker
     port: 3000,
     notify: false,
     open: false,
