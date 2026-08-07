@@ -1,3 +1,4 @@
+import { CountUp } from "countup.js";
 import { z } from "zod";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   customVideo();
   initContactForms();
   initTimeLine();
+  initCounters();
 });
 
 const contactSchema = z.object({
@@ -24,15 +26,15 @@ const contactSchema = z.object({
 });
 
 async function contactUs(data) {
-  try {
-    // const response = await fetch('/api/contact', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(data),
-    // });
-  } catch (error) {
-    console.error(error);
-  }
+  // try {
+  //   const response = await fetch('/api/contact', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: JSON.stringify(data),
+  //   });
+  // } catch (error) {
+  //   console.error(error);
+  // }
 }
 
 function initContactForms() {
@@ -107,6 +109,11 @@ function initAccordion() {
   document.addEventListener("click", (e) => {
     const head = e.target.closest("[data-accordion-head]");
     if (!head) return;
+
+    const link = e.target.closest("a");
+    if (link && head.contains(link)) {
+      return;
+    }
 
     const item = head.closest("[data-accordion-item]");
     const body = item.querySelector("[data-accordion-body]");
@@ -274,7 +281,6 @@ function initTimeLine() {
 
   let ticking = false;
   let listening = false;
-  let maxProgress = INITIAL_PROGRESS;
 
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
@@ -295,23 +301,14 @@ function initTimeLine() {
     const progress =
       INITIAL_PROGRESS + normalized * (MAX_PROGRESS - INITIAL_PROGRESS);
 
-    maxProgress = Math.max(maxProgress, progress);
+    progressLine.style.height = `${progress * 100}%`;
 
-    progressLine.style.height = `${maxProgress * 100}%`;
-
-    const lineBottom = containerRect.top + container.offsetHeight * maxProgress;
+    const lineBottom = containerRect.top + container.offsetHeight * progress;
 
     circles.forEach((circle) => {
-      if (circle.dataset.active === "true") return;
-
       const rect = circle.getBoundingClientRect();
       const center = rect.top + rect.height / 2;
-
-      if (lineBottom >= center) {
-        circle.dataset.active = "true";
-        circle.classList.remove("border-[#D9D9D9]", "text-[#D9D9D9]");
-        circle.classList.add("border-[#E90B0F]", "text-black");
-      }
+      circle.dataset.active = lineBottom >= center ? "true" : "false";
     });
 
     ticking = false;
@@ -346,4 +343,20 @@ function initTimeLine() {
   );
 
   observer.observe(container);
+}
+
+function initCounters() {
+  const options = {
+    duration: 2,
+  };
+
+  const counterArea = new CountUp("counter-area__count", 35, options);
+  const counterYears = new CountUp("counter-years__count", 30, options);
+
+  if (!counterArea.error && !counterYears.error) {
+    counterArea.start();
+    counterYears.start();
+  } else {
+    console.error(counterArea.error, counterYears.error);
+  }
 }

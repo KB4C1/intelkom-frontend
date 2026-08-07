@@ -10,7 +10,7 @@
   <body>
     <!-- prettier-ignore -->
     @@include('../../partials/burger-menu.html', { "activePage": "products" })
-    @@include('../../partials/header.html')
+    @@include('../../partials/header.html', { "activePage": "products" })
     <main>
       <div
         class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
@@ -22,10 +22,8 @@
           <span class="text-[#939496]">Продукція</span>
         </span>
       </div>
-      <section class="3xl:max-w-[1400px] 3xl:mx-auto">
-        <div
-          class="mb-8 3xl:max-w-[1400px] 3xl:mx-auto w-full h-[500px] overflow-hidden relative flex justify-center items-center text-white text-center"
-        >
+      <section>
+        <div class="hero-banner">
           <img
             src="@@webRoot/assets/banners/banner2.jpg"
             class="absolute inset-0 w-full h-full object-cover object-center"
@@ -34,91 +32,91 @@
           <div
             class="absolute inset-0 z-10 bg-gradient-to-t from-[#004C97] to-[#004C9700] pointer-events-none"
           ></div>
-          <div class="z-20 max-w-[90%] flex flex-col place-self-end py-8 gap-4">
-            <h1 class="text-2xl font-semibold xs:text-[26px] md:text-3xl">
+          <div class="hero__wrapper">
+            <h1 class="hero__title">
               Комплексні рішення у пластику та металі для вашого бізнесу та дому
             </h1>
-            <p class="text-sm xs:text-sm md:text-[15px]">
+            <span class="hero__subtitle">
               Виробництво безпечних іграшок ТМ «ТехноК», лиття пластмас за
               індивідуальними кресленнями та професійна металообробка повного
               циклу. Надійність у кожній деталі
-            </p>
-            <a
-              href="@@webRoot/index.html"
-              class="p-3 rounded-lg text-white text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] max-h-min max-w-fit mx-auto text-xs xs:text-sm"
-            >
+            </span>
+            <a href="@@webRoot/index.html" class="mt-[36px] mx-auto button-red">
               Зробити замовлення
             </a>
           </div>
         </div>
 
         <div
-          class="px-4 xs:px-5 md:px-10 xl:px-[115px] py-9 flex flex-col gap-26 pb-13 md:gap-8 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
+          class="container gap-[100px]"
         >
-          <div
-            class="flex flex-col gap-6 md:flex-row md:items-center md:gap-12 w-full"
-          >
-            <div
-              class="w-full h-[250px] sm:h-[300px] md:h-[380px] overflow-hidden md:order-2"
-            >
+          <div class="product-card product-card--image-right">
+            <div class="product-card__image-wrapper">
               <img
                 src="@@webRoot/assets/banners/Frame1.jpg"
-                class="object-cover w-full h-full [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
+                class="product-card__image cut-angle"
                 alt="Створюємо якісні вироби з пластмаси для вашого бізнесу"
               />
             </div>
-            <div class="flex flex-col gap-4 md:order-1">
-              <h2 class="font-semibold text-lg xs:text-xl">
-                ТехноК — якісні та безпечні іграшки від провідного українського
-                виробника
-              </h2>
-              <div class="flex flex-col gap-8 text-xs xs:text-sm">
-                <p>
-                  ТехноК — власна торгова марка ТОВ «Інтелком», лідер серед
-                  українських виробників іграшок. Асортимент бренду налічує
-                  понад 800 найменувань: конструктори, машинки, меблі та товари
-                  для малюків.
-                </p>
-                <p>
-                  Уся продукція сертифікована за стандартами EN 71, відповідає
-                  вимогам безпеки та експортується до понад 20 країн світу. Ми
-                  створюємо іграшки, що поєднують якість, безпечні матеріали та
-                  продуманий дизайн для розвитку дітей
-                </p>
+            <div class="product-card__content">
+              <div>
+                <div class="section-title__pretitle">
+                  <img
+                    src="@@webRoot/assets/icons/Decorative.svg"
+                    alt="decorative"
+                    class="h-4"
+                  />
+                  <span>Іграшки ТМ «ТехноК»</span>
+                </div>
+                <h2 class="section-title__title">
+                  ТехноК — якісні та безпечні іграшки від провідного
+                  українського виробника
+                </h2>
               </div>
-
-              <a
-                href="@@webRoot/products/toys.html"
-                class="p-3 rounded-lg text-[#004C97] bg-white duration-150 hover:opacity-70 border border-[#004C97] shadow-md !shadow-[0_0_12px_#004C9766] flex flex-row gap-4 max-w-fit text-xs px-3 xs:text-sm"
-              >
+              <p class="product-card__text">
+                ТехноК — власна торгова марка ТОВ «Інтелком», лідер серед
+                українських виробників іграшок. Асортимент бренду налічує понад
+                800 найменувань: конструктори, машинки, меблі та товари для
+                малюків. <br /><br />Уся продукція сертифікована за стандартами
+                EN 71, відповідає вимогам безпеки та експортується до понад 20
+                країн світу. Ми створюємо іграшки, що поєднують якість, безпечні
+                матеріали та продуманий дизайн для розвитку дітей
+              </p>
+              <a href="@@webRoot/products/toys.html" class="product-card__btn">
                 Дізнатися більше
                 <img
                   src="@@webRoot/assets/icons/ArrowRight3.svg"
-                  class="w-5 h-3 mx-auto self-center"
+                  class="product-card__btn-icon"
                   alt=""
                 />
               </a>
             </div>
           </div>
 
-          <div
-            class="flex flex-col gap-6 md:grid md:grid-cols-2 md:items-center md:gap-12 w-full"
-          >
-            <div
-              class="w-full h-[250px] sm:h-[300px] md:h-[380px] overflow-hidden md:order-1"
-            >
+          <div class="product-card">
+            <div class="product-card__image-wrapper">
               <img
                 src="@@webRoot/assets/banners/Frame2.jpg"
-                class="object-cover w-full h-full [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
+                class="product-card__image cut-angle"
                 alt="Металообробка"
               />
             </div>
-            <div class="flex flex-col gap-4 md:order-2">
-              <h2 class="font-semibold text-lg xs:text-xl">
-                Надійні пластикові рішення для промисловості та повсякденного
-                використання
-              </h2>
-              <p class="text-xs xs:text-sm text-gray-600">
+            <div class="product-card__content">
+              <div>
+                <div class="section-title__pretitle">
+                  <img
+                    src="@@webRoot/assets/icons/Decorative.svg"
+                    alt="decorative"
+                    class="h-4"
+                  />
+                  <span>Вироби з пластмаси</span>
+                </div>
+                <h2 class="section-title__title">
+                  Надійні пластикові рішення для промисловості та повсякденного
+                  використання
+                </h2>
+              </div>
+              <p class="product-card__text">
                 Ми виготовляємо пластикові вироби з високою точністю та
                 стабільністю параметрів, використовуючи сучасні технології лиття
                 й видувного формування. Контроль якості на всіх етапах та підбір
@@ -130,50 +128,55 @@
               </p>
               <a
                 href="@@webRoot/products/plastic.html"
-                class="p-3 rounded-lg text-[#004C97] bg-white duration-150 hover:opacity-70 border border-[#004C97] shadow-md !shadow-[0_0_12px_#004C9766] flex flex-row gap-4 max-w-fit text-xs px-3 xs:text-sm"
+                class="product-card__btn"
               >
                 Дізнатися більше
                 <img
                   src="@@webRoot/assets/icons/ArrowRight3.svg"
-                  class="w-5 h-3 mx-auto self-center"
+                  class="product-card__btn-icon"
                   alt=""
                 />
               </a>
             </div>
           </div>
-
-          <div
-            class="flex flex-col gap-6 md:grid md:grid-cols-2 md:items-center md:gap-12 w-full"
-          >
-            <div
-              class="w-full h-[250px] sm:h-[300px] md:h-[380px] overflow-hidden md:order-2"
-            >
+          <div class="product-card product-card--image-right">
+            <div class="product-card__image-wrapper">
               <img
                 src="@@webRoot/assets/banners/Frame5.jpg"
-                class="object-cover w-full h-full [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
+                class="product-card__image cut-angle"
                 alt="Промисловий дизайн та проєктування"
               />
             </div>
-            <div class="flex flex-col gap-4 md:order-1">
-              <h2 class="font-semibold text-lg xs:text-xl">Металообробка</h2>
-              <p class="text-xs xs:text-sm text-gray-600">
+            <div class="product-card__content">
+              <div>
+                <div class="section-title__pretitle">
+                  <img
+                    src="@@webRoot/assets/icons/Decorative.svg"
+                    alt="decorative"
+                    class="h-4"
+                  />
+                  <span>Вироби з металу</span>
+                </div>
+                <h2 class="section-title__title">Професійна обробка металів</h2>
+              </div>
+              <p class="product-card__text">
                 Ми виконуємо повний спектр робіт із високоточної обробки металів
                 — від токарних і фрезерних операцій до зварювання, гнуття,
                 лазерного різання та порошкового фарбування. Сучасне обладнання
                 та досвід інженерів забезпечують точну геометрію, стабільні
-                параметри та відповідність промисловим вимогам.   Наші металеві
-                деталі та конструкції підходять для машинобудування,
-                будівництва, меблевої галузі та інших сфер, де важлива
-                надійність і якість у кожному елементі.
+                параметри та відповідність промисловим вимогам. <br /><br />
+                Наші металеві деталі та конструкції підходять для
+                машинобудування, будівництва, меблевої галузі та інших сфер, де
+                важлива надійність і якість у кожному елементі.
               </p>
               <a
                 href="@@webRoot/products/metaloobrobka.html"
-                class="p-3 rounded-lg text-[#004C97] bg-white duration-150 hover:opacity-70 border border-[#004C97] shadow-md !shadow-[0_0_12px_#004C9766] flex flex-row gap-4 max-w-fit text-xs px-3 xs:text-sm"
+                class="product-card__btn"
               >
                 Дізнатися більше
                 <img
                   src="@@webRoot/assets/icons/ArrowRight3.svg"
-                  class="w-5 h-3 mx-auto self-center"
+                  class="product-card__btn-icon"
                   alt=""
                 />
               </a>

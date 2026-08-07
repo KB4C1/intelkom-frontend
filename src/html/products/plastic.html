@@ -10,7 +10,7 @@
   <body>
     <!-- prettier-ignore -->
     @@include('../../partials/burger-menu.html', { "activePage": "products" })
-    @@include('../../partials/header.html')
+    @@include('../../partials/header.html', { "activePage": "products" })
     <div
       class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
     >
@@ -27,9 +27,7 @@
     </div>
     <main>
       <section>
-        <div
-          class="mb-8 3xl:max-w-[1400px] 3xl:mx-auto w-full h-[500px] overflow-hidden relative flex justify-center items-center text-white text-center"
-        >
+        <div class="hero-banner">
           <img
             src="@@webRoot/assets/banners/img09.jpg"
             class="absolute inset-0 w-full h-full object-cover object-center"
@@ -38,24 +36,20 @@
           <div
             class="absolute inset-0 z-10 bg-gradient-to-t from-[#004C97]/90 from-25% to-transparent pointer-events-none"
           ></div>
-          <div class="z-20 max-w-[90%] flex flex-col place-self-end py-8 gap-4">
-            <h1
-              class="text-2xl font-semibold xs:text-[26px] md:text-3xl xl:text-4xl 3xl:text-5xl"
-            >
+          <div class="hero__wrapper">
+            <h1 class="hero__title">
               Надійні пластикові рішення для промисловості та повсякденного
               використання
             </h1>
-            <p class="text-xs xl:text-base 3xl:text-xl text-light">
+            <span class="hero__subtitle">
               Ми виготовляємо якісні та надійні вироби з пластмаси,
               використовуючи сучасні технології та сертифіковані матеріали. Наше
               виробництво забезпечує стабільну якість і точність деталей
               будь-якої складності.
-            </p>
+            </span>
           </div>
         </div>
-        <div
-          class="flex flex-col gap-4 w-full text-left py-3 px-4 xs:px-5 md:px-10 xl:px-[115px] 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
-        >
+        <div class="container text-left">
           <h2
             class="text-xl font-semibold self-center p-6 md:text-2xl 3xl:text-3xl"
           >
@@ -110,24 +104,21 @@
             @@include('../../partials/capacity-card.html', {"bgColor": "#004C97D9", "title": "Вироби для будівельної галузі", "imgPath": "../assets/banners/img20.jpg"})
           </div>
         </div>
-        <div
-          class="text-black flex flex-col px-4 xs:px-5 md:px-10 xl:px-[115px] 3xl:px-0 py-6 pb-9 gap-5 3xl:max-w-[1400px] 3xl:mx-auto"
-        >
+        <div class="container">
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[30px] mm:gap-[45px] xl:gap-[70px] 2xl:gap-[53px] items-center"
           >
             <div
-              class="md:order-2 w-full h-[262px] md:h-[380px] mm:h-[400px] xl:h-[520px] mb-6 md:mb-0 [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)] md:rounded-lg relative overflow-hidden"
+              class="md:order-2 w-full h-[262px] md:h-[380px] mm:h-[400px] xl:h-[520px] mb-6 md:mb-0 cut-angle md:rounded-lg relative overflow-hidden"
               data-video-wrapper
             >
               <video
                 data-video-player
                 playsinline
                 class="w-full h-full object-cover"
-                poster="@@webRoot/assets/banners/factory2.jpg"
               >
                 <source
-                  src="@@webRoot/assets/videos/lviv.mp4"
+                  src="@@webRoot/assets/videos/TechnoK.mp4#t=5"
                   type="video/mp4"
                 />
                 ваш браузер не підтримує відео
@@ -146,21 +137,17 @@
                 />
               </button>
             </div>
-            <div
-              class="flex flex-col self-start md:order-1 gap-[14px] md:gap-4 mm:gap-5 xl:gap-[26px] 2xl:gap-8"
-            >
-              <div class="flex items-center gap-2">
+            <div class="flex flex-col self-start md:order-1">
+              <div class="section-title__pretitle">
                 <img
                   src="@@webRoot/assets/icons/Decorative.svg"
                   alt="decorative"
                   class="h-4"
                 />
-                <span class="text-xs xs:text-sm md:text-base"
-                  >Чому саме ми?</span
-                >
+                <span>Чому саме ми?</span>
               </div>
               <h2
-                class="font-semibold text-lg xs:text-xl mm:text-2xl xl:text-3xl"
+                class="font-semibold text-lg xs:text-xl mm:text-2xl xl:text-3xl mb-[14px] mm:mb-5 md:mb-4 xl:mb-[26px] 2xl:mb-8"
               >
                 Ми надаємо свої потужності для росту Вашого бізнесу або
                 виготовлення Вашої продукції

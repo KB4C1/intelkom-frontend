@@ -11,18 +11,14 @@
     <div class="w-full flex flex-col md:flex-row md:items-stretch max-w-full">
       <div
         id="footer-contacts"
-        class="flex flex-col w-full md:w-1/2 bg-[#004C97E5] 2xl:-mt-[30px] 3xl:!justify-evenly 3xl:p-12 3xl:bg-[#004C97] flex flex-col text-[#fff] p-4 py-6 gap-5 [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
+        class="flex flex-col w-full md:w-1/2 bg-[#004C97E5] 2xl:-mt-[30px] 3xl:!justify-evenly 3xl:p-12 3xl:bg-[#004C97] flex flex-col text-[#fff] p-4 py-6 pt-12 gap-[40px] xs:gap-[48px] xl:gap-[100px] cut-angle"
       >
         <h2 class="text-2xl font-semibold md:text-3xl 3xl:text-[32px]">
           Контактна інформація:
         </h2>
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-6">
           <div class="text-sm flex flex-row gap-3 2xl:text-lg">
-            <img
-              class="w-5"
-              src="@@webRoot/assets/icons/LocationIcon.svg"
-              alt=""
-            />
+            <img class="w-5" src="@@webRoot/assets/icons/LocationIcon.svg" />
             <span
               >вул. Микитинецька, 7а, м. Івано-Франківськ, 76002, Україна</span
             >
@@ -39,21 +35,22 @@
 
         <div class="flex flex-col gap-2">
           <h2 class="font-medium">Стежте за нами в мережах:</h2>
-          <div class="flex flex-row gap-5">
-            <img
-              src="@@webRoot/assets/icons/meta/Facebook.svg"
-              alt="Facebook"
-            />
-            <img src="@@webRoot/assets/icons/meta/Youtube.svg" alt="Youtube" />
-            <img src="@@webRoot/assets/icons/meta/X.svg" alt="X" />
-            <img
-              src="@@webRoot/assets/icons/meta/Telegram.svg"
-              alt="Telegram"
-            />
-            <img
-              src="@@webRoot/assets/icons/meta/linkedin.svg"
-              alt="Linkedin"
-            />
+          <div class="flex flex-row gap-3 mm:gap-5">
+            <a href="">
+              <img src="@@webRoot/assets/icons/meta/Facebook.svg" />
+            </a>
+            <a href="">
+              <img src="@@webRoot/assets/icons/meta/Youtube.svg" />
+            </a>
+            <a href="">
+              <img src="@@webRoot/assets/icons/meta/X.svg" />
+            </a>
+            <a href="">
+              <img src="@@webRoot/assets/icons/meta/Telegram.svg" />
+            </a>
+            <a href="">
+              <img src="@@webRoot/assets/icons/meta/linkedin.svg" />
+            </a>
           </div>
         </div>
 
@@ -128,10 +125,7 @@
             ></span>
           </div>
 
-          <button
-            type="submit"
-            class="p-3 rounded-lg text-white text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] shadow-lg shadow-red-400"
-          >
+          <button type="submit" class="mx-auto button-red">
             <span>Зв'язатися з нами</span>
           </button>
         </form>
@@ -264,7 +258,7 @@
         </div>
       </div>
       <div
-        class="pt-6 border-t border-[#939496] flex flex-row justify-between items-center mm:flex-col mm:border-none mm:pt-0 gap-4"
+        class="pt-6 border-t border-[#939496] flex flex-row justify-between items-start mm:flex-col mm:border-none mm:pt-0 gap-4"
       >
         <img
           src="@@webRoot/assets/icons/LogoGray.svg"

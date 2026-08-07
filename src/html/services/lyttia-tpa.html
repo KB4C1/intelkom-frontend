@@ -14,7 +14,7 @@
   <body>
     <!-- prettier-ignore -->
     @@include('../../partials/burger-menu.html', { "activePage": "services" })
-    @@include('../../partials/header.html')
+    @@include('../../partials/header.html', { "activePage": "services" })
     <div
       class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
     >
@@ -31,9 +31,7 @@
     </div>
     <main>
       <section>
-        <div
-          class="mb-8 3xl:max-w-[1400px] 3xl:mx-auto w-full h-[500px] overflow-hidden relative flex justify-center items-center text-white text-center"
-        >
+        <div class="hero-banner">
           <img
             src="@@webRoot/assets/banners/img12.jpg"
             class="absolute inset-0 w-full h-full object-cover object-center"
@@ -42,28 +40,24 @@
           <div
             class="absolute inset-0 z-10 bg-gradient-to-t from-[#004C97] to-transparent pointer-events-none"
           ></div>
-          <div
-            class="z-20 flex flex-col place-self-end py-8 px-4 gap-4 xl:max-w-[70%] xl:place-self-center"
-          >
-            <h1
-              class="font-bold text-2xl font-semibold md:text-3xl xl:text-4xl 2xl:text-5xl"
-            >
+          <div class="hero__wrapper">
+            <h1 class="hero__title">
               Лиття під тиском на термопластавтоаматах (ТПА)
             </h1>
-            <p class="text-sm md:text-base 3xl:text-2xl">
+            <span class="hero__subtitle">
               Сучасні термопластавтомати зі зусиллям змикання 35–1000 т
               забезпечують формування деталей із високою точністю та
               стабільністю параметрів
-            </p>
+            </span>
           </div>
         </div>
         <div
-          class="flex flex-col gap-6 w-full py-3 px-4 xs:px-5 md:px-10 xl:px-[115px] 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto font-medium"
+          class="container tpa-container gap-10"
         >
-          <h2 class="text-2xl font-semibold text-center md:3xl">
+          <h2>
             Лиття під тиском на термопластавтоаматах (ТПА)
           </h2>
-          <div class="flex flex-col gap-8 text-left xl:max-w-[60%]">
+          <div>
             <p>
               Компанія ТОВ «ІНТЕЛКОМ», що представляє український бренд дитячих
               іграшок «ТехноК», увійшла до рейтингу Forbes Ukraine Next250 —
@@ -125,10 +119,7 @@
           </div>
         </div>
         <div class="flex m-12">
-          <a
-            href="@@webRoot/services/index.html"
-            class="p-3 rounded-lg text-white mx-auto text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] shadow-lg shadow-[#FF000066]"
-          >
+          <a href="@@webRoot/services/index.html" class="mx-auto button-red">
             Замовити послугу
           </a>
         </div>

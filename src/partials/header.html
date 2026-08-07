@@ -1,5 +1,6 @@
 <header
   data-site-header
+  data-active-page="@@activePage"
   class="max-w-full justify-between h-[64px] md:h-[80px] xl:h-[110] flex flex-row items-center p-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto bg-[#F7FAFC] border-b border-gray-100 gap-4"
 >
   <style>
@@ -29,6 +30,14 @@
       [data-search-open] {
       display: none;
     }
+
+    header[data-active-page="about"] [data-nav="about"],
+    header[data-active-page="products"] [data-nav="products"],
+    header[data-active-page="services"] [data-nav="services"],
+    header[data-active-page="cooperation"] [data-nav="cooperation"],
+    header[data-active-page="news"] [data-nav="news"] {
+      color: #e90b0f !important;
+    }
   </style>
 
   <a
@@ -53,6 +62,7 @@
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
           href="@@webRoot/about.html"
+          data-nav="about"
           class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
           >Компанія</a
         >
@@ -63,6 +73,7 @@
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
           href="@@webRoot/products/index.html"
+          data-nav="products"
           class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
           >Продукція</a
         >
@@ -100,6 +111,7 @@
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
           href="@@webRoot/services/index.html"
+          data-nav="services"
           class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
           >Послуги</a
         >
@@ -137,24 +149,29 @@
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
           href="@@webRoot/cooperation.html"
+          data-nav="cooperation"
           class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
           >Співпраця</a
         >
       </div>
     </div>
+
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
           href="@@webRoot/news/index.html"
+          data-nav="news"
           class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
           >Новини</a
         >
       </div>
     </div>
+
     <div class="group relative text-black">
       <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
         <a
           href="#footer-contacts"
+          data-nav="contacts"
           class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
           >Контакти</a
         >

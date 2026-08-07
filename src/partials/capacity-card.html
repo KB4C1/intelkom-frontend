@@ -1,15 +1,8 @@
 <div class="@@colSpan">
-  <div class="relative overflow-hidden inline-block h-[250px] w-full">
-    <img
-      class="w-full h-full object-cover [clip-path:polygon(30px_0,_100%_0,_100%_100%,_0_100%,_0_30px)]"
-      src="@@imgPath"
-      alt="@@title"
-    />
-
-    <div
-      class="bg-[#004C97D9] hover:bg-[#990103D9] absolute bottom-0 left-0 w-full flex flex-col text-center px-5 h-15 justify-center items-center z-20 transition-colors duration-300 cursor-pointer"
-    >
-      <strong class="font-semibold text-lg text-white">@@title</strong>
+  <div class="capacity-card">
+    <img src="@@imgPath" alt="@@title" class="capacity-card__image cut-angle" />
+    <div class="capacity-card__overlay">
+      <strong class="capacity-card__title">@@title</strong>
     </div>
   </div>
 </div>

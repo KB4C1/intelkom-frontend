@@ -15,7 +15,7 @@
   <body>
     <!-- prettier-ignore -->
     @@include('../partials/burger-menu.html', { "activePage": "about" })
-    @@include('../partials/header.html')
+    @@include('../partials/header.html', { "activePage": "about" })
     <main>
       <div
         class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
@@ -26,10 +26,8 @@
           <span class="text-[#939496]">Про компанію</span>
         </span>
       </div>
-      <section class="w-full flex flex-col">
-        <div
-          class="mb-8 3xl:max-w-[1400px] 3xl:mx-auto w-full h-[500px] overflow-hidden relative flex justify-center items-center text-white text-center"
-        >
+      <section>
+        <div class="hero-banner">
           <img
             src="@@webRoot/assets/banners/banner1.svg"
             class="absolute inset-0 w-full h-full object-cover object-center"
@@ -38,73 +36,66 @@
           <div
             class="absolute inset-0 z-10 bg-gradient-to-t from-[#004C97]/90 from-25% via-transparent via-50% to-transparent to-100% pointer-events-none"
           ></div>
-          <div class="z-20 max-w-[90%] flex flex-col place-self-end py-8">
-            <h1 class="text-2xl font-semibold md:text-[40px] xl:text-5xl">
+          <div class="hero__wrapper">
+            <h1 class="hero__title">
               Створюємо якісні вироби з пластмаси і металу для вашого бізнесу
             </h1>
-            <span class="text-sm md:text-lg xl:text-lg">
-              Забезпечуємо точне лиття под тиском із сучасним обладнанням та
-              матеріалами
+            <span class="hero__subtitle">
+              Забезпечуємо точне лиття під тиском із сучасним обладнанням та
+              матеріалами, отримуючи надійну продукцію за вимогами замовника
             </span>
           </div>
         </div>
 
         <div
-          class="flex flex-col gap-5 md:gap-[40px] 2xl:gap-[45px] px-4 xs:px-5 md:px-10 xl:px-[115px] py-8 3xl:w-[1400px] 3xl:px-0 3xl:mx-auto"
+          class="gap-5 md:gap-[40px] 2xl:gap-[45px] container"
         >
           <h2 class="font-semibold text-xl md:mx-auto md:text-3xl">
             Про компанію
           </h2>
-          <div
-            class="min-w-0 xl:w-[850px] self-start items-start justify-start flex flex-col gap-8 text-left"
-          >
-            <p class="font-medium">
+          <div class="about-container">
+            <p>
               Компанія ТОВ «ІНТЕЛКОМ», що представляє український бренд дитячих
               іграшок «ТехноК», увійшла до рейтингу Forbes Ukraine Next250 -
               списку найперспективніших малих та середніх компаній України, які
               демонструють стабільний розвиток, інноваційність та значний
               потенціал зростання.
             </p>
-            <p class="font-medium">
+            <p>
               Включення до цього рейтингу є важливим визнанням результатів
               роботи компанії та підтвердженням її активного розвитку навіть в
               умовах складної економічної ситуації та викликів воєнного часу.
             </p>
-            <div
-              class="flex flex-col gap-8 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
-            >
-              <h2 class="font-bold text-2xl">Основні напрямки виробництва</h2>
-              <ol class="list-decimal space-y-3 font-medium pl-4">
+            <div>
+              <h2>Основні напрямки виробництва</h2>
+              <ol>
                 <li>Виробництво іграшок під ТМ «ТехноК»</li>
                 <li>Лиття пластмас під тиском</li>
                 <li>Повний цикл металообробки</li>
               </ol>
 
-              <h2 class="text-xl font-semibold">Стандарти якості</h2>
-              <ul class="list-disc space-y-3 font-medium pl-4">
+              <h2>Стандарти якості</h2>
+              <ul>
                 <li>Сертифіковане виробництво</li>
                 <li>Сучасне обладнання</li>
                 <li>Експорт до 20 країн</li>
               </ul>
+              <h3>Наші досягнення</h3>
 
-              <h2 class="font-semibold text-xl">Наші досягнення</h2>
-              <div
-                class="border border-[#E5E7EB] rounded-xl p-4 flex flex-row items-stretch gap-4"
-              >
-                <div class="w-[3px] bg-[#C84E4E] rounded-full shrink-0"></div>
-                <p class="italic text-gray-700 block">
+              <blockquote>
+                <p>
                   «Компанія «ІНТЕЛКОМ» вже майже 30 років працює на ринку
                   дитячих іграшок та є одним із провідних українських виробників
                   у своїй галузі. Продукція бренду «ТехноК» представлена більш
                   ніж у 20 000 магазинах по всій Україні та експортується до 20
                   країн світу»
                 </p>
-              </div>
+              </blockquote>
             </div>
           </div>
         </div>
 
-        <div class="md:bg-[#D5E6FA] w-full py-16 mb-14">
+        <div class="md:bg-[#D5E6FA] container full-w">
           <div class="about-slider-wrap w-full mx-auto">
             <div class="about-slider swiper">
               <div class="swiper-wrapper">
@@ -123,7 +114,7 @@
           </div>
         </div>
 
-        <div class="w-full h-auto flex-1 3xl:max-w-[1400px] 3xl:mx-auto">
+        <div class="h-auto flex-1 container">
           <div
             class="w-full h-[80vw] 3xl:h-[40vw] self-start overflow-hidden relative"
             data-video-wrapper
@@ -132,9 +123,11 @@
               data-video-player
               playsinline
               class="w-full h-full object-cover"
-              poster="@@webRoot/assets/banners/factory2.jpg"
             >
-              <source src="@@webRoot/assets/videos/lviv.mp4" type="video/mp4" />
+              <source
+                src="@@webRoot/assets/videos/TechnoK.mp4#t=5"
+                type="video/mp4"
+              />
               ваш браузер не підтримує відео
             </video>
 
@@ -154,22 +147,18 @@
         </div>
 
         <div
-          class="text-black flex flex-col px-4 xs:px-5 md:px-10 xl:px-[115px] py-9 gap-8 3xl:px-0 xl:max-w-[1400px] xl:mx-auto"
+          class="container"
         >
-          <div class="flex flex-col gap-4 items-left md:items-center">
-            <div class="flex flex-row gap-2">
+          <div class="section-title__wrapper">
+            <div class="section-title__pretitle">
               <img
-                class="h-4"
                 src="@@webRoot/assets/icons/Decorative.svg"
                 alt="decorative"
+                class="h-4"
               />
-              <span class="text-xs xs:text-sm text-[#666666]"
-                >Основні напрямки</span
-              >
+              <span>Основні напрямки</span>
             </div>
-            <h2
-              class="font-semibold text-[22px] text-left md:text-center md:text-3xl max-w-[800px] mb-4"
-            >
+            <h2 class="section-title__title">
               Ми працюємо у трьох ключових напрямках
             </h2>
           </div>
@@ -190,7 +179,9 @@
               @@include('../partials/direction-block.html', {"title": "Вироби з металу", "imgPath": "./assets/banners/Frame3.jpg", "description": "Повний цикл металообробки: фрезерування, токарні, зварювальні роботи, складання та фарбування"})
             </div>
           </div>
-          <p class="hidden w-[90%] mx-auto text-center xl:block font-semibold">
+          <p
+            class="hidden mt-8 w-[90%] mx-auto text-center xl:block font-semibold"
+          >
             Наші потужності включають виробництво дитячих іграшок под ТМ
             «Технок» з акцентом на розвиток і безпеку дитини, лиття пластмас під
             тиском за індивідуальними кресленнями, а також повний цикл

@@ -29,6 +29,7 @@
     "tailwindcss": "^4.3.2"
   },
   "dependencies": {
+    "countup.js": "^2.10.1",
     "gulp-concat": "^2.6.1",
     "jquery": "^4.0.0",
     "jquery-migrate": "^4.0.2",
