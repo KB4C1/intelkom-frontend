@@ -25,17 +25,17 @@ const contactSchema = z.object({
     .min(5, { message: "повідомлення має містити не менше 5 символів" }),
 });
 
-async function contactUs(data) {
-  // try {
-  //   const response = await fetch('/api/contact', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify(data),
-  //   });
-  // } catch (error) {
-  //   console.error(error);
-  // }
-}
+// async function contactUs(data) {
+//   try {
+//     const response = await fetch('/api/contact', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify(data),
+//     });
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
 function initContactForms() {
   const forms = document.querySelectorAll(
