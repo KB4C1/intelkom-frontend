@@ -11,22 +11,19 @@
     <!-- prettier-ignore -->
     @@include('../../partials/burger-menu.html', { "activePage": "news" })
     @@include('../../partials/header.html', { "activePage": "news" })
-    <main class="3xl:max-w-[1400px] 3xl:mx-auto">
-      <div
-        class="w-full text-left py-9 px-4 md:px-8 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
-      >
-        <span
-          class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-          ><a class="hover:underline" href="@@webRoot/index.html">Головна</a>
-          <span> / </span>
-          <a class="hover:underline" href="@@webRoot/news/index.html">Новини</a>
-        </span>
-      </div>
+    <main>
       <section>
-        <div class="container">
-          <div
-            class="news-container"
-          >
+        <div class="breadcrumbs">
+          <span class="breadcrumbs__wrapper">
+            <a class="breadcrumbs__link" href="@@webRoot/index.html">Головна</a>
+            <span class="breadcrumbs__separator"> / </span>
+            <a class="breadcrumbs__link" href="@@webRoot/news/index.html"
+              >Новини</a
+            >
+          </span>
+        </div>
+        <div class="container no-padding">
+          <div class="news-container">
             <div class="news-container__top">
               <h1 class="news-container__title">
                 Компанія «ІНТЕЛКОМ» увійшла до рейтингу Forbes Ukraine Next250

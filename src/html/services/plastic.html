@@ -11,18 +11,15 @@
     <!-- prettier-ignore -->
     @@include('../../partials/burger-menu.html', { "activePage": "services" })
     @@include('../../partials/header.html', { "activePage": "services" })
-    <div
-      class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
-    >
-      <span
-        class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-        ><a class="hover:underline" href="@@webRoot/index.html">Головна</a>
-        <span> / </span>
-        <a class="hover:underline" href="@@webRoot/services/index.html"
+    <div class="breadcrumbs">
+      <span class="breadcrumbs__wrapper"
+        ><a class="breadcrumbs__link" href="@@webRoot/index.html">Головна</a>
+        <span class="breadcrumbs__separator"> / </span>
+        <a class="breadcrumbs__link" href="@@webRoot/services/index.html"
           >Послуги</a
         >
-        <span> / </span>
-        <span class="text-[#939496]">Лиття виробів із пластмаси</span>
+        <span class="breadcrumbs__separator"> / </span>
+        <span class="breadcrumbs__current">Лиття виробів із пластмаси</span>
       </span>
     </div>
     <main>
@@ -49,9 +46,7 @@
             </a>
           </div>
         </div>
-        <div
-          class="container"
-        >
+        <div class="container">
           <div class="self-center section-title__pretitle">
             <img
               src="@@webRoot/assets/icons/Decorative.svg"
@@ -93,9 +88,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="container"
-        >
+        <div class="container">
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[30px] mm:gap-[45px] xl:gap-[70px] 2xl:gap-[53px] items-center"
           >

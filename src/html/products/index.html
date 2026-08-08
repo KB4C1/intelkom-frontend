@@ -12,17 +12,16 @@
     @@include('../../partials/burger-menu.html', { "activePage": "products" })
     @@include('../../partials/header.html', { "activePage": "products" })
     <main>
-      <div
-        class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
-      >
-        <span
-          class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-          ><a class="hover:underline" href="@@webRoot/index.html">Головна</a>
-          <span> / </span>
-          <span class="text-[#939496]">Продукція</span>
-        </span>
-      </div>
       <section>
+        <div class="breadcrumbs">
+          <span class="breadcrumbs__wrapper"
+            ><a class="breadcrumbs__link" href="@@webRoot/index.html"
+              >Головна</a
+            >
+            <span class="breadcrumbs__separator"> / </span>
+            <span class="breadcrumbs__current">Продукція</span>
+          </span>
+        </div>
         <div class="hero-banner">
           <img
             src="@@webRoot/assets/banners/banner2.jpg"
@@ -47,9 +46,7 @@
           </div>
         </div>
 
-        <div
-          class="container gap-[100px]"
-        >
+        <div class="container gap-[100px]">
           <div class="product-card product-card--image-right">
             <div class="product-card__image-wrapper">
               <img

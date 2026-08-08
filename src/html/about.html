@@ -17,16 +17,16 @@
     @@include('../partials/burger-menu.html', { "activePage": "about" })
     @@include('../partials/header.html', { "activePage": "about" })
     <main>
-      <div
-        class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
-      >
-        <span
-          class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-          ><a class="hover:underline" href="@@webRoot/index.html">Головна</a> /
-          <span class="text-[#939496]">Про компанію</span>
-        </span>
-      </div>
       <section>
+        <div class="breadcrumbs">
+          <span class="breadcrumbs__wrapper"
+            ><a class="breadcrumbs__link" href="@@webRoot/index.html"
+              >Головна</a
+            >
+            /
+            <span class="breadcrumbs__current">Про компанію</span>
+          </span>
+        </div>
         <div class="hero-banner">
           <img
             src="@@webRoot/assets/banners/banner1.svg"
@@ -47,9 +47,7 @@
           </div>
         </div>
 
-        <div
-          class="gap-5 md:gap-[40px] 2xl:gap-[45px] container"
-        >
+        <div class="gap-5 md:gap-[40px] 2xl:gap-[45px] container">
           <h2 class="font-semibold text-xl md:mx-auto md:text-3xl">
             Про компанію
           </h2>
@@ -146,9 +144,7 @@
           </div>
         </div>
 
-        <div
-          class="container"
-        >
+        <div class="container">
           <div class="section-title__wrapper">
             <div class="section-title__pretitle">
               <img

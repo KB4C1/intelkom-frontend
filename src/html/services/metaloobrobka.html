@@ -12,18 +12,15 @@
     @@include('../../partials/burger-menu.html', { "activePage": "services" })
     @@include('../../partials/header.html', { "activePage": "services" })
     <main>
-      <div
-        class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
-      >
-        <span
-          class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-          ><a class="hover:underline" href="@@webRoot/index.html">Головна</a>
-          <span> / </span>
-          <a class="hover:underline" href="@@webRoot/services/index.html"
+      <div class="breadcrumbs">
+        <span class="breadcrumbs__wrapper"
+          ><a class="breadcrumbs__link" href="@@webRoot/index.html">Головна</a>
+          <span class="breadcrumbs__separator"> / </span>
+          <a class="breadcrumbs__link" href="@@webRoot/services/index.html"
             >Послуги</a
           >
-          <span> / </span>
-          <span class="text-[#939496]">Металообробка</span>
+          <span class="breadcrumbs__separator"> / </span>
+          <span class="breadcrumbs__current">Металообробка</span>
         </span>
       </div>
 

@@ -11,16 +11,17 @@
     @@include('../partials/burger-menu.html', { "activePage": "cooperation" })
     @@include('../partials/header.html', { "activePage": "cooperation" })
 
-    <div class="container text-left">
-      <span
-        class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-        ><a class="hover:underline" href="@@webRoot/index.html">Головна</a> /
-        <span class="text-[#939496]">Кооперація</span>
-      </span>
-    </div>
-
     <main>
       <section>
+        <div class="breadcrumbs">
+          <span class="breadcrumbs__wrapper"
+            ><a class="breadcrumbs__link" href="@@webRoot/index.html"
+              >Головна</a
+            >
+            /
+            <span class="breadcrumbs__current">Кооперація</span>
+          </span>
+        </div>
         <div class="hero-banner">
           <img
             src="@@webRoot/assets/banners/corporate.jpg"

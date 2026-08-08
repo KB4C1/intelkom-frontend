@@ -11,18 +11,15 @@
     <!-- prettier-ignore -->
     @@include('../../partials/burger-menu.html', { "activePage": "products" })
     @@include('../../partials/header.html', { "activePage": "products" })
-    <div
-      class="w-full text-left py-3 px-4 3xl:px-0 3xl:max-w-[1400px] 3xl:mx-auto"
-    >
-      <span
-        class="font-['Roboto',_sans-serif] font-normal text-xs text-[#004C97]"
-        ><a class="hover:underline" href="@@webRoot/index.html">Головна</a>
-        <span> / </span>
-        <a class="hover:underline" href="@@webRoot/products/index.html"
+    <div class="breadcrumbs">
+      <span class="breadcrumbs__wrapper"
+        ><a class="breadcrumbs__link" href="@@webRoot/index.html">Головна</a>
+        <span class="breadcrumbs__separator"> / </span>
+        <a class="breadcrumbs__link" href="@@webRoot/products/index.html"
           >Продукція</a
         >
-        <span> / </span>
-        <span class="text-[#939496]">Іграшки ТехноК</span>
+        <span class="breadcrumbs__separator"> / </span>
+        <span class="breadcrumbs__current">Іграшки ТехноК</span>
       </span>
     </div>
     <main>
@@ -48,12 +45,8 @@
             </span>
           </div>
         </div>
-        <div
-          class="container"
-        >
-          <h2 class="section-title">
-            Категорії товарів
-          </h2>
+        <div class="container">
+          <h2 class="section-title">Категорії товарів</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             <!-- prettier-ignore -->
             @@include('../../partials/toy-card.html', {"title": "Сезонні іграшки", "imgPath": "../assets/banners/img28.png", "bgColor": "#FB903D"})
@@ -79,9 +72,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="container"
-        >
+        <div class="container">
           <div class="flex flex-col mm:flex-row gap-8 items-center mt-4">
             <div
               class="flex flex-col place-self-start text-left flex-1 w-full mm:max-w-fit"
