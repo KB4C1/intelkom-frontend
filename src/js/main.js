@@ -346,8 +346,14 @@ function initTimeLine() {
 }
 
 function initCounters() {
+  const easingFn = (t, b, c, d) => {
+    const ts = (t /= d) * t;
+    const tc = ts * t;
+    return b + c * (tc * ts + -5 * ts * ts + 10 * tc + -10 * ts + 5 * t);
+  };
   const options = {
-    duration: 2,
+    duration: 1.5,
+    easingFn,
   };
 
   const counterArea = new CountUp("counter-area__count", 35, options);

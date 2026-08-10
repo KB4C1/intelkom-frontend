@@ -37,6 +37,10 @@ body {
   .container {
     padding: 50px 32px;
   }
+  .container.counters-container {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 @media (min-width: 110rem) {
@@ -58,6 +62,69 @@ body {
 
 .container.no-padding {
   padding-top: 0;
+}
+
+.container.counters-container {
+  gap: 24px;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.container.footer-container {
+  padding: 0;
+  margin: 0 auto;
+  gap: 1.75rem;
+}
+
+@media (min-width: 920px) {
+  .container.footer-container {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .container.footer-container {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 110rem) {
+  .container.footer-container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.container.header-container {
+  max-width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 64px;
+  padding: 16px;
+  gap: 16px;
+
+  background-color: #f7fafc;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .container.header-container {
+    height: 80px;
+  }
+}
+
+@media (min-width: 110rem) {
+  .container.header-container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .breadcrumbs {
@@ -140,6 +207,8 @@ body {
   font-weight: 700;
   font-size: 3rem;
   line-height: 1;
+  align-items: baseline;
+  white-space: nowrap;
 }
 
 .counters__unit {
