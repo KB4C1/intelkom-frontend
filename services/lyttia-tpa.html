@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Послуги - металообробка</title>
+    <link rel="icon" type="image/svg+xml" href="/intelkom-frontend/favicon.svg" />
+    <link rel="stylesheet" href="/intelkom-frontend/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- prettier-ignore -->
+    <div
+  class="fixed inset-0 z-[90] hidden bg-black/40 transition-opacity duration-200"
+  data-menu-overlay
+></div>
+
+<div
+  class="fixed top-0 right-0 z-[100] hidden h-screen w-full flex-col gap-7 overflow-y-auto bg-[#F7FAFC] pt-4 pr-4 pb-4 pl-4 shadow-2xl mm:w-2/5 mm:pl-0"
+  data-menu-panel
+>
+  <div class="self-end cursor-pointer p-1">
+    <img
+      src="/intelkom-frontend/assets/icons/Close.svg"
+      alt="Закрити меню"
+      class="cursor-pointer"
+      data-menu-close
+    />
+  </div>
+
+  <div class="flex flex-col">
+    <div class="w-full h-[1px] bg-[#EDEDED]"></div>
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4   border-l-transparent text-black "
+        data-accordion-head
+      >
+        <a
+          href="/intelkom-frontend/about.html"
+          class="font-medium text-lg text-inherit block w-full"
+          >Компанія</a
+        >
+      </div>
+    </div>
+    <div class="w-full h-[1px] bg-[#EDEDED]"></div>
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4   border-l-transparent text-black "
+        data-accordion-head
+      >
+        <a
+          href="/intelkom-frontend/products/index.html"
+          class="font-medium text-lg text-inherit"
+          >Продукція</a
+        >
+
+        <img
+          src="/intelkom-frontend/assets/icons/ArrowBottom.svg"
+          class="h-4 w-4 transition duration-300   -rotate-90 "
+          alt=""
+        />
+      </div>
+
+      <div
+        class=" hidden  w-full max-h-fit flex flex-col bg-gray-50/50 gap-4 pl-8 py-2"
+        data-accordion-body
+      >
+        <a
+          href="/intelkom-frontend/products/toys.html"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
+          >Іграшки «ТехноК»</a
+        >
+
+        <a
+          href="/intelkom-frontend/products/plastic.html"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
+          >Вироби з пластмаси</a
+        >
+
+        <a
+          href="/intelkom-frontend/products/metaloobrobka.html"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
+          >Вироби з металу</a
+        >
+      </div>
+    </div>
+    <div class="w-full h-[1px] bg-[#EDEDED]"></div>
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4  border-l-[#CC1A1A] bg-[#F2F2F7] text-[#CC1A1A]  "
+        data-accordion-head
+      >
+        <a
+          href="/intelkom-frontend/services/index.html"
+          class="font-medium text-lg text-inherit"
+          >Послуги</a
+        >
+
+        <img
+          src="/intelkom-frontend/assets/icons/ArrowBottom.svg"
+          class="h-4 w-4 transition duration-300  rotate-0  "
+          alt=""
+        />
+      </div>
+
+      <div
+        class=" w-full max-h-fit flex flex-col bg-gray-50/50 gap-4 pl-8 py-2"
+        data-accordion-body
+      >
+        <a
+          href="/intelkom-frontend/services/plastic.html"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
+          >Лиття виробів з пластмаси</a
+        >
+
+        <a
+          href="/intelkom-frontend/services/metaloobrobka.html"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
+          >Металообробка</a
+        >
+
+        <a
+          href="/intelkom-frontend/services/lyttia-tpa.html"
+          class="text-sm text-gray-700 hover:text-[#E90B0F] transition-colors"
+          >Промисловий дизайн та проєктування</a
+        >
+      </div>
+    </div>
+    <div class="w-full h-[1px] bg-[#EDEDED]"></div>
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4   border-l-transparent text-black "
+        data-accordion-head
+      >
+        <a
+          href="/intelkom-frontend/news/index.html"
+          class="font-medium text-lg text-inherit block w-full"
+          >Новини</a
+        >
+      </div>
+    </div>
+    <div class="w-full h-[1px] bg-[#EDEDED]"></div>
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4   border-l-transparent text-black "
+        data-accordion-head
+      >
+        <a
+          href="/intelkom-frontend/cooperation.html"
+          class="font-medium text-lg text-inherit block w-full"
+          >Співпраця</a
+        >
+      </div>
+    </div>
+    <div class="w-full h-[1px] bg-[#EDEDED]"></div>
+    <div class="accordion-item" data-accordion-item>
+      <div
+        class="flex w-full cursor-pointer flex-row items-center justify-between border-b border-l-4 border-gray-100 px-4 py-4   border-l-transparent text-black "
+        data-accordion-head
+      >
+        <a
+          href="/intelkom-frontend/contacts.html"
+          class="font-medium text-lg text-inherit block w-full"
+          >Контакти</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+    <header
+  data-site-header
+  data-active-page="services"
+  class="container header-container"
+>
+  <style>
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-main-nav] {
+      display: none;
+    }
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-logo-link] {
+      flex: 0 0 auto;
+    }
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-header-actions] {
+      flex: 1 0 auto;
+      flex-direction: row-reverse;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    @media (min-width: 768px) {
+      header[data-site-header]:has([data-search-box]:not(.hidden))
+        [data-header-actions] {
+        padding-left: 190px;
+      }
+    }
+    header[data-site-header]:has([data-search-box]:not(.hidden))
+      [data-search-open] {
+      display: none;
+    }
+
+    header[data-active-page="about"] [data-nav="about"],
+    header[data-active-page="products"] [data-nav="products"],
+    header[data-active-page="services"] [data-nav="services"],
+    header[data-active-page="cooperation"] [data-nav="cooperation"],
+    header[data-active-page="news"] [data-nav="news"] {
+      color: #e90b0f !important;
+    }
+  </style>
+
+  <a
+    href="/intelkom-frontend/index.html"
+    data-logo-link
+    class="flex items-center justify-start transition-all"
+  >
+    <img
+      src="/intelkom-frontend/assets/icons/Logo.svg"
+      class="w-31"
+      alt="Логотип"
+      data-logo
+    />
+  </a>
+
+  <nav
+    class="hidden xl:flex flex-row shrink-0 mx-auto justify-between"
+    data-main-nav
+    style="gap: 50px"
+  >
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="/intelkom-frontend/about.html"
+          data-nav="about"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
+          >Компанія</a
+        >
+      </div>
+    </div>
+
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="/intelkom-frontend/products/index.html"
+          data-nav="products"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
+          >Продукція</a
+        >
+        <img
+          src="/intelkom-frontend/assets/icons/ArrowBottom.svg"
+          class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-hover:brightness-75 group-focus-within:rotate-180 group-focus-within:brightness-75"
+        />
+      </div>
+      <div
+        class="absolute left-0 z-50 pt-2 hidden min-w-[220px] group-hover:block group-focus-within:block"
+      >
+        <div class="rounded-lg border border-gray-100 bg-white py-2 shadow-xl">
+          <div class="flex flex-col">
+            <a
+              href="/intelkom-frontend/products/toys.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#E90B0F] transition-colors"
+              >Іграшки «ТехноК»</a
+            >
+            <a
+              href="/intelkom-frontend/products/plastic.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#E90B0F] transition-colors"
+              >Вироби з пластмаси</a
+            >
+            <a
+              href="/intelkom-frontend/products/metaloobrobka.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#E90B0F] transition-colors"
+              >Вироби з металу</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="/intelkom-frontend/services/index.html"
+          data-nav="services"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
+          >Послуги</a
+        >
+        <img
+          src="/intelkom-frontend/assets/icons/ArrowBottom.svg"
+          class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-hover:brightness-75 group-focus-within:rotate-180 group-focus-within:brightness-75"
+        />
+      </div>
+      <div
+        class="absolute left-0 z-50 pt-2 hidden min-w-[220px] group-hover:block group-focus-within:block"
+      >
+        <div class="rounded-lg border border-gray-100 bg-white py-2 shadow-xl">
+          <div class="flex flex-col">
+            <a
+              href="/intelkom-frontend/services/plastic.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#E90B0F] transition-colors"
+              >Лиття виробів з пластмаси</a
+            >
+            <a
+              href="/intelkom-frontend/services/metaloobrobka.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#E90B0F] transition-colors"
+              >Металообробка</a
+            >
+            <a
+              href="/intelkom-frontend/services/lyttia-tpa.html"
+              class="px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#E90B0F] transition-colors"
+              >Промисловий дизайн та проєктування</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="/intelkom-frontend/cooperation.html"
+          data-nav="cooperation"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
+          >Співпраця</a
+        >
+      </div>
+    </div>
+
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="/intelkom-frontend/news/index.html"
+          data-nav="news"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
+          >Новини</a
+        >
+      </div>
+    </div>
+
+    <div class="group relative text-black">
+      <div class="flex flex-row items-center gap-1 cursor-pointer py-2">
+        <a
+          href="#footer-contacts"
+          data-nav="contacts"
+          class="font-medium text-black transition-colors duration-200 group-hover:text-[#E90B0F] group-hover:underline group-focus-within:text-[#E90B0F] group-focus-within:underline"
+          >Контакти</a
+        >
+      </div>
+    </div>
+  </nav>
+
+  <div
+    class="flex flex-row items-center gap-4 justify-end transition-all duration-300"
+    data-header-actions
+  >
+    <div
+      class="hidden min-w-0 flex-1 flex-row items-center gap-2 rounded-md border border-[#004C97] bg-white"
+      data-search-box
+      style="padding: 9px"
+    >
+      <img src="/intelkom-frontend/assets/icons/Search.svg" class="w-4" alt="Пошук" />
+      <input
+        type="text"
+        placeholder="що вас цікавить?"
+        class="text-black self-stretch w-full outline-none text-sm"
+        data-search-input
+      />
+      <img
+        src="/intelkom-frontend/assets/icons/Close2.svg"
+        class="w-4 cursor-pointer hover:opacity-70 transition-opacity"
+        alt="Закрити"
+        data-search-close
+      />
+    </div>
+
+    <img
+      src="/intelkom-frontend/assets/icons/Search.svg"
+      class="w-5 h-5 cursor-pointer hover:opacity-80 transition-opacity shrink-0"
+      data-search-open
+    />
+
+    <img
+      src="/intelkom-frontend/assets/icons/LangToggle.svg"
+      class="w-6 shrink-0"
+      data-lang-toggle
+    />
+    <img
+      src="/intelkom-frontend/assets/icons/MenuIcon.png"
+      class="w-5 h-5 xl:hidden cursor-pointer shrink-0"
+      alt="Меню"
+      data-menu-open
+    />
+  </div>
+</header>
+
+    <div class="breadcrumbs">
+      <span class="breadcrumbs__wrapper"
+        ><a class="breadcrumbs__link" href="/intelkom-frontend/index.html">Головна</a>
+        <span class="breadcrumbs__separator"> / </span>
+        <a class="breadcrumbs__link" href="/intelkom-frontend/services/index.html"
+          >Послуги</a
+        >
+        <span class="breadcrumbs__separator"> / </span>
+        <span class="breadcrumbs__current">Лиття під тиском на ТПА</span>
+      </span>
+    </div>
+    <main>
+      <section>
+        <div class="hero-banner">
+          <img
+            src="/intelkom-frontend/assets/banners/img12.jpg"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+            alt="Hero Banner"
+          />
+          <div
+            class="absolute inset-0 z-10 bg-gradient-to-t from-[#004C97] to-transparent pointer-events-none"
+          ></div>
+          <div class="hero__wrapper">
+            <h1 class="hero__title">
+              Лиття під тиском на термопластавтоаматах (ТПА)
+            </h1>
+            <span class="hero__subtitle">
+              Сучасні термопластавтомати зі зусиллям змикання 35–1000 т
+              забезпечують формування деталей із високою точністю та
+              стабільністю параметрів
+            </span>
+          </div>
+        </div>
+        <div class="container tpa-container gap-10">
+          <h2>Лиття під тиском на термопластавтоаматах (ТПА)</h2>
+          <div>
+            <p>
+              Компанія ТОВ «ІНТЕЛКОМ», що представляє український бренд дитячих
+              іграшок «ТехноК», увійшла до рейтингу Forbes Ukraine Next250 —
+              списку найперспективніших малих та середніх компаній України, які
+              демонструють стабільний розвиток, інноваційність та значний
+              потенціал зростання.
+            </p>
+            <p>
+              Включення до цього рейтингу є важливим визнанням результатів
+              роботи компанії та підтвердженням її активного розвитку навіть в
+              умовах складної економічної ситуації та викликів воєнного часу.
+            </p>
+            <p>
+              Компанія «ІНТЕЛКОМ» вже майже 30 років працює на ринку дитячих
+              іграшок та є одним із провідних українських виробників у своїй
+              галузі. Продукція бренду «ТехноК» представлена більш ніж у 20 000
+              магазинах по всій Україні та експортується до 20 країн світу.
+            </p>
+            <p>
+              Попри виклики війни, компанія продовжує активно розвиватися,
+              розширювати асортимент продукції та інвестувати у сучасні
+              виробничі технології. Одним із важливих напрямів розвитку є також
+              розширення міжнародної співпраці та участь у міжнародних
+              виставках, зокрема у найбільшій світовій виставці іграшок
+              Spielwarenmesse у Нюрнберзі.
+            </p>
+            <p>
+              На сьогодні каталог бренду «ТехноК» налічує понад 700 найменувань
+              іграшок. Входження до рейтингу Forbes Ukraine Next250 є важливим
+              етапом у розвитку компанії та підтверджує ефективність її
+              бізнес-стратегії, високі стандарти виробництва та потенціал
+              подальшого зростання як на українському, так і на міжнародному
+              ринках.
+            </p>
+            <p>
+              Компанія «ІНТЕЛКОМ» і надалі продовжує працювати над створенням
+              якісних, безпечних та сучасних іграшок бренду «ТехноК», які
+              дарують дітям радість та сприяють їхньому розвитку.
+            </p>
+          </div>
+        </div>
+        <div class="bg-[#D5E6FA] w-full py-16 mb-14">
+          <div class="tpa-slider-wrap w-full mx-auto relative">
+            <div class="tpa-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="/intelkom-frontend/assets/banners/img12.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="/intelkom-frontend/assets/banners/img13.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="/intelkom-frontend/assets/banners/img08.jpg" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination tpa-pagination"></div>
+          </div>
+        </div>
+        <div class="flex m-12">
+          <a href="/intelkom-frontend/services/index.html" class="mx-auto button-red">
+            Замовити послугу
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.1160983668206!2d24.73789331059069!3d48.913180270657996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c3df6b2d0f5f%3A0x7f0dff3974f8e4b3!2z0IbQvdGC0LXQu9C60L7QvCDQotCcICLQotC10YXQvdC-0Joi!5e0!3m2!1suk!2sua!4v1783420557616!5m2!1suk!2sua"
+    class="w-full h-[365px] 2xl:h-[547px] border-0"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Google Map Location"
+  ></iframe>
+
+  <div class="2xl:w-[1400px] 2xl:mx-auto 2xl:mb-20">
+    <div class="w-full flex flex-col md:flex-row md:items-stretch max-w-full">
+      <div
+        id="footer-contacts"
+        class="flex flex-col w-full md:w-1/2 bg-[#004C97E5] 2xl:-mt-[30px] 3xl:!justify-evenly 3xl:p-12 3xl:bg-[#004C97] flex flex-col text-[#fff] p-4 py-6 pt-12 gap-[40px] xs:gap-[48px] xl:gap-[100px] cut-angle"
+      >
+        <h2 class="text-2xl font-semibold md:text-3xl 3xl:text-[32px]">
+          Контактна інформація:
+        </h2>
+        <div class="flex flex-col gap-6">
+          <div class="text-sm flex flex-row gap-3 2xl:text-lg">
+            <img class="w-5" src="/intelkom-frontend/assets/icons/LocationIcon.svg" />
+            <span
+              >вул. Микитинецька, 7а, м. Івано-Франківськ, 76002, Україна</span
+            >
+          </div>
+          <div class="text-sm flex flex-row gap-3 2xl:text-lg">
+            <img class="w-5" src="/intelkom-frontend/assets/icons/Phone.svg" alt="" />
+            <span>+38 0342 50 35 85</span>
+          </div>
+          <div class="text-sm flex flex-row gap-3 2xl:text-lg">
+            <img class="w-5" src="/intelkom-frontend/assets/icons/Mail.svg" alt="" />
+            <span>office@intelkom.net.ua</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h2 class="font-medium">Стежте за нами в мережах:</h2>
+          <div class="flex flex-row gap-3 mm:gap-5">
+            <a href="">
+              <img src="/intelkom-frontend/assets/icons/meta/Facebook.svg" />
+            </a>
+            <a href="">
+              <img src="/intelkom-frontend/assets/icons/meta/Youtube.svg" />
+            </a>
+            <a href="">
+              <img src="/intelkom-frontend/assets/icons/meta/X.svg" />
+            </a>
+            <a href="">
+              <img src="/intelkom-frontend/assets/icons/meta/Telegram.svg" />
+            </a>
+            <a href="">
+              <img src="/intelkom-frontend/assets/icons/meta/linkedin.svg" />
+            </a>
+          </div>
+        </div>
+
+        <form
+          id="contact-form-mobile"
+          class="js-contact-form bg-[#D5E6FA] rounded-xl py-7 px-5 flex flex-col gap-4 md:hidden mt-4"
+          novalidate
+        >
+          <h2 class="text-[#004C97] font-semibold">Напишіть нам!</h2>
+
+          <div class="relative inline-block w-full">
+            <input
+              type="text"
+              name="name"
+              placeholder=" "
+              class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            />
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Ім'я <span class="text-red-500">*</span></span
+            >
+            <span
+              class="js-error hidden text-red-500 text-xs mt-1 block"
+            ></span>
+          </div>
+
+          <div class="relative inline-block w-full">
+            <input
+              type="tel"
+              name="phone"
+              placeholder=" "
+              class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            />
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Телефон <span class="text-red-500">*</span></span
+            >
+            <span
+              class="js-error hidden text-red-500 text-xs mt-1 block"
+            ></span>
+          </div>
+
+          <div class="relative inline-block w-full">
+            <input
+              type="email"
+              name="email"
+              placeholder=" "
+              class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            />
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Email <span class="text-red-500">*</span></span
+            >
+            <span
+              class="js-error hidden text-red-500 text-xs mt-1 block"
+            ></span>
+          </div>
+
+          <div class="relative inline-block w-full">
+            <textarea
+              name="message"
+              placeholder=" "
+              rows="4"
+              class="peer h-25 w-full resize-none rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            ></textarea>
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Повідомлення <span class="text-red-500">*</span></span
+            >
+            <span
+              class="js-error hidden text-red-500 text-xs mt-1 block"
+            ></span>
+          </div>
+
+          <button type="submit" class="mx-auto button-red">
+            <span>Зв'язатися з нами</span>
+          </button>
+        </form>
+      </div>
+
+      <form
+        id="contact-form-desktop"
+        class="js-contact-form hidden md:flex md:w-[50%] md:bg-[#F7FAFC] rounded-none bg-[#D5E6FA] p-6 justify-center"
+        novalidate
+      >
+        <div class="w-full max-w-md flex flex-col gap-4 self-start">
+          <h2 class="text-black font-semibold text-3xl">
+            Маєте питання або пропозицію? Напишіть нам!
+          </h2>
+
+          <div class="flex flex-col mm:flex-row gap-4">
+            <div class="relative inline-block w-full">
+              <input
+                type="text"
+                name="name"
+                placeholder=" "
+                class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+              />
+              <span
+                class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+                >Ім'я <span class="text-red-500">*</span></span
+              >
+              <span
+                class="js-error hidden text-red-500 text-xs mt-1 block"
+              ></span>
+            </div>
+
+            <div class="relative inline-block w-full">
+              <input
+                type="tel"
+                name="phone"
+                placeholder=" "
+                class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+              />
+              <span
+                class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+                >Телефон <span class="text-red-500">*</span></span
+              >
+              <span
+                class="js-error hidden text-red-500 text-xs mt-1 block"
+              ></span>
+            </div>
+          </div>
+
+          <div class="relative inline-block w-full">
+            <input
+              type="email"
+              name="email"
+              placeholder=" "
+              class="peer w-full rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            />
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Email <span class="text-red-500">*</span></span
+            >
+            <span
+              class="js-error hidden text-red-500 text-xs mt-1 block"
+            ></span>
+          </div>
+
+          <div class="relative inline-block w-full">
+            <textarea
+              name="message"
+              placeholder=" "
+              rows="4"
+              class="peer h-25 w-full resize-none rounded-lg border border-[#C8E8F8] bg-[#fff] p-3 text-black outline-none"
+            ></textarea>
+            <span
+              class="pointer-events-none absolute top-3 left-3 hidden text-gray-400 peer-placeholder-shown:block"
+              >Повідомлення <span class="text-red-500">*</span></span
+            >
+            <span
+              class="js-error hidden text-red-500 text-xs mt-1 block"
+            ></span>
+          </div>
+
+          <button
+            type="submit"
+            class="p-3 rounded-lg text-white text-center bg-[#E90B0F] duration-150 hover:bg-[#b8080b] shadow-lg shadow-red-400"
+          >
+            <span>Зв'язатися з нами</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="footer-links" class="bg-[#323232] text-white p-4 py-8">
+    <div class="container footer-container">
+      <div
+        class="flex gap-6 w-full md:self-center mm:w-[70%] flex-col md:justify-between md:flex-row"
+      >
+        <div class="flex flex-col gap-2 min-w-max">
+          <a href="/intelkom-frontend/about.html">
+            <strong class="font-extrabold">Компанія</strong>
+          </a>
+
+          <a href="/intelkom-frontend/about.html">Компанія</a>
+          <a href="/intelkom-frontend/news/index.html">Новини</a>
+          <a href="/intelkom-frontend/cooperation.html">Співпраця</a>
+        </div>
+        <div class="flex flex-col gap-2 min-w-max">
+          <a href="/intelkom-frontend/services/">
+            <strong class="font-extrabold">Послуги</strong>
+          </a>
+
+          <a href="/intelkom-frontend/services/plastic.html"
+            >Лиття виробів з пластмаси</a
+          >
+          <a href="/intelkom-frontend/services/metaloobrobka.html">Металообробка</a>
+          <a href="/intelkom-frontend/services/lyttia-tpa.html"
+            >Промисловий дизайн та проєктування</a
+          >
+        </div>
+        <div class="flex flex-col gap-2 min-w-max">
+          <a href="/intelkom-frontend/products/">
+            <strong class="font-extrabold">Продукція</strong>
+          </a>
+
+          <a href="/intelkom-frontend/products/toys.html">Іграшки ТМ “ТехноК”</a>
+          <a href="/intelkom-frontend/products/plastic.html">Вироби з пластмаси</a>
+          <a href="/intelkom-frontend/products/metaloobrobka.html">Вироби з металу</a>
+        </div>
+      </div>
+      <div
+        class="pt-6 border-t border-[#939496] flex flex-row justify-between items-start mm:flex-col mm:border-none mm:pt-0 gap-4"
+      >
+        <img
+          src="/intelkom-frontend/assets/icons/LogoGray.svg"
+          class="w-29"
+          alt="ІНТЕЛКОМ"
+        />
+        <p class="text-sm text-[#939496] mm:mt-2">© 2026 ТОВ «Інтелком»</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/intelkom-frontend/js/vendor.js" defer></script>
+<script src="/intelkom-frontend/js/main.js" defer type="module"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="/intelkom-frontend/js/main.js" type="module"></script>
+  </body>
+</html>
